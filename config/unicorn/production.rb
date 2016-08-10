@@ -1,4 +1,4 @@
-root = "/home/snmspace/snmmaurya/current" # e.g. /var/apps/rails_blog/current
+root = "/home/snmspace/apps/snmmaurya/current" # e.g. /var/apps/rails_blog/current
 working_directory root
 
 pid "#{root}/tmp/pids/unicorn.pid"
