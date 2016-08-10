@@ -42,3 +42,1294 @@
  DEBUG [9c35b50c] Command: [ -f /home/snmspace/snmmaurya/shared/config/database.yml ]
  DEBUG [9c35b50c] Finished in 0.557 seconds with exit status 1 (failed).
  ERROR linked file /home/snmspace/snmmaurya/shared/config/database.yml does not exist on 138.68.8.26
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:14:42 +0530 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6de11e8d] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [6de11e8d] Command: [ -d ~/.rvm ]
+ DEBUG [6de11e8d] Finished in 5.633 seconds with exit status 0 (successful).
+ DEBUG [3cdaeca7] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [3cdaeca7] Command: ~/.rvm/bin/rvm version
+ DEBUG [3cdaeca7] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [3cdaeca7] Finished in 11.645 seconds with exit status 0 (successful).
+ DEBUG [1b8d8c5e] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [1b8d8c5e] Command: ~/.rvm/bin/rvm current
+ DEBUG [1b8d8c5e] 	ruby-2.3.1
+ DEBUG [1b8d8c5e] Finished in 6.132 seconds with exit status 0 (successful).
+ DEBUG [5056e4aa] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [5056e4aa] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [5056e4aa] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [5056e4aa] Finished in 1.148 seconds with exit status 0 (successful).
+  INFO [2bf7b30c] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [2bf7b30c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2bf7b30c] Finished in 0.772 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [4d267369] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [4d267369] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [4d267369] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [dfdcbbfd] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [dfdcbbfd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [dfdcbbfd] 	7fe2c37b2cf29beafa7964be4dbaf010fc9fb726	refs/heads/master
+  INFO [dfdcbbfd] Finished in 2.464 seconds with exit status 0 (successful).
+  INFO [84ef4652] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared /home/snmspace/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [84ef4652] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared /home/snmspace/snmmaurya/releases
+  INFO [84ef4652] Finished in 0.966 seconds with exit status 0 (successful).
+  INFO [d1d7384e] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/log /home/snmspace/snmmaurya/shared/tmp/pids /home/snmspace/snmmaurya/shared/tmp/cache /home/snmspace/snmmaurya/shared/tmp/sockets /home/snmspace/snmmaurya/shared/vendor/bundle /home/snmspace/snmmaurya/shared/public/system /home/snmspace/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [d1d7384e] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/log /home/snmspace/snmmaurya/shared/tmp/pids /home/snmspace/snmmaurya/shared/tmp/cache /home/snmspace/snmmaurya/shared/tmp/sockets /home/snmspace/snmmaurya/shared/vendor/bundle /home/snmspace/snmmaurya/shared/public/system /home/snmspace/snmmaurya/shared/public/assets
+  INFO [d1d7384e] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [cf503870] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [cf503870] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/config
+  INFO [cf503870] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG [91f68a44] Running [ -f /home/snmspace/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [91f68a44] Command: [ -f /home/snmspace/snmmaurya/shared/config/database.yml ]
+ DEBUG [91f68a44] Finished in 0.563 seconds with exit status 1 (failed).
+ ERROR linked file /home/snmspace/snmmaurya/shared/config/database.yml does not exist on 138.68.8.26
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:25:14 +0530 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [926f2f7e] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [926f2f7e] Command: [ -d ~/.rvm ]
+ DEBUG [926f2f7e] Finished in 10.059 seconds with exit status 0 (successful).
+ DEBUG [7ee0a251] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [7ee0a251] Command: ~/.rvm/bin/rvm version
+ DEBUG [7ee0a251] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [7ee0a251] Finished in 16.488 seconds with exit status 0 (successful).
+ DEBUG [d6ebf244] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [d6ebf244] Command: ~/.rvm/bin/rvm current
+ DEBUG [d6ebf244] 	ruby-2.3.1
+ DEBUG [d6ebf244] Finished in 6.022 seconds with exit status 0 (successful).
+ DEBUG [203c98d5] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [203c98d5] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [203c98d5] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [203c98d5] Finished in 2.687 seconds with exit status 0 (successful).
+  INFO [abc2afdc] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [abc2afdc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [abc2afdc] Finished in 0.599 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [27e6d8ec] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [27e6d8ec] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [27e6d8ec] Finished in 0.795 seconds with exit status 0 (successful).
+  INFO [995706c6] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [995706c6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [995706c6] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [995706c6] Finished in 4.110 seconds with exit status 0 (successful).
+  INFO [daaba7ee] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared /home/snmspace/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [daaba7ee] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared /home/snmspace/snmmaurya/releases
+  INFO [daaba7ee] Finished in 0.852 seconds with exit status 0 (successful).
+  INFO [db8b680e] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/log /home/snmspace/snmmaurya/shared/tmp/pids /home/snmspace/snmmaurya/shared/tmp/cache /home/snmspace/snmmaurya/shared/tmp/sockets /home/snmspace/snmmaurya/shared/vendor/bundle /home/snmspace/snmmaurya/shared/public/system /home/snmspace/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [db8b680e] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/log /home/snmspace/snmmaurya/shared/tmp/pids /home/snmspace/snmmaurya/shared/tmp/cache /home/snmspace/snmmaurya/shared/tmp/sockets /home/snmspace/snmmaurya/shared/vendor/bundle /home/snmspace/snmmaurya/shared/public/system /home/snmspace/snmmaurya/shared/public/assets
+  INFO [db8b680e] Finished in 0.582 seconds with exit status 0 (successful).
+  INFO [c3d26e41] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [c3d26e41] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/config
+  INFO [c3d26e41] Finished in 2.348 seconds with exit status 0 (successful).
+ DEBUG [35970b80] Running [ -f /home/snmspace/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [35970b80] Command: [ -f /home/snmspace/snmmaurya/shared/config/database.yml ]
+ DEBUG [35970b80] Finished in 0.678 seconds with exit status 1 (failed).
+ ERROR linked file /home/snmspace/snmmaurya/shared/config/database.yml does not exist on 138.68.8.26
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:27:25 +0530 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [cbe4a52a] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [cbe4a52a] Command: [ -d ~/.rvm ]
+ DEBUG [cbe4a52a] Finished in 3.806 seconds with exit status 0 (successful).
+ DEBUG [dca22e18] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [dca22e18] Command: ~/.rvm/bin/rvm version
+ DEBUG [dca22e18] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [dca22e18] Finished in 3.531 seconds with exit status 0 (successful).
+ DEBUG [015b7fbd] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [015b7fbd] Command: ~/.rvm/bin/rvm current
+ DEBUG [015b7fbd] 	ruby-2.3.1
+ DEBUG [015b7fbd] Finished in 14.098 seconds with exit status 0 (successful).
+ DEBUG [0c3218ab] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [0c3218ab] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [0c3218ab] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [0c3218ab] Finished in 0.851 seconds with exit status 0 (successful).
+  INFO [45c85454] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [45c85454] Command: /usr/bin/env mkdir -p /tmp
+  INFO [45c85454] Finished in 0.538 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [158c7106] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [158c7106] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [158c7106] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [57726836] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [57726836] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [57726836] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [57726836] Finished in 2.360 seconds with exit status 0 (successful).
+  INFO [817c24c4] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [817c24c4] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [817c24c4] Finished in 0.571 seconds with exit status 0 (successful).
+  INFO [ae33ed3b] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [ae33ed3b] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [ae33ed3b] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [3e05a802] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [3e05a802] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config
+  INFO [3e05a802] Finished in 0.522 seconds with exit status 0 (successful).
+ DEBUG [cb57a6a3] Running [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [cb57a6a3] Command: [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ]
+ DEBUG [cb57a6a3] Finished in 0.553 seconds with exit status 1 (failed).
+ ERROR linked file /home/snmspace/apps/snmmaurya/shared/config/database.yml does not exist on 138.68.8.26
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:29:30 +0530 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [827252a2] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [827252a2] Command: [ -d ~/.rvm ]
+ DEBUG [827252a2] Finished in 3.449 seconds with exit status 0 (successful).
+ DEBUG [1022d6bd] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [1022d6bd] Command: ~/.rvm/bin/rvm version
+ DEBUG [1022d6bd] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [1022d6bd] Finished in 3.549 seconds with exit status 0 (successful).
+ DEBUG [5c27f634] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [5c27f634] Command: ~/.rvm/bin/rvm current
+ DEBUG [5c27f634] 	ruby-2.3.1
+ DEBUG [5c27f634] Finished in 3.315 seconds with exit status 0 (successful).
+ DEBUG [23e6cc6b] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [23e6cc6b] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [23e6cc6b] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [23e6cc6b] Finished in 0.807 seconds with exit status 0 (successful).
+  INFO [f870838f] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [f870838f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f870838f] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [fecbc8bf] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [fecbc8bf] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [fecbc8bf] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [4aa28137] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [4aa28137] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [4aa28137] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [4aa28137] Finished in 2.409 seconds with exit status 0 (successful).
+  INFO [780f0a56] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [780f0a56] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [780f0a56] Finished in 0.676 seconds with exit status 0 (successful).
+  INFO [0cc060a2] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [0cc060a2] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [0cc060a2] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [5a0c950c] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [5a0c950c] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config
+  INFO [5a0c950c] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG [1dcf501d] Running [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [1dcf501d] Command: [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ]
+ DEBUG [1dcf501d] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:30:02 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4d6c35f6] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [4d6c35f6] Command: [ -d ~/.rvm ]
+ DEBUG [4d6c35f6] Finished in 3.306 seconds with exit status 0 (successful).
+ DEBUG [9184a434] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [9184a434] Command: ~/.rvm/bin/rvm version
+ DEBUG [9184a434] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [9184a434] Finished in 3.426 seconds with exit status 0 (successful).
+ DEBUG [f29a4fca] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [f29a4fca] Command: ~/.rvm/bin/rvm current
+ DEBUG [f29a4fca] 	ruby-2.3.1
+ DEBUG [f29a4fca] Finished in 4.554 seconds with exit status 0 (successful).
+ DEBUG [9061670a] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [9061670a] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [9061670a] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [9061670a] Finished in 0.854 seconds with exit status 0 (successful).
+  INFO [a5ba503f] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [a5ba503f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a5ba503f] Finished in 0.553 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [85663417] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [85663417] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [85663417] Finished in 0.542 seconds with exit status 0 (successful).
+  INFO [1653d9ba] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [1653d9ba] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [1653d9ba] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [1653d9ba] Finished in 2.507 seconds with exit status 0 (successful).
+  INFO [380dd276] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [380dd276] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [380dd276] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [7ccd7896] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [7ccd7896] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [7ccd7896] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [cf4fccc7] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [cf4fccc7] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config
+  INFO [cf4fccc7] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [e8cb03bc] Running [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [e8cb03bc] Command: [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ]
+ DEBUG [e8cb03bc] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [0c989a59] Running [ -f /home/snmspace/apps/snmmaurya/current/REVISION ] as snmspace@138.68.8.26
+ DEBUG [0c989a59] Command: [ -f /home/snmspace/apps/snmmaurya/current/REVISION ]
+ DEBUG [0c989a59] Finished in 0.567 seconds with exit status 1 (failed).
+ DEBUG [6c8a16c3] Running [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ] as snmspace@138.68.8.26
+ DEBUG [6c8a16c3] Command: [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ]
+ DEBUG [6c8a16c3] Finished in 0.556 seconds with exit status 1 (failed).
+ DEBUG [9346c3ed] Running if test ! -d /home/snmspace/apps/snmmaurya; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [9346c3ed] Command: if test ! -d /home/snmspace/apps/snmmaurya; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya'" 1>&2; false; fi
+ DEBUG [9346c3ed] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [81b7ae7a] Running /usr/bin/env git clone --mirror git@github.com:snmspace/snmmaurya.git /home/snmspace/apps/snmmaurya/repo as snmspace@138.68.8.26
+ DEBUG [81b7ae7a] Command: cd /home/snmspace/apps/snmmaurya && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git clone --mirror git@github.com:snmspace/snmmaurya.git /home/snmspace/apps/snmmaurya/repo )
+ DEBUG [81b7ae7a] 	Cloning into bare repository '/home/snmspace/apps/snmmaurya/repo'...
+  INFO [81b7ae7a] Finished in 2.686 seconds with exit status 0 (successful).
+ DEBUG [1353882b] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [1353882b] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [1353882b] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO [08d93de5] Running /usr/bin/env git remote update --prune as snmspace@138.68.8.26
+ DEBUG [08d93de5] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [08d93de5] 	Fetching origin
+  INFO [08d93de5] Finished in 2.609 seconds with exit status 0 (successful).
+ DEBUG [92cbdbc7] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [92cbdbc7] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [92cbdbc7] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [be8818a0] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022 as snmspace@138.68.8.26
+ DEBUG [be8818a0] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022 )
+  INFO [be8818a0] Finished in 0.653 seconds with exit status 0 (successful).
+  INFO [5dd47151] Running /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810070022 as snmspace@138.68.8.26
+ DEBUG [5dd47151] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810070022 )
+  INFO [5dd47151] Finished in 0.568 seconds with exit status 0 (successful).
+ DEBUG [8b149caf] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [8b149caf] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [8b149caf] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [cf79becd] Running /usr/bin/env git rev-list --max-count=1 master as snmspace@138.68.8.26
+ DEBUG [cf79becd] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cf79becd] 	27f82ae441bcf16e0315e7af50efed6b73f2b500
+ DEBUG [cf79becd] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [48b12187] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [48b12187] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi
+ DEBUG [48b12187] Finished in 0.546 seconds with exit status 0 (successful).
+  INFO [f5646c58] Running /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION as snmspace@138.68.8.26
+ DEBUG [f5646c58] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION
+  INFO [f5646c58] Finished in 0.850 seconds with exit status 0 (successful).
+  INFO [1574894e] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022/config as snmspace@138.68.8.26
+ DEBUG [1574894e] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022/config
+  INFO [1574894e] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [f1220bd9] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [f1220bd9] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml ]
+ DEBUG [f1220bd9] Finished in 0.571 seconds with exit status 1 (failed).
+ DEBUG [35644f99] Running [ -f /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [35644f99] Command: [ -f /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml ]
+ DEBUG [35644f99] Finished in 0.569 seconds with exit status 0 (successful).
+  INFO [ac0f13b8] Running /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml as snmspace@138.68.8.26
+ DEBUG [ac0f13b8] Command: /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml
+  INFO [ac0f13b8] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [94ad89f4] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml as snmspace@138.68.8.26
+ DEBUG [94ad89f4] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810070022/config/database.yml
+  INFO [94ad89f4] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [970ea121] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022 /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor /home/snmspace/apps/snmmaurya/releases/20160810070022/public as snmspace@138.68.8.26
+ DEBUG [970ea121] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022 /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor /home/snmspace/apps/snmmaurya/releases/20160810070022/public
+  INFO [970ea121] Finished in 0.552 seconds with exit status 0 (successful).
+ DEBUG [89aa208d] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/log ] as snmspace@138.68.8.26
+ DEBUG [89aa208d] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/log ]
+ DEBUG [89aa208d] Finished in 0.610 seconds with exit status 1 (failed).
+ DEBUG [f8324b1c] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/log ] as snmspace@138.68.8.26
+ DEBUG [f8324b1c] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/log ]
+ DEBUG [f8324b1c] Finished in 0.563 seconds with exit status 0 (successful).
+  INFO [5c418dd5] Running /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810070022/log as snmspace@138.68.8.26
+ DEBUG [5c418dd5] Command: /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810070022/log
+  INFO [5c418dd5] Finished in 0.614 seconds with exit status 0 (successful).
+  INFO [f6aa511d] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810070022/log as snmspace@138.68.8.26
+ DEBUG [f6aa511d] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810070022/log
+  INFO [f6aa511d] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [fb1c1924] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [fb1c1924] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/pids ]
+ DEBUG [fb1c1924] Finished in 0.574 seconds with exit status 1 (failed).
+ DEBUG [eed58168] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [eed58168] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/pids ]
+ DEBUG [eed58168] Finished in 0.550 seconds with exit status 1 (failed).
+  INFO [f651f2c8] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/pids as snmspace@138.68.8.26
+ DEBUG [f651f2c8] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/pids
+  INFO [f651f2c8] Finished in 0.593 seconds with exit status 0 (successful).
+ DEBUG [71f33618] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [71f33618] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/cache ]
+ DEBUG [71f33618] Finished in 1.482 seconds with exit status 1 (failed).
+ DEBUG [6dfb49d4] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [6dfb49d4] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/cache ]
+ DEBUG [6dfb49d4] Finished in 0.555 seconds with exit status 1 (failed).
+  INFO [766c2135] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/cache as snmspace@138.68.8.26
+ DEBUG [766c2135] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/cache
+  INFO [766c2135] Finished in 0.601 seconds with exit status 0 (successful).
+ DEBUG [c7beab98] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [c7beab98] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/sockets ]
+ DEBUG [c7beab98] Finished in 0.558 seconds with exit status 1 (failed).
+ DEBUG [159eca7b] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [159eca7b] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/sockets ]
+ DEBUG [159eca7b] Finished in 0.576 seconds with exit status 1 (failed).
+  INFO [c4154de5] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/sockets as snmspace@138.68.8.26
+ DEBUG [c4154de5] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810070022/tmp/sockets
+  INFO [c4154de5] Finished in 0.897 seconds with exit status 0 (successful).
+ DEBUG [bb94220b] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [bb94220b] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor/bundle ]
+ DEBUG [bb94220b] Finished in 0.738 seconds with exit status 1 (failed).
+ DEBUG [36ec2bb3] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [36ec2bb3] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor/bundle ]
+ DEBUG [36ec2bb3] Finished in 0.807 seconds with exit status 1 (failed).
+  INFO [01f586fd] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor/bundle as snmspace@138.68.8.26
+ DEBUG [01f586fd] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810070022/vendor/bundle
+  INFO [01f586fd] Finished in 0.567 seconds with exit status 0 (successful).
+ DEBUG [d2078fa8] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/public/system ] as snmspace@138.68.8.26
+ DEBUG [d2078fa8] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/public/system ]
+ DEBUG [d2078fa8] Finished in 0.545 seconds with exit status 1 (failed).
+ DEBUG [88756745] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/public/system ] as snmspace@138.68.8.26
+ DEBUG [88756745] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/public/system ]
+ DEBUG [88756745] Finished in 0.678 seconds with exit status 1 (failed).
+  INFO [8f11a39d] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810070022/public/system as snmspace@138.68.8.26
+ DEBUG [8f11a39d] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810070022/public/system
+  INFO [8f11a39d] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [1f8eb5a1] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets ] as snmspace@138.68.8.26
+ DEBUG [1f8eb5a1] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets ]
+ DEBUG [1f8eb5a1] Finished in 1.315 seconds with exit status 1 (failed).
+ DEBUG [4fadd4f1] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets ] as snmspace@138.68.8.26
+ DEBUG [4fadd4f1] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets ]
+ DEBUG [4fadd4f1] Finished in 0.542 seconds with exit status 1 (failed).
+  INFO [8b80d747] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets as snmspace@138.68.8.26
+ DEBUG [8b80d747] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets
+  INFO [8b80d747] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG [2c740812] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [2c740812] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi
+ DEBUG [2c740812] Finished in 0.553 seconds with exit status 0 (successful).
+  INFO [196d2513] Running ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet as snmspace@138.68.8.26
+ DEBUG [196d2513] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet
+  INFO [196d2513] Finished in 110.527 seconds with exit status 0 (successful).
+ DEBUG [85c2b6a9] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [85c2b6a9] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi
+ DEBUG [85c2b6a9] Finished in 0.589 seconds with exit status 0 (successful).
+  INFO [252918fd] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as snmspace@138.68.8.26
+ DEBUG [252918fd] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [252918fd] 	I, [2016-08-10T07:02:49.847992 #28339]  INFO -- : Writing /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/application-10513bfe855daa2cc23bcd96ca32160d97be3a498133ed76dd5fb6cfe5128b97.js
+ DEBUG [252918fd] 	I, [2016-08-10T07:02:49.849285 #28339]  INFO -- : Writing /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/application-10513bfe855daa2cc23bcd96ca32160d97be3a498133ed76dd5fb6cfe5128b97.js.gz
+ DEBUG [252918fd] 	I, [2016-08-10T07:02:49.866622 #28339]  INFO -- : Writing /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [252918fd] 	I, [2016-08-10T07:02:49.866923 #28339]  INFO -- : Writing /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+  INFO [252918fd] Finished in 6.238 seconds with exit status 0 (successful).
+ DEBUG [3aed2512] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [3aed2512] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi
+ DEBUG [3aed2512] Finished in 1.176 seconds with exit status 0 (successful).
+  INFO [58ca80a2] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [58ca80a2] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070022/assets_manifest_backup
+  INFO [58ca80a2] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG [14c012f4] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [14c012f4] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest*
+ DEBUG [14c012f4] 	/home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [14c012f4] Finished in 0.542 seconds with exit status 0 (successful).
+ DEBUG [82b36749] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [82b36749] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest*
+ DEBUG [82b36749] 	/home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [82b36749] Finished in 0.547 seconds with exit status 0 (successful).
+  INFO [0f9b7ebf] Running /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810070022/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [0f9b7ebf] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810070022/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810070022/assets_manifest_backup
+  INFO [0f9b7ebf] Finished in 0.551 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in /db/migrate
+ DEBUG [89d8ea91] Running diff -q /home/snmspace/apps/snmmaurya/releases/20160810070022/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate as snmspace@138.68.8.26
+ DEBUG [89d8ea91] Command: diff -q /home/snmspace/apps/snmmaurya/releases/20160810070022/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate
+ DEBUG [89d8ea91] 	diff: 
+ DEBUG [89d8ea91] 	/home/snmspace/apps/snmmaurya/releases/20160810070022/db/migrate
+ DEBUG [89d8ea91] 	: No such file or directory
+ DEBUG [89d8ea91] 	
+ DEBUG [89d8ea91] 	diff: 
+ DEBUG [89d8ea91] 	/home/snmspace/apps/snmmaurya/current/db/migrate
+ DEBUG [89d8ea91] 	: No such file or directory
+ DEBUG [89d8ea91] 	
+ DEBUG [89d8ea91] Finished in 0.808 seconds with exit status 2 (failed).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [c7749868] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [c7749868] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070022; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070022'" 1>&2; false; fi
+ DEBUG [c7749868] Finished in 0.544 seconds with exit status 0 (successful).
+  INFO [a49b5872] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as snmspace@138.68.8.26
+ DEBUG [a49b5872] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070022 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [a49b5872] 	rake aborted!
+ DEBUG [a49b5872] 	Mysql2::Error: Access denied for user 'root'@'localhost' (using password: NO)
+ DEBUG [a49b5872] 	/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.4/lib/mysql2/client.rb:87:in `connect'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.4/lib/mysql2/client.rb:87:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `mysql2_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:91:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1099:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `up'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:983:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/tasks/database_tasks.rb:161:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `<main>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `eval'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [a49b5872] 	Tasks: TOP => db:migrate
+ DEBUG [a49b5872] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:37:06 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [15ca3966] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [15ca3966] Command: [ -d ~/.rvm ]
+ DEBUG [15ca3966] Finished in 4.746 seconds with exit status 0 (successful).
+ DEBUG [abb586b4] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [abb586b4] Command: ~/.rvm/bin/rvm version
+ DEBUG [abb586b4] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [abb586b4] Finished in 11.659 seconds with exit status 0 (successful).
+ DEBUG [dcf4154e] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [dcf4154e] Command: ~/.rvm/bin/rvm current
+ DEBUG [dcf4154e] 	ruby-2.3.1
+ DEBUG [dcf4154e] Finished in 4.957 seconds with exit status 0 (successful).
+ DEBUG [c8b83051] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [c8b83051] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c8b83051] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [c8b83051] Finished in 1.007 seconds with exit status 0 (successful).
+  INFO [bc7e8760] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [bc7e8760] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bc7e8760] Finished in 0.694 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [dcf83616] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [dcf83616] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [dcf83616] Finished in 2.489 seconds with exit status 0 (successful).
+  INFO [c5ddcc67] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [c5ddcc67] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [c5ddcc67] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [c5ddcc67] Finished in 3.550 seconds with exit status 0 (successful).
+  INFO [523bfe16] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [523bfe16] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [523bfe16] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [0b5fe169] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [0b5fe169] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [0b5fe169] Finished in 0.688 seconds with exit status 0 (successful).
+  INFO [d613f439] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [d613f439] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config
+  INFO [d613f439] Finished in 0.721 seconds with exit status 0 (successful).
+ DEBUG [5176cf73] Running [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [5176cf73] Command: [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ]
+ DEBUG [5176cf73] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [046fe675] Running [ -f /home/snmspace/apps/snmmaurya/current/REVISION ] as snmspace@138.68.8.26
+ DEBUG [046fe675] Command: [ -f /home/snmspace/apps/snmmaurya/current/REVISION ]
+ DEBUG [046fe675] Finished in 0.710 seconds with exit status 1 (failed).
+ DEBUG [2502a528] Running [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ] as snmspace@138.68.8.26
+ DEBUG [2502a528] Command: [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ]
+ DEBUG [2502a528] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/snmspace/apps/snmmaurya/repo
+ DEBUG [67a8fb62] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [67a8fb62] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [67a8fb62] Finished in 1.226 seconds with exit status 0 (successful).
+  INFO [4304c16d] Running /usr/bin/env git remote update --prune as snmspace@138.68.8.26
+ DEBUG [4304c16d] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [4304c16d] 	Fetching origin
+  INFO [4304c16d] Finished in 4.763 seconds with exit status 0 (successful).
+ DEBUG [bf3af9be] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [bf3af9be] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [bf3af9be] Finished in 0.700 seconds with exit status 0 (successful).
+  INFO [06f22216] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741 as snmspace@138.68.8.26
+ DEBUG [06f22216] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741 )
+  INFO [06f22216] Finished in 0.607 seconds with exit status 0 (successful).
+  INFO [a2815ba3] Running /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810070741 as snmspace@138.68.8.26
+ DEBUG [a2815ba3] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810070741 )
+  INFO [a2815ba3] Finished in 1.003 seconds with exit status 0 (successful).
+ DEBUG [8dbc4e2e] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [8dbc4e2e] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [8dbc4e2e] Finished in 0.673 seconds with exit status 0 (successful).
+ DEBUG [f2e6dd5c] Running /usr/bin/env git rev-list --max-count=1 master as snmspace@138.68.8.26
+ DEBUG [f2e6dd5c] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f2e6dd5c] 	27f82ae441bcf16e0315e7af50efed6b73f2b500
+ DEBUG [f2e6dd5c] Finished in 0.705 seconds with exit status 0 (successful).
+ DEBUG [7f63485f] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [7f63485f] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi
+ DEBUG [7f63485f] Finished in 0.767 seconds with exit status 0 (successful).
+  INFO [1bdb0d8b] Running /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION as snmspace@138.68.8.26
+ DEBUG [1bdb0d8b] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION
+  INFO [1bdb0d8b] Finished in 0.823 seconds with exit status 0 (successful).
+  INFO [db64cb0b] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741/config as snmspace@138.68.8.26
+ DEBUG [db64cb0b] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741/config
+  INFO [db64cb0b] Finished in 0.677 seconds with exit status 0 (successful).
+ DEBUG [fa3561f5] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [fa3561f5] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml ]
+ DEBUG [fa3561f5] Finished in 0.653 seconds with exit status 1 (failed).
+ DEBUG [bbcd52c8] Running [ -f /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [bbcd52c8] Command: [ -f /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml ]
+ DEBUG [bbcd52c8] Finished in 0.688 seconds with exit status 0 (successful).
+  INFO [a94b40c5] Running /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml as snmspace@138.68.8.26
+ DEBUG [a94b40c5] Command: /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml
+  INFO [a94b40c5] Finished in 0.659 seconds with exit status 0 (successful).
+  INFO [5f17f320] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml as snmspace@138.68.8.26
+ DEBUG [5f17f320] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810070741/config/database.yml
+  INFO [5f17f320] Finished in 0.751 seconds with exit status 0 (successful).
+  INFO [61c6722a] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741 /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor /home/snmspace/apps/snmmaurya/releases/20160810070741/public as snmspace@138.68.8.26
+ DEBUG [61c6722a] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741 /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor /home/snmspace/apps/snmmaurya/releases/20160810070741/public
+  INFO [61c6722a] Finished in 0.701 seconds with exit status 0 (successful).
+ DEBUG [30acec17] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/log ] as snmspace@138.68.8.26
+ DEBUG [30acec17] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/log ]
+ DEBUG [30acec17] Finished in 1.105 seconds with exit status 1 (failed).
+ DEBUG [6579917e] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/log ] as snmspace@138.68.8.26
+ DEBUG [6579917e] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/log ]
+ DEBUG [6579917e] Finished in 1.060 seconds with exit status 0 (successful).
+  INFO [1677c855] Running /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810070741/log as snmspace@138.68.8.26
+ DEBUG [1677c855] Command: /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810070741/log
+  INFO [1677c855] Finished in 0.957 seconds with exit status 0 (successful).
+  INFO [d3d71da5] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810070741/log as snmspace@138.68.8.26
+ DEBUG [d3d71da5] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810070741/log
+  INFO [d3d71da5] Finished in 0.985 seconds with exit status 0 (successful).
+ DEBUG [6c93e20f] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [6c93e20f] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/pids ]
+ DEBUG [6c93e20f] Finished in 0.751 seconds with exit status 1 (failed).
+ DEBUG [c93226d0] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [c93226d0] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/pids ]
+ DEBUG [c93226d0] Finished in 1.117 seconds with exit status 1 (failed).
+  INFO [796948c2] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/pids as snmspace@138.68.8.26
+ DEBUG [796948c2] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/pids
+  INFO [796948c2] Finished in 2.883 seconds with exit status 0 (successful).
+ DEBUG [e981f944] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [e981f944] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/cache ]
+ DEBUG [e981f944] Finished in 5.107 seconds with exit status 1 (failed).
+ DEBUG [06e156bf] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [06e156bf] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/cache ]
+ DEBUG [06e156bf] Finished in 5.071 seconds with exit status 1 (failed).
+  INFO [693d1b70] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/cache as snmspace@138.68.8.26
+ DEBUG [693d1b70] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/cache
+  INFO [693d1b70] Finished in 1.745 seconds with exit status 0 (successful).
+ DEBUG [f6eab592] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [f6eab592] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/sockets ]
+ DEBUG [f6eab592] Finished in 2.154 seconds with exit status 1 (failed).
+ DEBUG [ef84f0c8] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [ef84f0c8] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/sockets ]
+ DEBUG [ef84f0c8] Finished in 0.725 seconds with exit status 1 (failed).
+  INFO [52a40036] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/sockets as snmspace@138.68.8.26
+ DEBUG [52a40036] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810070741/tmp/sockets
+  INFO [52a40036] Finished in 0.757 seconds with exit status 0 (successful).
+ DEBUG [c8108513] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [c8108513] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor/bundle ]
+ DEBUG [c8108513] Finished in 0.749 seconds with exit status 1 (failed).
+ DEBUG [9b8d5dff] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [9b8d5dff] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor/bundle ]
+ DEBUG [9b8d5dff] Finished in 2.828 seconds with exit status 1 (failed).
+  INFO [2c5a43d8] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor/bundle as snmspace@138.68.8.26
+ DEBUG [2c5a43d8] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810070741/vendor/bundle
+  INFO [2c5a43d8] Finished in 1.798 seconds with exit status 0 (successful).
+ DEBUG [1f629b46] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/public/system ] as snmspace@138.68.8.26
+ DEBUG [1f629b46] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/public/system ]
+ DEBUG [1f629b46] Finished in 0.687 seconds with exit status 1 (failed).
+ DEBUG [a2a341af] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/public/system ] as snmspace@138.68.8.26
+ DEBUG [a2a341af] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/public/system ]
+ DEBUG [a2a341af] Finished in 0.916 seconds with exit status 1 (failed).
+  INFO [e2565708] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810070741/public/system as snmspace@138.68.8.26
+ DEBUG [e2565708] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810070741/public/system
+  INFO [e2565708] Finished in 0.840 seconds with exit status 0 (successful).
+ DEBUG [d363ccfd] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets ] as snmspace@138.68.8.26
+ DEBUG [d363ccfd] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets ]
+ DEBUG [d363ccfd] Finished in 1.069 seconds with exit status 1 (failed).
+ DEBUG [79d2872b] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets ] as snmspace@138.68.8.26
+ DEBUG [79d2872b] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets ]
+ DEBUG [79d2872b] Finished in 1.648 seconds with exit status 1 (failed).
+  INFO [92df4a84] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets as snmspace@138.68.8.26
+ DEBUG [92df4a84] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets
+  INFO [92df4a84] Finished in 1.084 seconds with exit status 0 (successful).
+ DEBUG [c702bc4a] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [c702bc4a] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi
+ DEBUG [c702bc4a] Finished in 4.252 seconds with exit status 0 (successful).
+  INFO [f3794d45] Running ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet as snmspace@138.68.8.26
+ DEBUG [f3794d45] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet
+  INFO [f3794d45] Finished in 2.397 seconds with exit status 0 (successful).
+ DEBUG [10c26bac] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [10c26bac] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi
+ DEBUG [10c26bac] Finished in 2.552 seconds with exit status 0 (successful).
+  INFO [865ff928] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as snmspace@138.68.8.26
+ DEBUG [865ff928] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [865ff928] Finished in 3.377 seconds with exit status 0 (successful).
+ DEBUG [248fd472] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [248fd472] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi
+ DEBUG [248fd472] Finished in 1.149 seconds with exit status 0 (successful).
+  INFO [a90ff6f5] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [a90ff6f5] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810070741/assets_manifest_backup
+  INFO [a90ff6f5] Finished in 1.012 seconds with exit status 0 (successful).
+ DEBUG [2961e74f] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [2961e74f] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest*
+ DEBUG [2961e74f] 	/home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [2961e74f] Finished in 4.315 seconds with exit status 0 (successful).
+ DEBUG [e93d6313] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [e93d6313] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest*
+ DEBUG [e93d6313] 	/home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [e93d6313] Finished in 1.861 seconds with exit status 0 (successful).
+  INFO [308f6ab3] Running /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810070741/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [308f6ab3] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810070741/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810070741/assets_manifest_backup
+  INFO [308f6ab3] Finished in 3.255 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in /db/migrate
+ DEBUG [60954d75] Running diff -q /home/snmspace/apps/snmmaurya/releases/20160810070741/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate as snmspace@138.68.8.26
+ DEBUG [60954d75] Command: diff -q /home/snmspace/apps/snmmaurya/releases/20160810070741/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate
+ DEBUG [60954d75] 	diff: 
+ DEBUG [60954d75] 	/home/snmspace/apps/snmmaurya/releases/20160810070741/db/migrate
+ DEBUG [60954d75] 	: No such file or directory
+ DEBUG [60954d75] 	
+ DEBUG [60954d75] 	diff: 
+ DEBUG [60954d75] 	/home/snmspace/apps/snmmaurya/current/db/migrate
+ DEBUG [60954d75] 	: No such file or directory
+ DEBUG [60954d75] 	
+ DEBUG [60954d75] Finished in 2.806 seconds with exit status 2 (failed).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [4f2788a7] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [4f2788a7] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810070741; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810070741'" 1>&2; false; fi
+ DEBUG [4f2788a7] Finished in 0.701 seconds with exit status 0 (successful).
+  INFO [a407085b] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as snmspace@138.68.8.26
+ DEBUG [a407085b] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810070741 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [a407085b] 	rake aborted!
+ DEBUG [a407085b] 	Mysql2::Error: Access denied for user 'root'@'localhost' (using password: NO)
+ DEBUG [a407085b] 	/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.4/lib/mysql2/client.rb:87:in `connect'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.4/lib/mysql2/client.rb:87:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `mysql2_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:91:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1099:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `up'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:983:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/tasks/database_tasks.rb:161:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `<main>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `eval'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [a407085b] 	Tasks: TOP => db:migrate
+ DEBUG [a407085b] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:41:07 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [246398ce] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [246398ce] Command: [ -d ~/.rvm ]
+ DEBUG [246398ce] Finished in 3.514 seconds with exit status 0 (successful).
+ DEBUG [214fcc6f] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [214fcc6f] Command: ~/.rvm/bin/rvm version
+ DEBUG [214fcc6f] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [214fcc6f] Finished in 3.779 seconds with exit status 0 (successful).
+ DEBUG [49c40032] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [49c40032] Command: ~/.rvm/bin/rvm current
+ DEBUG [49c40032] 	ruby-2.3.1
+ DEBUG [49c40032] Finished in 3.924 seconds with exit status 0 (successful).
+ DEBUG [c76e1838] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [c76e1838] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c76e1838] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [c76e1838] Finished in 0.987 seconds with exit status 0 (successful).
+  INFO [7ca81049] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [7ca81049] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7ca81049] Finished in 0.622 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [2fa48766] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [2fa48766] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [2fa48766] Finished in 0.580 seconds with exit status 0 (successful).
+  INFO [a08d5b70] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [a08d5b70] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [a08d5b70] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [a08d5b70] Finished in 3.307 seconds with exit status 0 (successful).
+  INFO [4f483395] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [4f483395] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [4f483395] Finished in 0.608 seconds with exit status 0 (successful).
+  INFO [d7fab803] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [d7fab803] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [d7fab803] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [309c0199] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [309c0199] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config
+  INFO [309c0199] Finished in 1.061 seconds with exit status 0 (successful).
+ DEBUG [432147c8] Running [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [432147c8] Command: [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ]
+ DEBUG [432147c8] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [d579811c] Running [ -f /home/snmspace/apps/snmmaurya/current/REVISION ] as snmspace@138.68.8.26
+ DEBUG [d579811c] Command: [ -f /home/snmspace/apps/snmmaurya/current/REVISION ]
+ DEBUG [d579811c] Finished in 0.798 seconds with exit status 1 (failed).
+ DEBUG [6a21cbe2] Running [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ] as snmspace@138.68.8.26
+ DEBUG [6a21cbe2] Command: [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ]
+ DEBUG [6a21cbe2] Finished in 0.571 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/snmspace/apps/snmmaurya/repo
+ DEBUG [68d2373d] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [68d2373d] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [68d2373d] Finished in 0.580 seconds with exit status 0 (successful).
+  INFO [62db43d5] Running /usr/bin/env git remote update --prune as snmspace@138.68.8.26
+ DEBUG [62db43d5] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [62db43d5] 	Fetching origin
+  INFO [62db43d5] Finished in 2.684 seconds with exit status 0 (successful).
+ DEBUG [45446855] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [45446855] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [45446855] Finished in 0.626 seconds with exit status 0 (successful).
+  INFO [7a6cb0a0] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129 as snmspace@138.68.8.26
+ DEBUG [7a6cb0a0] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129 )
+  INFO [7a6cb0a0] Finished in 0.643 seconds with exit status 0 (successful).
+  INFO [4fca0f56] Running /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810071129 as snmspace@138.68.8.26
+ DEBUG [4fca0f56] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810071129 )
+  INFO [4fca0f56] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [2844ba05] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [2844ba05] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [2844ba05] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [9c7cf8ab] Running /usr/bin/env git rev-list --max-count=1 master as snmspace@138.68.8.26
+ DEBUG [9c7cf8ab] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9c7cf8ab] 	27f82ae441bcf16e0315e7af50efed6b73f2b500
+ DEBUG [9c7cf8ab] Finished in 0.548 seconds with exit status 0 (successful).
+ DEBUG [07ad5f9d] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [07ad5f9d] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi
+ DEBUG [07ad5f9d] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [a9dc7744] Running /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION as snmspace@138.68.8.26
+ DEBUG [a9dc7744] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION
+  INFO [a9dc7744] Finished in 0.534 seconds with exit status 0 (successful).
+  INFO [42351615] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129/config as snmspace@138.68.8.26
+ DEBUG [42351615] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129/config
+  INFO [42351615] Finished in 0.528 seconds with exit status 0 (successful).
+ DEBUG [dea4ea97] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [dea4ea97] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml ]
+ DEBUG [dea4ea97] Finished in 0.582 seconds with exit status 1 (failed).
+ DEBUG [cc3face9] Running [ -f /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [cc3face9] Command: [ -f /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml ]
+ DEBUG [cc3face9] Finished in 0.533 seconds with exit status 0 (successful).
+  INFO [a21d3901] Running /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml as snmspace@138.68.8.26
+ DEBUG [a21d3901] Command: /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml
+  INFO [a21d3901] Finished in 0.544 seconds with exit status 0 (successful).
+  INFO [c39fa887] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml as snmspace@138.68.8.26
+ DEBUG [c39fa887] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810071129/config/database.yml
+  INFO [c39fa887] Finished in 0.591 seconds with exit status 0 (successful).
+  INFO [38683d5a] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129 /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor /home/snmspace/apps/snmmaurya/releases/20160810071129/public as snmspace@138.68.8.26
+ DEBUG [38683d5a] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129 /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor /home/snmspace/apps/snmmaurya/releases/20160810071129/public
+  INFO [38683d5a] Finished in 0.564 seconds with exit status 0 (successful).
+ DEBUG [c8c3de3b] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/log ] as snmspace@138.68.8.26
+ DEBUG [c8c3de3b] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/log ]
+ DEBUG [c8c3de3b] Finished in 0.604 seconds with exit status 1 (failed).
+ DEBUG [2b404ef1] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/log ] as snmspace@138.68.8.26
+ DEBUG [2b404ef1] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/log ]
+ DEBUG [2b404ef1] Finished in 1.638 seconds with exit status 0 (successful).
+  INFO [fefe5a09] Running /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810071129/log as snmspace@138.68.8.26
+ DEBUG [fefe5a09] Command: /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810071129/log
+  INFO [fefe5a09] Finished in 0.854 seconds with exit status 0 (successful).
+  INFO [5e3db0f3] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810071129/log as snmspace@138.68.8.26
+ DEBUG [5e3db0f3] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810071129/log
+  INFO [5e3db0f3] Finished in 0.537 seconds with exit status 0 (successful).
+ DEBUG [bfedd086] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [bfedd086] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/pids ]
+ DEBUG [bfedd086] Finished in 0.756 seconds with exit status 1 (failed).
+ DEBUG [a5a86b23] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [a5a86b23] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/pids ]
+ DEBUG [a5a86b23] Finished in 0.537 seconds with exit status 1 (failed).
+  INFO [92c26ab1] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/pids as snmspace@138.68.8.26
+ DEBUG [92c26ab1] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/pids
+  INFO [92c26ab1] Finished in 0.641 seconds with exit status 0 (successful).
+ DEBUG [86bbd4e4] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [86bbd4e4] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/cache ]
+ DEBUG [86bbd4e4] Finished in 0.655 seconds with exit status 1 (failed).
+ DEBUG [10c4068e] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [10c4068e] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/cache ]
+ DEBUG [10c4068e] Finished in 0.565 seconds with exit status 1 (failed).
+  INFO [fa1dfbd2] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/cache as snmspace@138.68.8.26
+ DEBUG [fa1dfbd2] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/cache
+  INFO [fa1dfbd2] Finished in 0.626 seconds with exit status 0 (successful).
+ DEBUG [7dc733fd] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [7dc733fd] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/sockets ]
+ DEBUG [7dc733fd] Finished in 0.537 seconds with exit status 1 (failed).
+ DEBUG [56a177e4] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [56a177e4] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/sockets ]
+ DEBUG [56a177e4] Finished in 0.598 seconds with exit status 1 (failed).
+  INFO [e2e72930] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/sockets as snmspace@138.68.8.26
+ DEBUG [e2e72930] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810071129/tmp/sockets
+  INFO [e2e72930] Finished in 1.037 seconds with exit status 0 (successful).
+ DEBUG [32b7b69d] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [32b7b69d] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor/bundle ]
+ DEBUG [32b7b69d] Finished in 1.651 seconds with exit status 1 (failed).
+ DEBUG [dfa77004] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [dfa77004] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor/bundle ]
+ DEBUG [dfa77004] Finished in 0.821 seconds with exit status 1 (failed).
+  INFO [e78297d6] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor/bundle as snmspace@138.68.8.26
+ DEBUG [e78297d6] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810071129/vendor/bundle
+  INFO [e78297d6] Finished in 0.656 seconds with exit status 0 (successful).
+ DEBUG [7aa53b9a] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/public/system ] as snmspace@138.68.8.26
+ DEBUG [7aa53b9a] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/public/system ]
+ DEBUG [7aa53b9a] Finished in 0.532 seconds with exit status 1 (failed).
+ DEBUG [6c6e05eb] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/public/system ] as snmspace@138.68.8.26
+ DEBUG [6c6e05eb] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/public/system ]
+ DEBUG [6c6e05eb] Finished in 0.917 seconds with exit status 1 (failed).
+  INFO [d54a0377] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810071129/public/system as snmspace@138.68.8.26
+ DEBUG [d54a0377] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810071129/public/system
+  INFO [d54a0377] Finished in 0.819 seconds with exit status 0 (successful).
+ DEBUG [73fb4661] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets ] as snmspace@138.68.8.26
+ DEBUG [73fb4661] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets ]
+ DEBUG [73fb4661] Finished in 0.754 seconds with exit status 1 (failed).
+ DEBUG [105fe2cf] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets ] as snmspace@138.68.8.26
+ DEBUG [105fe2cf] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets ]
+ DEBUG [105fe2cf] Finished in 0.576 seconds with exit status 1 (failed).
+  INFO [41c35f38] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets as snmspace@138.68.8.26
+ DEBUG [41c35f38] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets
+  INFO [41c35f38] Finished in 0.608 seconds with exit status 0 (successful).
+ DEBUG [5cb1b4e8] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [5cb1b4e8] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi
+ DEBUG [5cb1b4e8] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [bbf0c281] Running ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet as snmspace@138.68.8.26
+ DEBUG [bbf0c281] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet
+  INFO [bbf0c281] Finished in 1.934 seconds with exit status 0 (successful).
+ DEBUG [b300da04] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [b300da04] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi
+ DEBUG [b300da04] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO [43c846a4] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as snmspace@138.68.8.26
+ DEBUG [43c846a4] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [43c846a4] Finished in 4.068 seconds with exit status 0 (successful).
+ DEBUG [c84905a4] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [c84905a4] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi
+ DEBUG [c84905a4] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [be0aef96] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [be0aef96] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071129/assets_manifest_backup
+  INFO [be0aef96] Finished in 0.694 seconds with exit status 0 (successful).
+ DEBUG [8646c491] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [8646c491] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest*
+ DEBUG [8646c491] 	/home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [8646c491] Finished in 0.923 seconds with exit status 0 (successful).
+ DEBUG [920fc66c] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [920fc66c] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest*
+ DEBUG [920fc66c] 	/home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [920fc66c] Finished in 2.524 seconds with exit status 0 (successful).
+  INFO [69b4380b] Running /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810071129/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [69b4380b] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810071129/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810071129/assets_manifest_backup
+  INFO [69b4380b] Finished in 0.799 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in /db/migrate
+ DEBUG [77336a0c] Running diff -q /home/snmspace/apps/snmmaurya/releases/20160810071129/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate as snmspace@138.68.8.26
+ DEBUG [77336a0c] Command: diff -q /home/snmspace/apps/snmmaurya/releases/20160810071129/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate
+ DEBUG [77336a0c] 	diff: /home/snmspace/apps/snmmaurya/releases/20160810071129/db/migrate: No such file or directory
+diff: /home/snmspace/apps/snmmaurya/current/db/migrate: No such file or directory
+ DEBUG [77336a0c] Finished in 0.598 seconds with exit status 2 (failed).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [7a1d3484] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [7a1d3484] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071129; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071129'" 1>&2; false; fi
+ DEBUG [7a1d3484] Finished in 0.556 seconds with exit status 0 (successful).
+  INFO [eff32a09] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as snmspace@138.68.8.26
+ DEBUG [eff32a09] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071129 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [eff32a09] 	rake aborted!
+ DEBUG [eff32a09] 	ActiveRecord::NoDatabaseError: Unknown database 'snmmaurya_production'
+ DEBUG [eff32a09] 	/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:29:in `rescue in mysql2_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:12:in `mysql2_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:91:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1099:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `up'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:983:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/tasks/database_tasks.rb:161:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `<main>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `eval'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [eff32a09] 	Mysql2::Error: Unknown database 'snmmaurya_production'
+ DEBUG [eff32a09] 	/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.4/lib/mysql2/client.rb:87:in `connect'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/mysql2-0.4.4/lib/mysql2/client.rb:87:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `mysql2_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/connection_handling.rb:91:in `connection'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1099:in `initialize'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `new'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:1005:in `up'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/migration.rb:983:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/tasks/database_tasks.rb:161:in `migrate'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/activerecord-5.0.0/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/snmspace/apps/snmmaurya/shared/bundle/ruby/2.3.0/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:63:in `kernel_load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli/exec.rb:24:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:304:in `exec'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/cli.rb:11:in `start'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:27:in `block in <top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/lib/bundler/friendly_errors.rb:98:in `with_friendly_errors'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/gems/bundler-1.12.5/exe/bundle:19:in `<top (required)>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `load'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/bundle:23:in `<main>'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `eval'
+/home/snmspace/.rvm/gems/ruby-2.3.1@global/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [eff32a09] 	Tasks: TOP => db:migrate
+ DEBUG [eff32a09] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:43:43 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7feb4b8e] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [7feb4b8e] Command: [ -d ~/.rvm ]
+ DEBUG [7feb4b8e] Finished in 3.708 seconds with exit status 0 (successful).
+ DEBUG [d349cbe7] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [d349cbe7] Command: ~/.rvm/bin/rvm version
+ DEBUG [d349cbe7] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [d349cbe7] Finished in 3.592 seconds with exit status 0 (successful).
+ DEBUG [b053f2a6] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [b053f2a6] Command: ~/.rvm/bin/rvm current
+ DEBUG [b053f2a6] 	ruby-2.3.1
+ DEBUG [b053f2a6] Finished in 5.353 seconds with exit status 0 (successful).
+ DEBUG [d66da557] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [d66da557] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [d66da557] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [d66da557] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [1661776e] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [1661776e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1661776e] Finished in 0.694 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [4716917a] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [4716917a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [4716917a] Finished in 0.579 seconds with exit status 0 (successful).
+  INFO [b0c101ee] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [b0c101ee] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [b0c101ee] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [b0c101ee] Finished in 3.500 seconds with exit status 0 (successful).
+  INFO [cd7529e0] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [cd7529e0] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [cd7529e0] Finished in 0.675 seconds with exit status 0 (successful).
+  INFO [e59f2c02] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [e59f2c02] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [e59f2c02] Finished in 1.159 seconds with exit status 0 (successful).
+  INFO [15231725] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [15231725] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/config
+  INFO [15231725] Finished in 0.565 seconds with exit status 0 (successful).
+ DEBUG [666efa69] Running [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [666efa69] Command: [ -f /home/snmspace/apps/snmmaurya/shared/config/database.yml ]
+ DEBUG [666efa69] Finished in 0.566 seconds with exit status 0 (successful).
+ DEBUG [7ed4ba0a] Running [ -f /home/snmspace/apps/snmmaurya/current/REVISION ] as snmspace@138.68.8.26
+ DEBUG [7ed4ba0a] Command: [ -f /home/snmspace/apps/snmmaurya/current/REVISION ]
+ DEBUG [7ed4ba0a] Finished in 0.580 seconds with exit status 1 (failed).
+ DEBUG [3c998df2] Running [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ] as snmspace@138.68.8.26
+ DEBUG [3c998df2] Command: [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ]
+ DEBUG [3c998df2] Finished in 0.606 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/snmspace/apps/snmmaurya/repo
+ DEBUG [12cce849] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [12cce849] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [12cce849] Finished in 0.570 seconds with exit status 0 (successful).
+  INFO [2ed2be1e] Running /usr/bin/env git remote update --prune as snmspace@138.68.8.26
+ DEBUG [2ed2be1e] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2ed2be1e] 	Fetching origin
+  INFO [2ed2be1e] Finished in 3.070 seconds with exit status 0 (successful).
+ DEBUG [e87ac255] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [e87ac255] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [e87ac255] Finished in 0.675 seconds with exit status 0 (successful).
+  INFO [cf3c2e48] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406 as snmspace@138.68.8.26
+ DEBUG [cf3c2e48] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406 )
+  INFO [cf3c2e48] Finished in 0.582 seconds with exit status 0 (successful).
+  INFO [f1b346c9] Running /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810071406 as snmspace@138.68.8.26
+ DEBUG [f1b346c9] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810071406 )
+  INFO [f1b346c9] Finished in 0.586 seconds with exit status 0 (successful).
+ DEBUG [2651a34d] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [2651a34d] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [2651a34d] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [fa6d582b] Running /usr/bin/env git rev-list --max-count=1 master as snmspace@138.68.8.26
+ DEBUG [fa6d582b] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fa6d582b] 	27f82ae441bcf16e0315e7af50efed6b73f2b500
+ DEBUG [fa6d582b] Finished in 1.054 seconds with exit status 0 (successful).
+ DEBUG [35e30106] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [35e30106] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi
+ DEBUG [35e30106] Finished in 0.598 seconds with exit status 0 (successful).
+  INFO [a44a70d0] Running /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION as snmspace@138.68.8.26
+ DEBUG [a44a70d0] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION
+  INFO [a44a70d0] Finished in 0.596 seconds with exit status 0 (successful).
+  INFO [0487a9ea] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406/config as snmspace@138.68.8.26
+ DEBUG [0487a9ea] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406/config
+  INFO [0487a9ea] Finished in 0.652 seconds with exit status 0 (successful).
+ DEBUG [af38ce55] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [af38ce55] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml ]
+ DEBUG [af38ce55] Finished in 0.570 seconds with exit status 1 (failed).
+ DEBUG [2bf05320] Running [ -f /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [2bf05320] Command: [ -f /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml ]
+ DEBUG [2bf05320] Finished in 1.813 seconds with exit status 0 (successful).
+  INFO [a8eb9d00] Running /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml as snmspace@138.68.8.26
+ DEBUG [a8eb9d00] Command: /usr/bin/env rm /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml
+  INFO [a8eb9d00] Finished in 1.311 seconds with exit status 0 (successful).
+  INFO [0cd4ca43] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml as snmspace@138.68.8.26
+ DEBUG [0cd4ca43] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/config/database.yml /home/snmspace/apps/snmmaurya/releases/20160810071406/config/database.yml
+  INFO [0cd4ca43] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [d27eee62] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406 /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor /home/snmspace/apps/snmmaurya/releases/20160810071406/public as snmspace@138.68.8.26
+ DEBUG [d27eee62] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406 /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor /home/snmspace/apps/snmmaurya/releases/20160810071406/public
+  INFO [d27eee62] Finished in 0.589 seconds with exit status 0 (successful).
+ DEBUG [4c2f1e4e] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/log ] as snmspace@138.68.8.26
+ DEBUG [4c2f1e4e] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/log ]
+ DEBUG [4c2f1e4e] Finished in 0.562 seconds with exit status 1 (failed).
+ DEBUG [77e811d1] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/log ] as snmspace@138.68.8.26
+ DEBUG [77e811d1] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/log ]
+ DEBUG [77e811d1] Finished in 0.850 seconds with exit status 0 (successful).
+  INFO [fea0a64f] Running /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810071406/log as snmspace@138.68.8.26
+ DEBUG [fea0a64f] Command: /usr/bin/env rm -rf /home/snmspace/apps/snmmaurya/releases/20160810071406/log
+  INFO [fea0a64f] Finished in 0.574 seconds with exit status 0 (successful).
+  INFO [a4256ae2] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810071406/log as snmspace@138.68.8.26
+ DEBUG [a4256ae2] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/log /home/snmspace/apps/snmmaurya/releases/20160810071406/log
+  INFO [a4256ae2] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG [06ea2737] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [06ea2737] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/pids ]
+ DEBUG [06ea2737] Finished in 0.554 seconds with exit status 1 (failed).
+ DEBUG [977ca477] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/pids ] as snmspace@138.68.8.26
+ DEBUG [977ca477] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/pids ]
+ DEBUG [977ca477] Finished in 0.562 seconds with exit status 1 (failed).
+  INFO [ee1364ff] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/pids as snmspace@138.68.8.26
+ DEBUG [ee1364ff] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/pids /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/pids
+  INFO [ee1364ff] Finished in 0.891 seconds with exit status 0 (successful).
+ DEBUG [55160550] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [55160550] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/cache ]
+ DEBUG [55160550] Finished in 0.571 seconds with exit status 1 (failed).
+ DEBUG [f4aa0994] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/cache ] as snmspace@138.68.8.26
+ DEBUG [f4aa0994] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/cache ]
+ DEBUG [f4aa0994] Finished in 0.591 seconds with exit status 1 (failed).
+  INFO [abbb5445] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/cache as snmspace@138.68.8.26
+ DEBUG [abbb5445] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/cache /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/cache
+  INFO [abbb5445] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [74ff56a8] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [74ff56a8] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/sockets ]
+ DEBUG [74ff56a8] Finished in 0.579 seconds with exit status 1 (failed).
+ DEBUG [9f7f346c] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/sockets ] as snmspace@138.68.8.26
+ DEBUG [9f7f346c] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/sockets ]
+ DEBUG [9f7f346c] Finished in 0.562 seconds with exit status 1 (failed).
+  INFO [6f030c20] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/sockets as snmspace@138.68.8.26
+ DEBUG [6f030c20] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/tmp/sockets /home/snmspace/apps/snmmaurya/releases/20160810071406/tmp/sockets
+  INFO [6f030c20] Finished in 0.570 seconds with exit status 0 (successful).
+ DEBUG [8f4efebb] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [8f4efebb] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor/bundle ]
+ DEBUG [8f4efebb] Finished in 0.560 seconds with exit status 1 (failed).
+ DEBUG [91b5fd79] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor/bundle ] as snmspace@138.68.8.26
+ DEBUG [91b5fd79] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor/bundle ]
+ DEBUG [91b5fd79] Finished in 0.613 seconds with exit status 1 (failed).
+  INFO [a3017ff2] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor/bundle as snmspace@138.68.8.26
+ DEBUG [a3017ff2] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/vendor/bundle /home/snmspace/apps/snmmaurya/releases/20160810071406/vendor/bundle
+  INFO [a3017ff2] Finished in 0.573 seconds with exit status 0 (successful).
+ DEBUG [b240c4c3] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/public/system ] as snmspace@138.68.8.26
+ DEBUG [b240c4c3] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/public/system ]
+ DEBUG [b240c4c3] Finished in 0.585 seconds with exit status 1 (failed).
+ DEBUG [062c5238] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/public/system ] as snmspace@138.68.8.26
+ DEBUG [062c5238] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/public/system ]
+ DEBUG [062c5238] Finished in 0.589 seconds with exit status 1 (failed).
+  INFO [a9e60029] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810071406/public/system as snmspace@138.68.8.26
+ DEBUG [a9e60029] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/system /home/snmspace/apps/snmmaurya/releases/20160810071406/public/system
+  INFO [a9e60029] Finished in 0.619 seconds with exit status 0 (successful).
+ DEBUG [7ce06c31] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets ] as snmspace@138.68.8.26
+ DEBUG [7ce06c31] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets ]
+ DEBUG [7ce06c31] Finished in 1.292 seconds with exit status 1 (failed).
+ DEBUG [39f54d13] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets ] as snmspace@138.68.8.26
+ DEBUG [39f54d13] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets ]
+ DEBUG [39f54d13] Finished in 0.571 seconds with exit status 1 (failed).
+  INFO [93d7e74d] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets as snmspace@138.68.8.26
+ DEBUG [93d7e74d] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets
+  INFO [93d7e74d] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [afd3ae9e] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [afd3ae9e] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi
+ DEBUG [afd3ae9e] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [3eb8f579] Running ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet as snmspace@138.68.8.26
+ DEBUG [3eb8f579] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && ~/.rvm/bin/rvm default do bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet
+  INFO [3eb8f579] Finished in 1.741 seconds with exit status 0 (successful).
+ DEBUG [7a586fc4] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [7a586fc4] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi
+ DEBUG [7a586fc4] Finished in 0.559 seconds with exit status 0 (successful).
+  INFO [6a39f5e6] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as snmspace@138.68.8.26
+ DEBUG [6a39f5e6] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [6a39f5e6] Finished in 3.183 seconds with exit status 0 (successful).
+ DEBUG [efc191cb] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [efc191cb] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi
+ DEBUG [efc191cb] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [def1b5f3] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [def1b5f3] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810071406/assets_manifest_backup
+  INFO [def1b5f3] Finished in 0.571 seconds with exit status 0 (successful).
+ DEBUG [1e07005b] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [1e07005b] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest*
+ DEBUG [1e07005b] 	/home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [1e07005b] Finished in 0.564 seconds with exit status 0 (successful).
+ DEBUG [82639207] Running /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest* as snmspace@138.68.8.26
+ DEBUG [82639207] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && /usr/bin/env ls /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest*
+ DEBUG [82639207] 	/home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json
+ DEBUG [82639207] Finished in 0.593 seconds with exit status 0 (successful).
+  INFO [b3e56e4e] Running /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810071406/assets_manifest_backup as snmspace@138.68.8.26
+ DEBUG [b3e56e4e] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && /usr/bin/env cp /home/snmspace/apps/snmmaurya/releases/20160810071406/public/assets/.sprockets-manifest-511a0ab38d42f4ff84d4d0a79f4f7124.json /home/snmspace/apps/snmmaurya/releases/20160810071406/assets_manifest_backup
+  INFO [b3e56e4e] Finished in 0.806 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in /db/migrate
+ DEBUG [ba92d2a5] Running diff -q /home/snmspace/apps/snmmaurya/releases/20160810071406/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate as snmspace@138.68.8.26
+ DEBUG [ba92d2a5] Command: diff -q /home/snmspace/apps/snmmaurya/releases/20160810071406/db/migrate /home/snmspace/apps/snmmaurya/current/db/migrate
+ DEBUG [ba92d2a5] 	diff: /home/snmspace/apps/snmmaurya/releases/20160810071406/db/migrate: No such file or directory
+diff: /home/snmspace/apps/snmmaurya/current/db/migrate: No such file or directory
+ DEBUG [ba92d2a5] Finished in 0.691 seconds with exit status 2 (failed).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [802d7524] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [802d7524] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810071406; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810071406'" 1>&2; false; fi
+ DEBUG [802d7524] Finished in 0.601 seconds with exit status 0 (successful).
+  INFO [2f121f02] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as snmspace@138.68.8.26
+ DEBUG [2f121f02] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810071406 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [2f121f02] Finished in 2.908 seconds with exit status 0 (successful).
+  INFO [639a71c1] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/releases/20160810071406 /home/snmspace/apps/snmmaurya/releases/current as snmspace@138.68.8.26
+ DEBUG [639a71c1] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/releases/20160810071406 /home/snmspace/apps/snmmaurya/releases/current
+  INFO [639a71c1] Finished in 0.632 seconds with exit status 0 (successful).
+  INFO [8cdc0cb6] Running /usr/bin/env mv /home/snmspace/apps/snmmaurya/releases/current /home/snmspace/apps/snmmaurya as snmspace@138.68.8.26
+ DEBUG [8cdc0cb6] Command: /usr/bin/env mv /home/snmspace/apps/snmmaurya/releases/current /home/snmspace/apps/snmmaurya
+  INFO [8cdc0cb6] Finished in 0.578 seconds with exit status 0 (successful).
+ DEBUG [2da67400] Running if test ! -d /home/snmspace/apps/snmmaurya/current; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/current'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [2da67400] Command: if test ! -d /home/snmspace/apps/snmmaurya/current; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/current'" 1>&2; false; fi
+ DEBUG [2da67400] Finished in 0.583 seconds with exit status 0 (successful).
+ DEBUG [0d4e069d] Running [ -e /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid ] as snmspace@138.68.8.26
+ DEBUG [0d4e069d] Command: [ -e /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid ]
+ DEBUG [0d4e069d] Finished in 0.638 seconds with exit status 1 (failed).
+  INFO unicorn is not running...
+ DEBUG [3d1d7c7f] Running if test ! -d /home/snmspace/apps/snmmaurya/current; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/current'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [3d1d7c7f] Command: if test ! -d /home/snmspace/apps/snmmaurya/current; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/current'" 1>&2; false; fi
+ DEBUG [3d1d7c7f] Finished in 0.661 seconds with exit status 0 (successful).
+ DEBUG [3273625d] Running [ -e /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid ] && kill -0 `cat /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid` as snmspace@138.68.8.26
+ DEBUG [3273625d] Command: [ -e /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid ] && kill -0 `cat /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid`
+ DEBUG [3273625d] Finished in 0.565 seconds with exit status 1 (failed).
+  INFO [4cb738fa] Running ~/.rvm/bin/rvm default do bundle exec unicorn -c /home/snmspace/apps/snmmaurya/current/config/unicorn/production.rb -E deployment -D  as snmspace@138.68.8.26
+ DEBUG [4cb738fa] Command: cd /home/snmspace/apps/snmmaurya/current && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec unicorn -c /home/snmspace/apps/snmmaurya/current/config/unicorn/production.rb -E deployment -D  )
+  INFO [4cb738fa] Finished in 3.288 seconds with exit status 0 (successful).
+ DEBUG [40d51c73] Running if test ! -d /home/snmspace/apps/snmmaurya/current; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/current'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [40d51c73] Command: if test ! -d /home/snmspace/apps/snmmaurya/current; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/current'" 1>&2; false; fi
+ DEBUG [40d51c73] Finished in 0.615 seconds with exit status 0 (successful).
+  INFO reloading...
+  INFO [ef3b54c4] Running /usr/bin/env kill -s HUP `cat /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid` as snmspace@138.68.8.26
+ DEBUG [ef3b54c4] Command: cd /home/snmspace/apps/snmmaurya/current && /usr/bin/env kill -s HUP `cat /home/snmspace/apps/snmmaurya/current/tmp/pids/unicorn.pid`
+  INFO [ef3b54c4] Finished in 0.716 seconds with exit status 0 (successful).
+ DEBUG [cfc3eac0] Running /usr/bin/env ls -xtr /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [cfc3eac0] Command: /usr/bin/env ls -xtr /home/snmspace/apps/snmmaurya/releases
+ DEBUG [cfc3eac0] 	20160810070022	20160810070741	20160810071129	20160810071406
+ DEBUG [cfc3eac0] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [db82ff48] Running if test ! -d /home/snmspace/apps/snmmaurya/releases; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [db82ff48] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases'" 1>&2; false; fi
+ DEBUG [db82ff48] Finished in 0.595 seconds with exit status 0 (successful).
+  INFO [37754c46] Running /usr/bin/env echo "Branch master (at 27f82ae441bcf16e0315e7af50efed6b73f2b500) deployed as release 20160810071406 by snm" >> /home/snmspace/apps/snmmaurya/revisions.log as snmspace@138.68.8.26
+ DEBUG [37754c46] Command: cd /home/snmspace/apps/snmmaurya/releases && /usr/bin/env echo "Branch master (at 27f82ae441bcf16e0315e7af50efed6b73f2b500) deployed as release 20160810071406 by snm" >> /home/snmspace/apps/snmmaurya/revisions.log
+  INFO [37754c46] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 13:26:54 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6cd96d90] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [6cd96d90] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6cd96d90] Finished in 4.247 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [a27ecd0a] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [a27ecd0a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [a27ecd0a] Finished in 0.509 seconds with exit status 0 (successful).
+  INFO [3d3b2b11] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [3d3b2b11] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [3d3b2b11] 	27f82ae441bcf16e0315e7af50efed6b73f2b500	refs/heads/master
+  INFO [3d3b2b11] Finished in 2.654 seconds with exit status 0 (successful).
+  INFO [cd401658] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [cd401658] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared /home/snmspace/apps/snmmaurya/releases
+  INFO [cd401658] Finished in 0.517 seconds with exit status 0 (successful).
+  INFO [39ec3bd4] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [39ec3bd4] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/shared/public/assets
+  INFO [39ec3bd4] Finished in 0.525 seconds with exit status 0 (successful).
+ DEBUG [2e5991cc] Running [ -f /home/snmspace/apps/snmmaurya/shared/puma.rb ] as snmspace@138.68.8.26
+ DEBUG [2e5991cc] Command: [ -f /home/snmspace/apps/snmmaurya/shared/puma.rb ]
+ DEBUG [2e5991cc] Finished in 0.663 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/snmspace/apps/snmmaurya/shared/puma.rb 0.0%
+  INFO Uploading /home/snmspace/apps/snmmaurya/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [78137e02] Running [ -f /home/snmspace/apps/snmmaurya/current/REVISION ] as snmspace@138.68.8.26
+ DEBUG [78137e02] Command: [ -f /home/snmspace/apps/snmmaurya/current/REVISION ]
+ DEBUG [78137e02] Finished in 1.260 seconds with exit status 1 (failed).
+ DEBUG [bf95fd2f] Running [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ] as snmspace@138.68.8.26
+ DEBUG [bf95fd2f] Command: [ -f /home/snmspace/apps/snmmaurya/repo/HEAD ]
+ DEBUG [bf95fd2f] Finished in 0.526 seconds with exit status 1 (failed).
+ DEBUG [010009b2] Running if test ! -d /home/snmspace/apps/snmmaurya; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [010009b2] Command: if test ! -d /home/snmspace/apps/snmmaurya; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya'" 1>&2; false; fi
+ DEBUG [010009b2] Finished in 0.524 seconds with exit status 0 (successful).
+  INFO [64ed8b87] Running /usr/bin/env git clone --mirror git@github.com:snmspace/snmmaurya.git /home/snmspace/apps/snmmaurya/repo as snmspace@138.68.8.26
+ DEBUG [64ed8b87] Command: cd /home/snmspace/apps/snmmaurya && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git clone --mirror git@github.com:snmspace/snmmaurya.git /home/snmspace/apps/snmmaurya/repo )
+ DEBUG [64ed8b87] 	Cloning into bare repository '/home/snmspace/apps/snmmaurya/repo'...
+  INFO [64ed8b87] Finished in 2.816 seconds with exit status 0 (successful).
+ DEBUG [2b1ce5b2] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [2b1ce5b2] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [2b1ce5b2] Finished in 0.558 seconds with exit status 0 (successful).
+  INFO [2db45227] Running /usr/bin/env git remote update --prune as snmspace@138.68.8.26
+ DEBUG [2db45227] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2db45227] 	Fetching origin
+  INFO [2db45227] Finished in 2.382 seconds with exit status 0 (successful).
+ DEBUG [7872424c] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [7872424c] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [7872424c] Finished in 0.517 seconds with exit status 0 (successful).
+  INFO [41a4ce62] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810075711 as snmspace@138.68.8.26
+ DEBUG [41a4ce62] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810075711 )
+  INFO [41a4ce62] Finished in 0.680 seconds with exit status 0 (successful).
+  INFO [569b7e7f] Running /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810075711 as snmspace@138.68.8.26
+ DEBUG [569b7e7f] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/snmspace/apps/snmmaurya/releases/20160810075711 )
+  INFO [569b7e7f] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [f6b0d790] Running if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [f6b0d790] Command: if test ! -d /home/snmspace/apps/snmmaurya/repo; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/repo'" 1>&2; false; fi
+ DEBUG [f6b0d790] Finished in 0.514 seconds with exit status 0 (successful).
+ DEBUG [f393016d] Running /usr/bin/env git rev-list --max-count=1 master as snmspace@138.68.8.26
+ DEBUG [f393016d] Command: cd /home/snmspace/apps/snmmaurya/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f393016d] 	27f82ae441bcf16e0315e7af50efed6b73f2b500
+ DEBUG [f393016d] Finished in 0.528 seconds with exit status 0 (successful).
+ DEBUG [964fe692] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810075711; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810075711'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [964fe692] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810075711; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810075711'" 1>&2; false; fi
+ DEBUG [964fe692] Finished in 0.517 seconds with exit status 0 (successful).
+  INFO [941cb2a5] Running /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION as snmspace@138.68.8.26
+ DEBUG [941cb2a5] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810075711 && /usr/bin/env echo "27f82ae441bcf16e0315e7af50efed6b73f2b500" >> REVISION
+  INFO [941cb2a5] Finished in 0.514 seconds with exit status 0 (successful).
+  INFO [ac7b0eba] Running /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810075711/public as snmspace@138.68.8.26
+ DEBUG [ac7b0eba] Command: /usr/bin/env mkdir -p /home/snmspace/apps/snmmaurya/releases/20160810075711/public
+  INFO [ac7b0eba] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [0c645498] Running [ -L /home/snmspace/apps/snmmaurya/releases/20160810075711/public/assets ] as snmspace@138.68.8.26
+ DEBUG [0c645498] Command: [ -L /home/snmspace/apps/snmmaurya/releases/20160810075711/public/assets ]
+ DEBUG [0c645498] Finished in 0.517 seconds with exit status 1 (failed).
+ DEBUG [29f4e195] Running [ -d /home/snmspace/apps/snmmaurya/releases/20160810075711/public/assets ] as snmspace@138.68.8.26
+ DEBUG [29f4e195] Command: [ -d /home/snmspace/apps/snmmaurya/releases/20160810075711/public/assets ]
+ DEBUG [29f4e195] Finished in 0.516 seconds with exit status 1 (failed).
+  INFO [0c857037] Running /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810075711/public/assets as snmspace@138.68.8.26
+ DEBUG [0c857037] Command: /usr/bin/env ln -s /home/snmspace/apps/snmmaurya/shared/public/assets /home/snmspace/apps/snmmaurya/releases/20160810075711/public/assets
+  INFO [0c857037] Finished in 0.513 seconds with exit status 0 (successful).
+ DEBUG [8bce2d0d] Running if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810075711; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810075711'" 1>&2; false; fi as snmspace@138.68.8.26
+ DEBUG [8bce2d0d] Command: if test ! -d /home/snmspace/apps/snmmaurya/releases/20160810075711; then echo "Directory does not exist '/home/snmspace/apps/snmmaurya/releases/20160810075711'" 1>&2; false; fi
+ DEBUG [8bce2d0d] Finished in 0.516 seconds with exit status 0 (successful).
+  INFO [a33d0512] Running /usr/bin/env bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet as snmspace@138.68.8.26
+ DEBUG [a33d0512] Command: cd /home/snmspace/apps/snmmaurya/releases/20160810075711 && /usr/bin/env bundle install --path /home/snmspace/apps/snmmaurya/shared/bundle --without development test --deployment --quiet
+ DEBUG [a33d0512] 	/usr/bin/env: 
+ DEBUG [a33d0512] 	bundle
+ DEBUG [a33d0512] 	: No such file or directory
+ DEBUG [a33d0512] 	
