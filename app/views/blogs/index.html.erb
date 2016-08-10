@@ -1,0 +1,45 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Feel free to comment on any blog!" %>
+
+<div class="row">
+  <div class="col-lg-10">
+    <form action="" method="get">
+      <div class="input-group">
+        <input type="text" name="search" value="<%= params[:search] %>" class="form-control" placeholder="Sunspot:Solr Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-2 text-right">
+  <%= link_to "Advance Search", advance_search_blogs_path, class: "btn btn-default", data: {toggle: :modal, target: "#advance-search-modal", remote: false} %>
+  </div>
+</div>
+<!-- Intro Content -->
+<div class="row">
+  <% if @blogs.present? %>
+    <% @blogs.each do |blog| %>
+      <div class="col-sm-12">
+        <p>
+          <p>
+            <h3>
+            <%= link_to blog_path(blog) do %>
+              <%= blog.title %>
+            <% end %>
+            </h3>
+            <%= truncate(blog.description, length: 250) %>
+          </p>
+          <div class="col-sm-12 text-right">
+          <%= render partial: "blogs/informations", locals: {datetime: blog.created_at, user: blog.user, counter: blog.comments.count } %>
+        </div>
+        </p>
+        <hr>
+      </div>
+    <% end %>
+  <% else %>
+    <%= render "shared/search_not_found" %>
+  <% end %>
+
+</div>

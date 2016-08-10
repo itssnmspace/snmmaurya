@@ -1,0 +1,146 @@
+/*!
+* Bootstrap - 3
+* Code licensed under the Apache License v2.0. for more details visit to http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+/*
+* All custom css based on bootstrap 3
+* Creating newely styles
+*/
+
+body {
+  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+footer {
+  margin: 50px 0;
+}
+
+.topic-anchor-container .topic-anchor{
+  padding: 15px;
+  display: block;
+}
+
+.topic-anchor-container .anchor-container{
+  margin-right: 5px;
+  text-align: center;
+}
+/* Custom css COMMON CSS */
+.right-border{
+  border-right: 1px solid #cccccc;
+}
+.left-border{
+  border-left: 1px solid #cccccc;
+}
+.book-index-container ul{
+  list-style: none;
+}
+.book-index-container ul li{
+  padding: 5px 0;
+}
+
+.book-index-container .selected{
+  font-weight: bold;
+  font-style: italic;
+}
+.width-hundred-percent{
+  width: 100%;
+}
+.custom-error{
+  color: #a94442;
+  padding: 10px;
+}
+.spacer-20{
+  height:20px;
+}
+.spacer-10{
+  height:10px;
+}
+.clear{
+  clear:both;
+}
+.error{
+ color: #a94442;
+}
+.border-one{
+  border: 1px solid #708090;
+}
+.bg-color-green-one{
+  background-color: #dff0d8;
+}
+.bg-color-green-two{
+  background-color: #3c763d;
+}
+.bg-color-red-one{
+  background-color: #a94442;
+}
+.featured{
+  font-size: 10px;
+}
+.text-title{
+  font-weight: bold;
+}
+.text-description{
+  font-weight: normal;
+}
+.text-information{
+  font-size: 12px;
+  font-style: italic;
+  display: inline;
+}
+/* END Custom css COMMON CSS */
+
+
+/* Custom css for editors */
+#editor-preview #header{
+  display: block;
+  font-weight: bold;
+}
+/* END Custom css for editors */
+
+
+/* Custom css for anchors for solutions */
+
+/* END Custom css for anchors for solutions */
+
+
+/* Custom css for Rubiest */
+.rubiests-anchor.selected, .lessions-anchor.selected{
+  color: #123456;
+  font-weight: bold;
+  font-style: italic;
+}
+/* END Custom css for Rubiest */
+
+
+/* Custom css for profile main page */
+.home-page-image{
+  height: 200px;
+  width: 250px;
+}
+.profile-image{
+  height: 250px;
+  width: 300px;
+}
+.home-page-image{
+  height: 200px;
+  width: 250px;
+}
+.main-link{
+  display: block;
+  padding: 10px;
+}
+@media (min-width: 1022px) {
+  .mine-info-container{
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+
+}
+/* END Custom css for profile main page */

@@ -1,0 +1,42 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Education / Professional / Technologies All about me!" %>
+<%= render "shared/meta_data" %>
+<!-- Intro Content -->
+<div class="row">
+  <div class="col-sm-7">
+    <h3>Employment</h3>
+    <% @employments.each_with_index do |employment, index| %>
+      <h5>
+      <%= employment.role %> - <%= employment.name %> (<%= datetimeformat(employment.get_started_at) %> - <%= datetimeformat(employment.get_end_at) %>)
+      </h5>
+      <%= employment.description %>
+      <% if @employments.count > index + 1 %>
+        <hr>
+      <% end %>
+    <% end %>
+    <hr>
+    <h3>Education</h3>
+    <% @educations.each_with_index do |education, index| %>
+      <h5>
+        <%= education.cource %> - <%= education.college %>(<%= datetimeformat(education.get_started_at) %> - <%= datetimeformat(education.get_completed_at) %>)
+      </h5>
+      <%= education.description %>
+      <% if @educations.count > index + 1 %>
+        <hr>
+      <% end %>
+    <% end %>
+    </div>
+
+
+  <div class="col-sm-5">
+    <% @technology_types.each do |technology_type| %>
+      <h3><%= technology_type.title %></h3>
+      <div>
+        <% if technology_type.technologies.present? %>
+          <%= technology_type.technologies.map{|technology| technology.name}.join("<br>").html_safe %>
+        <% else %>
+          ......
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

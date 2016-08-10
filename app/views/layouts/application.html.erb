@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Snmmaurya</title>
+    <!-- Default meta data setting if page has not meta data -->
+    <% meta_options = default_meta_data %>
+    <%= metamagic title: meta_options[:title], description: meta_options[:description], keywords: meta_options[:keywords] %>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+
+    <%= render "shared/flash_message" %>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+          <%= yield :header_title %>
+        </div>
+        <!-- /.row -->
+
+        <%= yield %>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; snmmaurya.herokuapp.com 2016-2020</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <%= render "shared/modal" %>
   </body>
 </html>

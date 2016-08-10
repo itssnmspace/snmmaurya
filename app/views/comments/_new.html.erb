@@ -1,0 +1,7 @@
+<%= form_for [@blog, Comment.new] do |form| %>
+  <%= form.label "Comment" %><br>
+  <%= form.text_field :title %><br>
+  <%= form.text_area :description %><br>
+
+  <%= form.submit "Submit" %>
+<% end %>

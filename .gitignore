@@ -22,3 +22,7 @@
 /config/database.yml
 /config/nginx.conf
 /config/secrets.yml
+/solr/*
+/log/development.log
+/config/aws.yml
+/config/settings.yml

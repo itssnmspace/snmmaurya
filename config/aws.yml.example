@@ -1,0 +1,10 @@
+development:
+  access_key_id: accessid
+  secret_access_key: accesskey
+  bucket: bucketname
+  region: region
+production:
+  access_key_id: accessid
+  secret_access_key: accesskey
+  bucket: bucketname
+  region: region

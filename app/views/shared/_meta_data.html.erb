@@ -1,0 +1,13 @@
+<% meta_options = setup_meta_data(defined?(data) ? data : nil) %>
+<% meta title: meta_options[:title], description: meta_options[:description], keywords: meta_options[:keywords] %>
+<!-- Sharing image on social like facebook and twitter -->
+<% if defined?(image) %>
+  <!-- Facebook -->
+  <% meta og: { image: image.sub("https", "http") } %>
+  <% meta og: { image: {secure_url: image} } %>
+  <% meta og: { image: {width: "255"} } %>
+  <% meta og: { image: {height: "255"} } %>
+
+  <!-- Twitter -->
+  <% meta twitter: { image: image } %>
+<% end %>

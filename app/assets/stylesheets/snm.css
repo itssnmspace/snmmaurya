@@ -1,0 +1,24 @@
+/*!
+* Bootstrap - 3
+* Code licensed under the Apache License v2.0. for more details visit to http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+/*
+* All override css based on bootstrap 3
+* Creating styles for ciritical task
+*/
+
+.snm-border-style-one{
+  border: 1px #cccccc solid;
+}
+.snm-height-four{
+  height: 400px;
+}
+.snm-image-size-portfolio-one{
+  height: 250px;
+  width: 100%;
+}
+.snm-image-profile-one{
+  height: 250px;
+  width: 100%;
+}

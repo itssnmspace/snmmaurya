@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title" id="portfolioModalLabel"><%= @portfolio.title %></h4>
+</div>
+<div class="modal-body">
+  <%= image_tag @portfolio.images.last.data.url(:original), alt: @portfolio.title, class: "snm-image-size-portfolio-one" %>
+  <h4>URL:</h4>
+  <%= link_to @portfolio.url, @portfolio.url, alt: @portfolio.title %>
+  <h4>Tools:</h4>
+  <ul>
+    <% @portfolio.tools.split(",").each do |tool| %>
+      <li><%= tool %></li>
+    <% end %>
+  </ul>
+  <h4>Description:</h4>
+  <p><%= @portfolio.description %></p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>

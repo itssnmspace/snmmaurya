@@ -1,0 +1,5 @@
+<% if @options[:status] == "failed" %>
+  SnmJS.custom.cunstructErrorMessageController("signin-error", "error", "<%= @options[:message] %>");
+<% else %>
+  window.location.href = "<%= session[:origin] || root_path %>"
+<% end %>

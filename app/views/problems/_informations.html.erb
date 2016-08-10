@@ -1,0 +1,7 @@
+<div class="text-information">
+  <% if defined?(counter) %>
+    <span class="solution-counter"><span class="text-title">Solutions# </span><%= counter %></span>
+  <% end %>
+  <span class="problem-created-at"><span class="text-title">Created On </span><%= datetimeformat(datetime, 2)%></span>
+  <span class="problem-by"><span class="text-title">By </span><%= user.try(:username) %></span> 
+</div>

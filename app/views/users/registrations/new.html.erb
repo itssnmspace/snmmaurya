@@ -1,0 +1,43 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Fill registration form to signup!" %>
+
+<!-- Intro Content -->
+<div class="row">
+  <div class="col-sm-7">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
+      <%= devise_error_messages! %>
+
+      <fieldset class="form-group">
+        <%= form.label :email %><br />
+        <%= form.email_field :email, autofocus: true, class: "form-control" %>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <%= form.label :username %><br />
+        <%= form.text_field :username, class: "form-control" %>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <%= form.label :contact %><br />
+        <%= form.text_field :contact, class: "form-control" %>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <%= form.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= form.password_field :password, autocomplete: "off", class: "form-control" %>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <%= form.label :password_confirmation %><br />
+        <%= form.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      </fieldset>
+
+      <div class="actions">
+        <%= form.submit "Signup", class: "btn btn-primary width-hundred-percent" %>
+      </div>
+    <% end %>
+    <%= render "users/shared/links" %>
+  </div>
+</div>

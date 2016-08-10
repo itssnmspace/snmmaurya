@@ -1,0 +1,2 @@
+class MetaDataSocial < ApplicationRecord
+end

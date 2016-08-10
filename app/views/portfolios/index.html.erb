@@ -1,0 +1,29 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Portfolios the projects I have worked on!" %>
+
+<!-- Start row -->
+<div class="row">
+  <% @portfolios.each do |portfolio| %>
+    <div class="col-md-6 portfolio-item text-center snm-height-four">
+      <a href="<%= portfolio_path(portfolio) %>" data-toggle="modal" data-target="#portfolioModal", data-remote="false">
+        <%= image_tag portfolio.images.last.data.url(:original), alt: portfolio.title, class: "snm-image-size-portfolio-one" %>
+      </a>
+      <h3>
+        <%= link_to portfolio.title, "javascript: void(0)" %>
+      </h3>
+      <p>
+        <div>
+          <strong>Tools: </strong>
+          <%= portfolio.tools %>
+        </div>
+        <%= portfolio.description %>
+      </p>
+    </div>
+  <% end %>
+</div>
+<!-- /.row -->
+<!-- Default bootstrap modal example -->
+<div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Feel free to contact with me!" %>
+
+<!-- Start row -->
+<div class="row">
+
+<div class="col-sm-6">
+  <span><Strong>Name: </Strong></span> Sandeep Maurya
+  <hr>
+  <span><Strong>Email: </Strong></span> snmmaurya@gmail.com / snmspace@gmail.com
+  <hr>
+  <span><Strong>Contact: </Strong></span> +91 7666760715
+  <hr>
+  <span><Strong>Website: </Strong></span> <a href="http://snmmaurya.herokuapp.com">http://snmmaurya.herokuapp.com</a>
+  <hr>
+  <span><Strong>Github: </Strong></span> <a href="https://www.github.com/snmmaurya">snmmaurya</a>
+  <hr>
+  <span><Strong>Twitter: </Strong></span> <a href="https://www.twitter.com/snmmaurya">snmmaurya</a>
+  <hr>
+</div>
+<div class="col-sm-6">
+  <%= form_for @contact, url: create_contact_pages_path do |form| %>
+   <fieldset class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, autofocus: true, class: "form-control" %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class: "form-control" %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, class: "form-control" %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control" %>
+  </fieldset>
+
+  <div class="actions">
+    <%= form.submit "Submit Comment", class: "btn btn-primary width-hundred-percent" %>
+  </div>
+<% end %>
+
+</div>
+</div>

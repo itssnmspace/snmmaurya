@@ -1,0 +1,31 @@
+<%= render 'shared/header_title', header_title: "Available Downlads", header_sub_title: "" %>
+
+<!-- Start row -->
+<div class="row">
+  <div class="col-md-12">
+    <% if @downloads.count > 0 %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @downloads.each do |download| %>
+             <tr class="table-<%= download.status.present? ? "success" : "active" %>">
+               <td><%= download.id %></td>
+               <td><%= download.title %></td>
+               <td><%= download.status.present? ? "Completed" : "Processing" %></td>
+               <td><%= link_to download.title, "#{Settings.host_url}downloads/#{download.download}" %></td>
+             </tr>
+           <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <%= render partial: "shared/data_not_found" %>
+    <% end %>
+  </div>
+</div>

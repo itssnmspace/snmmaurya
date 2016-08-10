@@ -1,0 +1,22 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Study content releted to #{@study.try(:title)}" %>
+
+<!-- Start row -->
+<div class="row">
+  <div class="col-md-4 lessions-container">
+    <% @lessions.each do |lession| %>
+      <%= link_to lession.title, study_lession_path(@study, lession, page: (params[:page] || 1)), class: "lessions-anchor #{"selected" if @lession.id == lession.id}" %>
+      <% if lession.featured? %>
+        <sup class="featured btn btn-danger btn-xs">Featured</sup>
+      <% end %>
+      <hr>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <%= @lession.try(:description).try(:html_safe) %>
+  </div>
+
+  <div class="col-sm-12">
+    <%= paginate @lessions %>
+  </div>
+</div>
+<!-- /.row -->

@@ -1,0 +1,30 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Specify your problem related to #{@topic.title}" %>
+
+<%= render "shared/solution_anchors" %>
+<!-- Intro Content -->
+<div class="row">
+  <div class="col-sm-8">
+    <%= form_for [:topic, @problem] do |form| %>
+     <fieldset class="form-group">
+      <%= form.label "Related To Language", for: "topic" %>
+      <%= form.select :topic_id, options_for_select(Topic.topic_options, @topic.id), {}, {:class => "form-control"} %>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <%= form.label "Title", for: "title" %>
+      <%= form.text_field :title, class: "form-control", placeholder: "Title...." %>
+    </fieldset>
+
+    <fieldset class="form-group">
+      <%= form.label "Query", for: "Query" %>
+      <%= form.text_area :description, id: "editor", class: "form-control", placeholder: "Query...." %>
+    </fieldset>
+    <div id="editor-preview">
+      <span id="header"></span>
+      <span id="data"></span>
+    </div>
+
+    <button type="submit" class="btn btn-info width-hundred-percent">Query</button>
+    <% end %>
+  </div>
+</div>

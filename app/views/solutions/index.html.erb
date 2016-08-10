@@ -1,0 +1,19 @@
+<%= render 'shared/header_title', header_title: "Solutions", header_sub_title: "A question answer system" %>
+
+<!-- Start row -->
+<div class="row">
+  <% @solutions.each do |solution| %>
+    <div class="col-md-6 portfolio-item text-center snm-height-four">
+      <a href="<%= solution_questions_path(solution) %>">
+        <%= image_tag solution.images.last.data.url(:original), alt: solution.title, class: "snm-image-size-portfolio-one" %>
+      </a>
+      <h3>
+        <%= link_to solution.title, solution_questions_path(solution) %>
+      </h3>
+      <p>
+        <%= solution.description %>
+      </p>
+    </div>
+  <% end %>
+</div>
+<!-- /.row -->

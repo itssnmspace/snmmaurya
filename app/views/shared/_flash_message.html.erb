@@ -1,0 +1,6 @@
+<% message, message_class = create_flash_message_and_class %>
+<% if message.present? %>
+  <div class="alert alert-<%= message_class %> flash_message">
+    <%= message %>
+  </div>
+<% end %>

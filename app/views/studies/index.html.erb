@@ -1,0 +1,21 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Study content" %>
+
+<!-- Start row -->
+<div class="row">
+  <% @studies.each do |study| %>
+    <div class="col-md-6 portfolio-item text-center snm-height-four">
+      <a href="<%= study_lessions_path(study) %>">
+        <% if study.images.last.present? %>
+          <%= image_tag study.images.last.data.url(:original), alt: study.title, class: "snm-image-size-portfolio-one" %>
+        <% end %>
+      </a>
+      <h3>
+        <%= link_to study.title, study_lessions_path(study) %>
+      </h3>
+      <p>
+        <%= study.description.try(:html_safe) %>
+      </p>
+    </div>
+  <% end %>
+</div>
+<!-- /.row -->

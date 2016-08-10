@@ -1,0 +1,13 @@
+<%= form_for [@topic, @problem, @solution] do |form| %>
+    <fieldset class="form-group">
+      <%= form.label "Solution", for: "Solution" %>
+      <%= form.text_area :description, id: "editor", class: "form-control", placeholder: "Solution...." %>
+    </fieldset>
+    <div id="editor-preview">
+      <span id="header"></span>
+      <span id="data"></span>
+    </div>
+    <!-- hidden fields -->
+    <%= hidden_field_tag "solution[problem_id]", @problem.id %>
+  <button type="submit" class="btn btn-primary">Solution Submition</button>
+<% end %>

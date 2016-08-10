@@ -1,0 +1,55 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h3 class="modal-title text-center">Blog Advance Search</h4>
+</div>
+<div class="modal-body">
+
+<%= form_tag blogs_path, method: :get do |form| %>
+  <fieldset class="form-group">
+    <%= label_tag :Search %>
+    <%= text_field_tag :search, nil, class: "form-control" %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <%= label_tag "Specific User" %>
+    <%= select_tag :user_id, options_for_select(User.user_options), class: "form-control" %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <%= check_box_tag :featured %>
+    <%= label_tag :featured %>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <%= label_tag :from %>
+          <div class='input-group date' id='from-date-timepicker'>
+            <input type='text' class="form-control" name="from" />
+            <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <%= label_tag :to %>
+          <div class='input-group date' id='to-date-timepicker'>
+            <input type='text' class="form-control" name="to" />
+            <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="actions">
+    <%= submit_tag "Advance Search", class: "btn btn-primary width-hundred-percent" %>
+  </div>
+
+<% end %>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>

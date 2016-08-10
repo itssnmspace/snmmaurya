@@ -1,0 +1,4 @@
+<div class="text-information">
+  <%=  link_to "Edit", edit_topic_problem_solution_path(@topic, @problem, solution), role: "button", data: {remote: true} %> &nbsp;
+  <%=  link_to "Delete",  topic_problem_solution_path(@topic, @problem, solution), role: "button", method: :delete, data: {confirm: "Are you sure ?"} %> &nbsp;
+</div>

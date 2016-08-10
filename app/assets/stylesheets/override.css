@@ -1,0 +1,56 @@
+/*!
+* Bootstrap - 3
+* Code licensed under the Apache License v2.0. for more details visit to http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+/*
+* All override css based on bootstrap 3
+* Overriding to modify default styles of bootstrap
+*/
+
+a{
+  text-decoration: none !important;
+  color: #008080 !important;
+}
+a:hover{
+  /*color: #123456 !important;*/
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+.flash_message{
+  margin-top: -20px;
+  text-align: center;
+}
+.media{
+  padding: 0 0 0 20px !important;
+}
+.snm-comment-border-spacer{
+  padding: 25px 0;
+  border-bottom: 1px solid #cccccc;
+}
+.snm-navbar-inverse{
+  background-color: #FFFFFF !important;
+}
+body, small{
+  color: #008080 !important;
+}
+.btn-info{
+  background-color: #008080 !important;
+  border-color: #46b8da !important;
+  color: #fff !important;
+}
+.page-header{
+  margin: 0 0 20px
+}
+.snm-navbar-toggle{
+  background-color: #008080 !important;
+}
+h3.page-header small{
+  font-style: italic;
+  font-weight: bold;
+}
+h3, .h3 {
+  font-size: 16px !important;
+  font-weight: bold;
+}
