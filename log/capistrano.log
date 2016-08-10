@@ -1,0 +1,44 @@
+# Logfile created on 2016-08-10 12:10:04 +0530 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-10 12:10:04 +0530 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8412985f] Running [ -d ~/.rvm ] as snmspace@138.68.8.26
+ DEBUG [8412985f] Command: [ -d ~/.rvm ]
+ DEBUG [8412985f] Finished in 5.793 seconds with exit status 0 (successful).
+ DEBUG [fb7c3ae8] Running ~/.rvm/bin/rvm version as snmspace@138.68.8.26
+ DEBUG [fb7c3ae8] Command: ~/.rvm/bin/rvm version
+ DEBUG [fb7c3ae8] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [fb7c3ae8] Finished in 3.644 seconds with exit status 0 (successful).
+ DEBUG [7d4d5ba1] Running ~/.rvm/bin/rvm current as snmspace@138.68.8.26
+ DEBUG [7d4d5ba1] Command: ~/.rvm/bin/rvm current
+ DEBUG [7d4d5ba1] 	ruby-2.3.1
+ DEBUG [7d4d5ba1] Finished in 3.268 seconds with exit status 0 (successful).
+ DEBUG [6414a176] Running ~/.rvm/bin/rvm default do ruby --version as snmspace@138.68.8.26
+ DEBUG [6414a176] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [6414a176] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [6414a176] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [afb15616] Running /usr/bin/env mkdir -p /tmp as snmspace@138.68.8.26
+ DEBUG [afb15616] Command: /usr/bin/env mkdir -p /tmp
+  INFO [afb15616] Finished in 0.543 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 0.0%
+  INFO Uploading /tmp/git-ssh-snmmaurya-production-snm.sh 100.0%
+  INFO [0f1d0b49] Running /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh as snmspace@138.68.8.26
+ DEBUG [0f1d0b49] Command: /usr/bin/env chmod 700 /tmp/git-ssh-snmmaurya-production-snm.sh
+  INFO [0f1d0b49] Finished in 0.584 seconds with exit status 0 (successful).
+  INFO [df950c78] Running /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git as snmspace@138.68.8.26
+ DEBUG [df950c78] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-snmmaurya-production-snm.sh" ; /usr/bin/env git ls-remote --heads git@github.com:snmspace/snmmaurya.git )
+ DEBUG [df950c78] 	b25cccdc449f1118d3e9687ae54a8aabffca0682	refs/heads/master
+  INFO [df950c78] Finished in 4.061 seconds with exit status 0 (successful).
+  INFO [924a180c] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared /home/snmspace/snmmaurya/releases as snmspace@138.68.8.26
+ DEBUG [924a180c] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared /home/snmspace/snmmaurya/releases
+  INFO [924a180c] Finished in 0.623 seconds with exit status 0 (successful).
+  INFO [fce591f0] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/log /home/snmspace/snmmaurya/shared/tmp/pids /home/snmspace/snmmaurya/shared/tmp/cache /home/snmspace/snmmaurya/shared/tmp/sockets /home/snmspace/snmmaurya/shared/vendor/bundle /home/snmspace/snmmaurya/shared/public/system /home/snmspace/snmmaurya/shared/public/assets as snmspace@138.68.8.26
+ DEBUG [fce591f0] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/log /home/snmspace/snmmaurya/shared/tmp/pids /home/snmspace/snmmaurya/shared/tmp/cache /home/snmspace/snmmaurya/shared/tmp/sockets /home/snmspace/snmmaurya/shared/vendor/bundle /home/snmspace/snmmaurya/shared/public/system /home/snmspace/snmmaurya/shared/public/assets
+  INFO [fce591f0] Finished in 0.730 seconds with exit status 0 (successful).
+  INFO [056047ae] Running /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/config as snmspace@138.68.8.26
+ DEBUG [056047ae] Command: /usr/bin/env mkdir -p /home/snmspace/snmmaurya/shared/config
+  INFO [056047ae] Finished in 0.743 seconds with exit status 0 (successful).
+ DEBUG [9c35b50c] Running [ -f /home/snmspace/snmmaurya/shared/config/database.yml ] as snmspace@138.68.8.26
+ DEBUG [9c35b50c] Command: [ -f /home/snmspace/snmmaurya/shared/config/database.yml ]
+ DEBUG [9c35b50c] Finished in 0.557 seconds with exit status 1 (failed).
+ ERROR linked file /home/snmspace/snmmaurya/shared/config/database.yml does not exist on 138.68.8.26
