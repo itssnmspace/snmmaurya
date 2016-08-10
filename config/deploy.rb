@@ -52,8 +52,8 @@ namespace :deploy do
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:app) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/master`
-        puts "WARNING: HEAD is not the same as origin/master"
+      unless `git rev-parse HEAD` == `git rev-parse snmspace/master`
+        puts "WARNING: HEAD is not the same as snmspace/master"
         puts "Run `git push` to sync changes."
         exit
       end
@@ -79,4 +79,13 @@ namespace :deploy do
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+end
+
+
+# Force invocation of the given task, even if it has already been run
+module Capistrano::DSL
+  def invoke(task, reenable: true, **args)
+    Rake::Task[task].invoke(args)
+    Rake::Task[task].reenable if reenable
+  end
 end

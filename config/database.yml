@@ -51,4 +51,4 @@ production:
   <<: *default
   database: snmmaurya_production
   username: root
-  password: <%= ENV['SNMMAURYA_DATABASE_PASSWORD'] %>
+  password: root
