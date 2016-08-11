@@ -34,6 +34,11 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rspec-rails'
 
+#Solr Search
+gem 'sunspot_rails'
+gem 'progress_bar'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -50,7 +55,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
   gem 'pry'
 end
 
@@ -70,10 +74,6 @@ gem 'omniauth-google'
 gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
-
-#Solr Search
-gem 'sunspot_rails'
-gem 'progress_bar'
 
 #Seo Setting gems
 gem 'metamagic'
