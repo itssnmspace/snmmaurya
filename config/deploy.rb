@@ -15,7 +15,7 @@ set :use_sudo,        false
 set :stage,           :production
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
-set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
+set :puma_bind,       "unix:///tmp/snmmaurya.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
@@ -72,6 +72,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       invoke 'puma:restart'
+      invoke 'sidekiq:start'
     end
   end
 
@@ -83,32 +84,33 @@ namespace :deploy do
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
-  after  :finishing,    :sidekiq:start
+  after 'deploy:publishing', 'deploy:restart'
 end
 
 
-namespace :solr do
-  desc "start solr"
-  task :start, :roles => :app, :except => { :no_release => true } do
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-  end
-  desc "stop solr"
-  task :stop, :roles => :app, :except => { :no_release => true } do
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-  end
-  desc "reindex the whole database"
-  task :reindex, :roles => :app do
-    stop
-    run "rm -rf #{shared_path}/solr/data"
-    start
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
-  end
-end
+# namespace :solr do
+#   desc "start solr"
+#   task :start, :roles => :app, :except => { :no_release => true } do
+#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
+#   end
+#   desc "stop solr"
+#   task :stop, :roles => :app, :except => { :no_release => true } do
+#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
+#   end
+#   desc "reindex the whole database"
+#   task :reindex, :roles => :app do
+#     stop
+#     run "rm -rf #{shared_path}/solr/data"
+#     start
+#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
+#   end
+# end
 
 namespace :sidekiq do
   task :start do
-    run "cd #{current_path} && bundle exec sidekiq -q high,5 default,1 -e production -L log/sidekiq.log &"
-    p capture("ps aux | grep sidekiq | awk '{print $2}' | sed -n 1p").strip!
+    on roles(:app) do
+      # execute("bundle exec sidekiq -c 10 -e production")
+    end
   end
 end
 
