@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805052830) do
+ActiveRecord::Schema.define(version: 20160813112014) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -369,13 +369,9 @@ ActiveRecord::Schema.define(version: 20160805052830) do
     t.string   "resume_pdf_content_type"
     t.integer  "resume_pdf_file_size"
     t.datetime "resume_pdf_updated_at"
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.string   "uid"
+    t.string   "provider"
     t.index ["role_id"], name: "index_users_on_role_id", using: :btree
-    t.index ["slug"], name: "index_users_on_slug", unique: true, using: :btree
-    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
-    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
   add_foreign_key "blogs", "users"
