@@ -445,6 +445,7 @@ DEPENDENCIES
   devise
   draper (> 3.x)
   factory_girl_rails
+  ffi
   friendly_id (~> 5.1.0)
   inherited_resources!
   jbuilder (~> 2.5)

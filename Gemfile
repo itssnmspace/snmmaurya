@@ -56,6 +56,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry'
 end
+
+gem 'ffi' # -v '1.9.14
 gem 'listen', '~> 3.0.5'
 gem 'config'
 
