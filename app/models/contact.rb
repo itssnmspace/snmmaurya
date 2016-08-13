@@ -13,7 +13,7 @@ class Contact < ApplicationRecord
       contact: self.contact,
       message: self.message,
       from: self.email,
-      subject: "Snmmaurya: Contact Request"
+      subject: "Snmmaurya: Contact Request",
       to: Settings.administrator_emails.informations
     }).deliver_now
   end
