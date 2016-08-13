@@ -57,7 +57,7 @@ group :development do
   gem 'pry'
 end
 
-gem 'ffi' # -v '1.9.14
+gem 'ffi',  '1.9.14'
 gem 'listen', '~> 3.0.5'
 gem 'config'
 
