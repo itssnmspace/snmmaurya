@@ -30,8 +30,14 @@ bundle exec puma -e production -b unix:///tmp/snmmaurya.sock
 
 posgtres:
 **************
+
+sudo su - postgres
+
+
+
 command line login: psql
 
+sudo -u postgres psql postgres
 
 **********************************************************************************
 
