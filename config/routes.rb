@@ -37,6 +37,9 @@ Rails.application.routes.draw do
 
   resources :rubiests
 
+  #scoping is the way to just remove namespaces
+  #path: /contat
+  #route: contact_path
   scope :module => "pages" do
     get :contact
     post :create_contact

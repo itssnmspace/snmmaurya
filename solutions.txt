@@ -1,0 +1,136 @@
+https://github.com/ffi/ffi
+
+
+
+
+
+
+
+
+
+
+Some commands:
+==================================================================================
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+RAILS_ENV=production bundle exec rake sunspot:solr:restart
+RAILS_ENV=production bundle exec rake sunspot:solr:stop
+RAILS_ENV=production bundle exec rake sunspot:solr:reindex
+
+**********************************************************************************
+
+
+puma:
+**************
+bundle exec puma -e production -b unix:///tmp/snmmaurya.sock
+
+**********************************************************************************
+
+
+posgtres:
+**************
+command line login: psql
+
+
+**********************************************************************************
+
+
+
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+
+**********************************************************************************
+
+
+
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+
+**********************************************************************************
+
+
+
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+
+**********************************************************************************
+
+
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+
+**********************************************************************************
+
+
+
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+
+**********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ruby#11$@Social
+
+Social Setup
+==================================================================================
+Facebook
+
+snmmaurya.com
+appname: snmmaurya
+appid: 282741802097343
+secret: 0152d1ac99220d48e7de3c273bae2fbb
+
+
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '282741802097343',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+Facebook like button
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
