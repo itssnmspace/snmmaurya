@@ -33,7 +33,8 @@ set :log_level,     :debug
 set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
-set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml}
+## All the files must be reside in shared/config/filename.extn will be automatically copied to current/config/filename.extn
+set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml config/puma.rb}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do

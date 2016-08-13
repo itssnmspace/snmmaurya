@@ -11,7 +11,25 @@ class PagesController < ApplicationController
     else
       flash[:error] = "Unable to process! #{@contact.errors.full_messages.join(', ')}"
     end
-    redirect_to contact_pages_path
+    redirect_to contact_path
+  end
+
+  def terms
+  end
+
+  def policies
+  end
+
+  #Render static pages
+  #params[:page] has partial/erb file name
+  #pages_path(page: "filename", layout: true/false)
+  def pages
+    if params[:page].present?
+      render params[:page], layout: (params[:layout].present? ? params[:layout] : true)
+    else
+      flash[:error] = "You are trying to access wrong page/path!"
+      redirect_to root_path
+    end
   end
 
 private

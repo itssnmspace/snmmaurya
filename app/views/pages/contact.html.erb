@@ -18,7 +18,7 @@
   <hr>
 </div>
 <div class="col-sm-6">
-  <%= form_for @contact, url: create_contact_pages_path do |form| %>
+  <%= form_for @contact, url: create_contact_path do |form| %>
    <fieldset class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, autofocus: true, class: "form-control" %>

@@ -36,11 +36,13 @@ Rails.application.routes.draw do
   end
 
   resources :rubiests
-  resources :pages do
-    collection do
-      get :contact
-      post :create_contact
-    end
+
+  scope :module => "pages" do
+    get :contact
+    post :create_contact
+    get :terms
+    get :policies
+    get :pages
   end
 
   resources :downloads, only: :index do

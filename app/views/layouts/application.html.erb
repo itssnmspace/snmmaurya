@@ -17,25 +17,36 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Page Header -->
+      <!-- Page Header -->
+      <div class="row">
+        <%= yield :header_title %>
+      </div>
+      <!-- /.row -->
+
+      <%= yield %>
+
+      <hr>
+
+      <!-- Footer -->
+      <footer>
         <div class="row">
-          <%= yield :header_title %>
+          <div class="col-lg-12">
+            <div class="col-lg-4">
+              <ul>
+                <li><%= link_to "Terms & Conditions", terms_path %></li>
+                <li><%= link_to "Terms & Policies", policies_path %></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              
+            </div>
+            <div class="col-lg-4">
+              Copyright &copy; <%= link_to "http://www.snmmaurya.com", root_path %>
+            </div>
+          </div>
         </div>
         <!-- /.row -->
-
-        <%= yield %>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; snmmaurya.herokuapp.com 2016-2020</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+      </footer>
 
     </div>
     <!-- /.container -->
