@@ -26,3 +26,4 @@
 /log/development.log
 /config/aws.yml
 /config/settings.yml
+/spec/*
