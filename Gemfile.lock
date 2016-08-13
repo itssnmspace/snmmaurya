@@ -445,13 +445,12 @@ DEPENDENCIES
   devise
   draper (> 3.x)
   factory_girl_rails
-  ffi (= 1.9.14)
   friendly_id (~> 5.1.0)
   inherited_resources!
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
-  listen (~> 3.0.5)
+  listen
   metamagic
   mysql2
   omniauth
