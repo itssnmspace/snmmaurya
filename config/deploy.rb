@@ -26,6 +26,11 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
+
+#Assets adding prefix as in environments/production.rb
+# set :assets_prefix, "/shared/public/assets"
+# set :bundle_binstubs, -> { shared_path.join('bin') }
+
 ## Defaults:
 set :scm,           :git
 set :branch,        :master
@@ -53,8 +58,8 @@ namespace :deploy do
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:app) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/master`
-        puts "WARNING: HEAD is not the same as origin/master"
+      unless `git rev-parse HEAD` == `git rev-parse snmspace/master`
+        puts "WARNING: HEAD is not the same as snmspace/master"
         puts "Run `git push` to sync changes."
         exit
       end
