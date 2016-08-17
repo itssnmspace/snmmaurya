@@ -1,4 +1,10 @@
-<% meta_options = setup_meta_data(defined?(data) ? data : nil) %>
+<% if defined?(data) %>
+  <% meta_options = setup_meta_data(( data.meta_title.present? ? ({data: data}) : nil)) %>
+<% elsif defined?(custom_data) %>
+  <% meta_options = setup_meta_data(( custom_data.meta_title.present? ? ({custom_data: custom_data}) : nil)) %>
+<% else %>
+  <% meta_options = setup_meta_data(nil) %>
+<% end %>
 <% meta title: meta_options[:title], description: meta_options[:description], keywords: meta_options[:keywords] %>
 <!-- Sharing image on social like facebook and twitter -->
 <% if defined?(image) %>

@@ -1,6 +1,8 @@
 <%= render 'shared/header_title', header_title: "", header_sub_title: "Problem / Solutions related to #{@topic.title}" %>
 
 <%= render "shared/solution_anchors" %>
+
+<%= render partial: "shared/meta_data", locals: {data: @problem} %>
 <!-- Intro Content -->
 <div class="row">
   <div class="col-sm-12">

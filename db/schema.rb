@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160813112014) do
+ActiveRecord::Schema.define(version: 20160817133209) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -152,15 +152,18 @@ ActiveRecord::Schema.define(version: 20160813112014) do
   end
 
   create_table "lessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "title",       limit: 65535
-    t.text     "description", limit: 65535
-    t.boolean  "status",                    default: true
+    t.text     "title",            limit: 65535
+    t.text     "description",      limit: 65535
+    t.boolean  "status",                         default: true
     t.integer  "user_id"
     t.integer  "study_id"
     t.string   "slug"
-    t.boolean  "featured",                  default: false
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.boolean  "featured",                       default: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.string   "meta_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
     t.index ["study_id"], name: "index_lessions_on_study_id", using: :btree
     t.index ["user_id"], name: "index_lessions_on_user_id", using: :btree
   end
@@ -197,15 +200,18 @@ ActiveRecord::Schema.define(version: 20160813112014) do
 
   create_table "problems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.text     "description", limit: 65535
+    t.text     "description",      limit: 65535
     t.integer  "topic_id"
-    t.boolean  "featured",                  default: true
-    t.boolean  "correct",                   default: true
+    t.boolean  "featured",                       default: true
+    t.boolean  "correct",                        default: true
     t.integer  "position"
-    t.boolean  "status",                    default: true
+    t.boolean  "status",                         default: true
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "meta_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
     t.index ["topic_id"], name: "index_problems_on_topic_id", using: :btree
   end
 
@@ -252,39 +258,48 @@ ActiveRecord::Schema.define(version: 20160813112014) do
   end
 
   create_table "rubiests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "title",       limit: 65535
-    t.text     "description", limit: 65535
-    t.boolean  "status",                    default: true
+    t.text     "title",            limit: 65535
+    t.text     "description",      limit: 65535
+    t.boolean  "status",                         default: true
     t.string   "slug"
-    t.boolean  "featured",                  default: false
+    t.boolean  "featured",                       default: false
     t.integer  "user_id"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.string   "meta_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
     t.index ["user_id"], name: "index_rubiests_on_user_id", using: :btree
   end
 
   create_table "solutions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.text     "description", limit: 65535
+    t.text     "description",      limit: 65535
     t.integer  "problem_id"
-    t.boolean  "correct",                   default: true
+    t.boolean  "correct",                        default: true
     t.integer  "position"
-    t.boolean  "status",                    default: true
+    t.boolean  "status",                         default: true
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "meta_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
     t.index ["problem_id"], name: "index_solutions_on_problem_id", using: :btree
   end
 
   create_table "studies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text     "title",       limit: 65535
-    t.text     "description", limit: 65535
-    t.boolean  "status",                    default: true
+    t.text     "title",            limit: 65535
+    t.text     "description",      limit: 65535
+    t.boolean  "status",                         default: true
     t.string   "slug"
-    t.boolean  "featured",                  default: false
+    t.boolean  "featured",                       default: false
     t.integer  "user_id"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.string   "meta_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
     t.index ["user_id"], name: "index_studies_on_user_id", using: :btree
   end
 
@@ -313,10 +328,13 @@ ActiveRecord::Schema.define(version: 20160813112014) do
     t.string   "title"
     t.string   "description"
     t.integer  "position"
-    t.boolean  "status",      default: true
+    t.boolean  "status",           default: true
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "meta_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
   end
 
   create_table "user_problems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

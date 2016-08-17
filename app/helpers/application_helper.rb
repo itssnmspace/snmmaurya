@@ -57,11 +57,13 @@ module ApplicationHelper
 
   #Method for Meta Data Settings
   #data parameter handles dynamic meta data like individual solution
-  def setup_meta_data data=nil
+  def setup_meta_data options={}
     meta_options = {}
-    if data.present?
+    if options.present? && options[:custom_data].present?
+      {title: options[:custom_data][:meta_title], description: options[:custom_data][:meta_description], keywords: options[:custom_data][:meta_keywords]}
+    elsif options.present? && options[:data].present?
      #Dynamic individual meta data
-     meta_options = setup_meta_options data
+     meta_options = setup_meta_options options[:data]
     else
       #Page Specific meta data
       meta_data = MetaDataSetting.all

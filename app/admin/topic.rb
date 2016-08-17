@@ -1,7 +1,7 @@
 ActiveAdmin.register Topic do
   menu parent: "Solutions"
 
-  permit_params :title, :description, :position, :status, images_attributes: [:id, :data, :_destroy]
+  permit_params :title, :description, :position, :status, :meta_title, :meta_description, :meta_keywords, images_attributes: [:id, :data, :_destroy]
 
   index do
     column :title
@@ -21,8 +21,13 @@ ActiveAdmin.register Topic do
       end
       f.input :position
       f.input :status
-      f.actions
     end
+    f.inputs "Seo Settings" do
+      f.input :meta_title
+      f.input :meta_keywords
+      f.input :meta_description
+    end
+    f.actions
   end
 
   filter :name

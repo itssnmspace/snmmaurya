@@ -1,7 +1,7 @@
 ActiveAdmin.register Study do
   menu parent: "Studies"
 
-  permit_params :title, :description, :status, :featured, images_attributes: [:id, :data, :_destroy]
+  permit_params :title, :description, :status, :featured, :meta_title, :meta_description, :meta_keywords, images_attributes: [:id, :data, :_destroy]
 
   index do
     column :id
@@ -24,8 +24,13 @@ ActiveAdmin.register Study do
       end
       f.input :featured
       f.input :status
-      f.actions
     end
+    f.inputs "Seo Settings" do
+      f.input :meta_title
+      f.input :meta_keywords
+      f.input :meta_description
+    end
+    f.actions
   end
 
   filter :title

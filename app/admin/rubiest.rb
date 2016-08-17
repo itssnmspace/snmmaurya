@@ -1,7 +1,7 @@
 ActiveAdmin.register Rubiest do
   menu parent: "Rubiest"
 
-  permit_params :title, :description, :status, :featured
+  permit_params :title, :description, :status, :featured, :meta_title, :meta_description, :meta_keywords
 
   index do
     column :id
@@ -21,8 +21,13 @@ ActiveAdmin.register Rubiest do
       f.input :description, as: :html_editor
       f.input :featured
       f.input :status
-      f.actions
     end
+    f.inputs "Seo Settings" do
+      f.input :meta_title
+      f.input :meta_keywords
+      f.input :meta_description
+    end
+    f.actions
   end
 
   filter :title
