@@ -93,6 +93,9 @@ footer {
   font-style: italic;
   display: inline;
 }
+.block{
+  display: block;
+}
 /* END Custom css COMMON CSS */
 
 

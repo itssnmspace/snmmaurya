@@ -1,7 +1,7 @@
 class AboutController < ApplicationController
   def index
-    @employments = Employment.active.order(:started_at)
-    @educations = Education.active.order(:started_at)
-    @technology_types = TechnologyType.includes(:technologies)
+    @employments = Employment.active.order(:position)
+    @educations = Education.active.order(:position)
+    @technology_types = TechnologyType.order(:position).includes(:technologies)
   end
 end
