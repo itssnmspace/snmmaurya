@@ -101,16 +101,16 @@ ActiveRecord::Schema.define(version: 20160813112014) do
   create_table "employments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "location"
-    t.string   "description"
+    t.text     "description", limit: 65535
     t.string   "url"
     t.string   "started_at"
     t.string   "end_at"
     t.integer  "user_id"
-    t.string   "role",        default: "Software Engineer"
-    t.boolean  "status",      default: true
+    t.string   "role",                      default: "Software Engineer"
+    t.boolean  "status",                    default: true
     t.integer  "position"
-    t.datetime "created_at",                                null: false
-    t.datetime "updated_at",                                null: false
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -2,7 +2,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def github
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    sign_in_and_redirect @user
+    if @user.present?
+      sign_in_and_redirect @user
+    else
+      flash[:error] = "Something went wrong please try later!"
+      redirect_to root_path
+    end
   end
 
   def twitter
@@ -14,7 +19,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def facebook
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    sign_in_and_redirect @user
+    if @user.present?
+      sign_in_and_redirect @user
+    else
+      flash[:error] = "Something went wrong please try later!"
+      redirect_to root_path
+    end
   end
 
   def google

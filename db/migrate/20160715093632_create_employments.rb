@@ -3,7 +3,7 @@ class CreateEmployments < ActiveRecord::Migration
     create_table :employments do |t|
       t.string :name
       t.string :location
-      t.string :description
+      t.text :description
       t.string :url
       t.string :started_at
       t.string :end_at
