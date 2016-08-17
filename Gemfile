@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'sprockets'
+
 gem 'rspec-rails'
 
 #Solr Search
