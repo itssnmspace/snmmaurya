@@ -81,11 +81,39 @@ namespace :deploy do
     end
   end
 
+  
+  after 'deploy:started', 'reenable_phased_restart'
+  task :reenable_phased_restart do
+    ::Rake.application['puma:phased-restart'].reenable
+  end
+
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+
+
+  namespace :sidekiq do
+    task :quiet do
+      on roles(:app) do
+        puts capture("pgrep -f 'workers' | xargs kill -USR1") 
+      end
+    end
+
+    task :restart do
+      on roles(:app) do
+        execute :sudo, :initctl, :stop, :workers
+        execute :sudo, :initctl, :start, :workers
+      end
+    end
+  end
+
+  after :starting, 'sidekiq:quiet'
+  after :reverted, 'sidekiq:restart'
+  after :published, 'sidekiq:restart'
+
 end
+
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
