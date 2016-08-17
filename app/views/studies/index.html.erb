@@ -13,7 +13,7 @@
         <%= link_to study.title, study_lessions_path(study) %>
       </h3>
       <p>
-        <%= study.description.try(:html_safe) %>
+        <%= study.description.truncate(250).try(:html_safe) %>
       </p>
     </div>
   <% end %>

@@ -12,7 +12,7 @@
         <%= link_to topic.title, topic_problems_path(topic) %>
       </h3>
       <p>
-        <%= topic.description.truncate(250) %>
+        <%= topic.description.truncate(250).try(:html_safe) %>
       </p>
     </div>
   <% end %>
