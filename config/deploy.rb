@@ -12,7 +12,7 @@ set :puma_workers,    0
 
 # Don't change these unless you know what you're doing
 set :pty,             true
-set :use_sudo,        false
+set :use_sudo,        true
 set :stage,           :production
 set :deploy_via,      :remote_cache
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
@@ -39,7 +39,7 @@ set :log_level,     :debug
 set :keep_releases, 5
 
 ## Linked Files & Directories (Default None):
-set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml}
+set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml config/puma.rb}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
@@ -91,26 +91,6 @@ namespace :deploy do
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
-
-
-  namespace :sidekiq do
-    task :quiet do
-      on roles(:app) do
-        puts capture("pgrep -f 'workers' | xargs kill -USR1") 
-      end
-    end
-
-    task :restart do
-      on roles(:app) do
-        execute :sudo, :initctl, :stop, :workers
-        execute :sudo, :initctl, :start, :workers
-      end
-    end
-  end
-
-  after :starting, 'sidekiq:quiet'
-  after :reverted, 'sidekiq:restart'
-  after :published, 'sidekiq:restart'
 
 end
 
