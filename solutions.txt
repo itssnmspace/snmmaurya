@@ -151,3 +151,8 @@ http://foreverbule2003.logdown.com/posts/307886-deploy-rails-app-use-capistrano-
 
 
 http://codepany.com/blog/rails-5-puma-capistrano-nginx-jungle-upstart/
+http://codepany.com/blog/rails-5-puma-capistrano-nginx-jungle-upstart/
+
+
+wget https://raw.githubusercontent.com/puma/puma/master/tools/jungle/upstart/puma-manager.conf
+wget https://raw.githubusercontent.com/puma/puma/master/tools/jungle/upstart/puma.conf
