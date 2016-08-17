@@ -205,3 +205,15 @@ symlink on server -
 sudo rm /etc/nginx/sites-enabled/default
 
 sudo ln -nfs "/home/snmspace/apps/snmmaurya/current/config/nginx.conf" "/etc/nginx/sites-enabled/snmmaurya"
+
+
+
+
+
+
+
+
+
+
+Sidekiq
+$ bundle exec sidekiq -q high,5 default,1

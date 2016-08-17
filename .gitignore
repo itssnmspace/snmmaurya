@@ -28,3 +28,4 @@
 /spec/*
 /log/capistrano.log
 /log/development.log
+/public/*
