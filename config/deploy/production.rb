@@ -1,4 +1,3 @@
-server '138.68.8.26', user: 'snmspace', roles: %w{app db web}
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

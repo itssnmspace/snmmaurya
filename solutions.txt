@@ -140,3 +140,14 @@ Facebook like button
   data-width="450"
   data-show-faces="true">
 </div>
+
+
+
+
+Deployment Setup
+==================================================================================
+http://foreverbule2003.logdown.com/posts/307886-deploy-rails-app-use-capistrano-puma-to-ec2
+
+
+
+http://codepany.com/blog/rails-5-puma-capistrano-nginx-jungle-upstart/
