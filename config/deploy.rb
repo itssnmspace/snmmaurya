@@ -9,7 +9,7 @@ set :branch, 'master'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
  
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/home/snmspace/apps/snmmaurya'
  
 # Default value for :scm is :git
 # set :scm, :git
@@ -26,7 +26,7 @@ set :branch, 'master'
  
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb', 'config/settings.yml', 'config/aws.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/settings.yml', 'config/aws.yml')
  
 # Default value for linked_dirs is []
 # append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
