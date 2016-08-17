@@ -23,7 +23,8 @@
 /config/nginx.conf
 /config/secrets.yml
 /solr/*
-/log/development.log
 /config/aws.yml
 /config/settings.yml
 /spec/*
+/log/capistrano.log
+/log/development.log

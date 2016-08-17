@@ -3,11 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
-# Use sqlite3 as the database for Active Record
+# Use mysql2 as the database for Active Record
 gem 'mysql2'
-# Use Puma as the app server
-
-gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -105,11 +102,24 @@ gem 'sinatra', github: 'sinatra', require: false
 gem 'rack-protection', github: 'sinatra/rack-protection', require: false
 
 
+# group :development do
+#   gem 'capistrano',         require: false
+#   gem 'capistrano-rvm',     require: false
+#   gem 'capistrano-rails',   require: false
+#   gem 'capistrano-bundler', require: false
+#   gem 'capistrano3-puma',   require: false
+#   gem 'capistrano3-nginx',  require: false
+# end
+
+
+gem 'figaro'
+
+# Use Puma as the app server
+gem 'puma'
 group :development do
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-  gem 'capistrano3-nginx',  require: false
+  gem 'capistrano-rvm'
 end

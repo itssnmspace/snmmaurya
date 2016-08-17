@@ -156,3 +156,46 @@ http://codepany.com/blog/rails-5-puma-capistrano-nginx-jungle-upstart/
 
 wget https://raw.githubusercontent.com/puma/puma/master/tools/jungle/upstart/puma-manager.conf
 wget https://raw.githubusercontent.com/puma/puma/master/tools/jungle/upstart/puma.conf
+
+
+
+
+
+
+http://foreverbule2003.logdown.com/posts/307886-deploy-rails-app-use-capistrano-puma-to-ec2
+
+upstream app {
+  # Path to Puma SOCK file, as defined previously
+  server unix:/home/snmspace/apps/snmmaurya/shared/tmp/sockets/puma.sock fail_timeout=0;
+  # edit it to fit your app name
+}
+
+server {
+  listen 80;
+  server_name www.snmmaurya.com snmmaurya.com;
+
+  root /home/snmspace/apps/snmmaurya/public;# edit it to fit your app name
+
+  try_files $uri/index.html $uri @app;
+
+  location / {
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header Host $host;
+    proxy_redirect off;
+    proxy_http_version 1.1;
+    proxy_set_header Connection '';
+    proxy_pass http://app;
+  }
+
+  location ~ ^/(assets|fonts|system)/|favicon.ico|robots.txt {
+    gzip_static on;
+    expires max;
+    add_header Cache-Control public;
+  }
+
+  error_page 500 502 503 504 /500.html;
+  client_max_body_size 4G;
+  keepalive_timeout 10;
+}
