@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :set_master_profile
+  before_action :set_master_profile, :set_favicon
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_url, :error => exception.message
@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
   def set_master_profile
     @user = User.find_by(role_id: 1)
     @user_profile = @user.profiles.try(:last)
+  end
+
+  def set_favicon
+    image_asset = ImageAsset.image_asset_by_code("favicon")
+    if image_asset.present?
+      @favicon = image_asset.data.url(:original)
+    end
   end
 
   # def set_origin

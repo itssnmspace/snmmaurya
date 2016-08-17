@@ -6,7 +6,7 @@
     <h3>Employment</h3>
     <% @employments.each_with_index do |employment, index| %>
       <strong class="block">
-      <%= employment.role %> - <%= employment.name %> (<i><%= datetimeformat(employment.get_started_at) %> - <%= datetimeformat(employment.get_end_at) %></i>)
+      <%= employment.role %> - <%= employment.name %> (<%= datetimeformat(employment.get_started_at) %> - <%= datetimeformat(employment.get_end_at) %>)
       </strong>
       <%= employment.description.try(:html_safe) %>
       <% if @employments.count > index + 1 %>
@@ -17,7 +17,7 @@
     <h3>Education</h3>
     <% @educations.each_with_index do |education, index| %>
       <strong class="block">
-        <%= education.cource %> - <%= education.college %>(<i><%= datetimeformat(education.get_started_at) %> - <%= datetimeformat(education.get_completed_at) %></i>)
+        <%= education.cource %> - <%= education.college %>(<%= datetimeformat(education.get_started_at) %> - <%= datetimeformat(education.get_completed_at) %>)
       </strong>
       <%= education.description.try(:html_safe) %>
       <% if @educations.count > index + 1 %>
