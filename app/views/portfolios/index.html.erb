@@ -14,8 +14,8 @@
         <div>
           <strong>Tools: </strong>
           <%= portfolio.tools %>
-        </div>
-        <%= portfolio.description %>
+        </div><br>
+        <%= portfolio.description.truncate(250).try(:html_safe) %>
       </p>
     </div>
   <% end %>
