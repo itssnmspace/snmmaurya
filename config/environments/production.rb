@@ -79,5 +79,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #Setup assets path in production mode
-  config.assets.prefix = "/shared/public/assets"
+  # config.assets.prefix = "/shared/public/assets"
 end
