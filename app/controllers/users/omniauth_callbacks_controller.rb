@@ -12,7 +12,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def twitter
     flash[:message] = "Signin/Signup with twitter under development"
-    redirect_ to root_path
+    redirect_to root_path
     @user = User.from_omniauth(request.env["omniauth.auth"])
     sign_in_and_redirect @user
   end
@@ -29,7 +29,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def google
     flash[:message] = "Signin/Signup with google under development"
-    redirect_ to root_path
+    redirect_to root_path
     @user = User.from_omniauth(request.env["omniauth.auth"])
     sign_in_and_redirect @user
   end
@@ -41,7 +41,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def amazon
     flash[:message] = "Signin/Signup with amazon under development"
-    redirect_ to root_path
+    redirect_to root_path
     @user = User.from_omniauth(request.env["omniauth.auth"])
     sign_in_and_redirect @user
   end
