@@ -15,9 +15,23 @@ a{
 a:hover{
   /*color: #123456 !important;*/
   font-weight: bold;
-  font-style: italic;
   cursor: pointer;
 }
+
+.snm-navbar-inverse a{
+  text-decoration: none !important;
+  color: #008080 !important;
+  font-weight: bold;
+}
+.snm-navbar-inverse a:hover{
+  /*color: #123456 !important;*/
+  background-color: #008080 !important;
+  color: #FFFFFF !important;
+  cursor: pointer;
+}
+
+
+
 .flash_message{
   margin-top: -20px;
   text-align: center;
@@ -53,4 +67,11 @@ h3.page-header small{
 h3, .h3 {
   font-size: 16px !important;
   font-weight: bold;
+}
+
+
+/* navbar bootstrap */
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #008080;
+  color: #FFFFFF !important;
 }
