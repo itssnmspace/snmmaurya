@@ -6,11 +6,15 @@ How to deploy rails application
 GMAIL SMTP SETTINGS:
 
 1) Login to you email account
+
+
+2) Visit 
 https://www.google.com/settings/security/lesssecureapps
-turn on
+and
+click/check => turn on
 
 
-From Gmail account--
+2) From Gmail account--
 Settings
 Forwarding and POP/IMAP
 Enable IMAP
@@ -22,7 +26,8 @@ Save Settings
 
 
 
-smtp settins:
+3) Inside your project smtp settins:
+
 rails application under env file like develpment.rb/production.rb whatever your need
 
 
@@ -37,3 +42,17 @@ config.action_mailer.smtp_settings = {
   authentication:       'plain',
   enable_starttls_auto: true
 }
+
+
+
+
+
+
+
+
+
+#Production mode setups  RAILS-5
+
+environments/production.rb
+
+the value of of config.assets.compile must be true like - config.assets.compile = true
