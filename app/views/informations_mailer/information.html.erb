@@ -12,13 +12,13 @@
   <p>
     A new request here as contact !
     <hr>
-    Details:
     <p>
-      Name: <%= @options[:name] %><br>
-      email: <%= @options[:email] %><br>
-      contact: <%= @options[:contact] %><br>
-      Message: <%= @options[:message] %><br>
+      <strong>Name:</strong> <%= @options[:name] %><br>
+      <strong>email:</strong> <%= @options[:email] %><br>
+      <strong>contact:</strong> <%= @options[:contact] %><br>
+      <strong>Message:</strong> <%= @options[:message] %><br>
     </p>
+    <%= render "shared/emailers/footer" %>
   </p>
 </p>
 </body>
