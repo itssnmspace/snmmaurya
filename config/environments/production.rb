@@ -96,4 +96,7 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true
   }
+
+  #Add fonts path to assets pipeline
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 end
