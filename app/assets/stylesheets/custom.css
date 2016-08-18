@@ -147,3 +147,20 @@ footer {
 
 }
 /* END Custom css for profile main page */
+
+/* Inner page */
+.account-left-side-bar-container{
+  background-color: #00CED1;
+}
+.account-left-side-bar-container ul{
+  list-style: none;
+  list-style-position: outside;
+   margin: 0 auto;
+  padding: 0;
+}
+.account-left-side-bar-container ul li{
+  padding: 10px;
+}
+.account-container{
+  /*color: #FFFFFF !important;*/
+}

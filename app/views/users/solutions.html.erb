@@ -1,0 +1,18 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Problems created by you!" %>
+
+<!-- Start row -->
+<div class="row account-container">
+  <%= render partial: "users/shared/left_side_bar" %>
+  <div class="col-md-10 account-panel-container">
+    <% if @solutions.present? %>
+      <% @solutions.each do |solution| %>
+        <div>
+          <%= solution.title %>
+        </div>
+      <% end %>
+    <% else %>
+      <%= render "shared/data_not_found" %>
+    <% end %>
+  </div>
+</div>
+<!-- /.row -->

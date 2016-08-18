@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   def problems
-    render plain: "Yay! working fine!"
+    @problems = current_user.problems
   end
 
   def solutions
-    render plain: "Yay! working fine!"
+    @problems = current_user.solutions
   end
 end

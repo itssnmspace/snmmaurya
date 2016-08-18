@@ -1,0 +1,13 @@
+<div class="col-md-2 account-left-side-bar-container text-center">
+  <ul>
+    <li>
+      <%= link_to "Problems", problems_user_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "Solutions", solutions_user_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to "Sign out", destroy_session_path(current_user), method: :delete %>
+    </li>
+  </ul>
+</div>
