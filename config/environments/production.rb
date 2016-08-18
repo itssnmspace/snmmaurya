@@ -80,4 +80,20 @@ Rails.application.configure do
 
   #Setup assets path in production mode
   # config.assets.prefix = "/shared/public/assets"
+
+
+  #Getting running server like snmmaurya as production
+  server = Rails.env.production? ? "snmmaurya" : "localhost"
+
+  config.action_mailer.default_url_options = { host: Settings.smtp_settings.try(server).host }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               Settings.smtp_settings.try(server).host,
+    user_name:            Settings.smtp_settings.try(server).user_name,
+    password:             Settings.smtp_settings.try(server).password,
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
 end

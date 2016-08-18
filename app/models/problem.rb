@@ -7,52 +7,61 @@ class Problem < ApplicationRecord
   has_many :solutions, dependent: :destroy
   belongs_to :topic
 
-  validates :title, presence: true
+  validates :title, :description, presence: true
 
-#****************************************************************************#
-  #START Seo Related Functions
-  extend FriendlyId
-  friendly_id :slug_candidates, use: [:slugged, :finders]
+  before_create :set_meta_data
 
-  def slug_candidates
-    return if self.title.blank?
-    [
-      [:title],
-      [:title, :id]
-    ]
+
+  def set_meta_data
+    textual_description = ActionView::Base.full_sanitizer.sanitize(self.description)[0..200]
+    self.meta_title = self.title
+    self.meta_keywords = textual_description.gsub(" ", ",")
+    self.meta_description = textual_description
   end
-  #END Seo Related Functions
+  #****************************************************************************#
+    #START Seo Related Functions
+    extend FriendlyId
+    friendly_id :slug_candidates, use: [:slugged, :finders]
 
-  #Override slug creator method of friendly_id
-  def resolve_friendly_id_conflict(candidates)
-    candidates.first + friendly_id_config.sequence_separator + SecureRandom.uuid
-  end
-
-  #Override slug creator method of friendly_id
-  def set_slug(normalized_slug = nil)
-    if should_generate_new_friendly_id?
-      candidates = FriendlyId::Candidates.new(self, normalized_slug || send(friendly_id_config.base))
-      slug = slug_generator.generate(candidates) || resolve_friendly_id_conflict(candidates)
-      send "#{friendly_id_config.slug_column}=", slug
+    def slug_candidates
+      return if self.title.blank?
+      [
+        [:title],
+        [:title, :id]
+      ]
     end
-  end
-#****************************************************************************#
+    #END Seo Related Functions
 
-
-#***************************************************************************#
-#Solr Search
-#***************************************************************************#
-  searchable do
-    text :title
-    integer :topic_id
-    text :solutions do
-      solutions.map { |solution| solution.title }
+    #Override slug creator method of friendly_id
+    def resolve_friendly_id_conflict(candidates)
+      candidates.first + friendly_id_config.sequence_separator + SecureRandom.uuid
     end
-    time :created_at
-  end
-#***************************************************************************#
-#END Solr Search
-#***************************************************************************#  
+
+    #Override slug creator method of friendly_id
+    def set_slug(normalized_slug = nil)
+      if should_generate_new_friendly_id?
+        candidates = FriendlyId::Candidates.new(self, normalized_slug || send(friendly_id_config.base))
+        slug = slug_generator.generate(candidates) || resolve_friendly_id_conflict(candidates)
+        send "#{friendly_id_config.slug_column}=", slug
+      end
+    end
+  #****************************************************************************#
+
+
+  #***************************************************************************#
+  #Solr Search
+  #***************************************************************************#
+    searchable do
+      text :title
+      integer :topic_id
+      text :solutions do
+        solutions.map { |solution| solution.title }
+      end
+      time :created_at
+    end
+  #***************************************************************************#
+  #END Solr Search
+  #***************************************************************************#  
 end
 
 

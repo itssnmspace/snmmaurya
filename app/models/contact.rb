@@ -15,6 +15,6 @@ class Contact < ApplicationRecord
       from: self.email,
       subject: "Snmmaurya: Contact Request",
       to: Settings.administrator_emails.informations
-    }).deliver_now
+    }).deliver
   end
 end

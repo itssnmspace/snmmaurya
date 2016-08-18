@@ -82,18 +82,40 @@ namespace :deploy do
   end
 
   
-  after 'deploy:started', 'reenable_phased_restart'
-  task :reenable_phased_restart do
-    ::Rake.application['puma:phased-restart'].reenable
-  end
+  # after 'deploy:started', 'reenable_phased_restart'
+  # task :reenable_phased_restart do
+  #   ::Rake.application['puma:phased-restart'].reenable
+  # end
 
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 
+  #Solr setup
+  # after  :finishing,    'solr:stop'
+  # after  :finishing,    'solr:start'
+  # after  :finishing,    'solr:reindex'
 end
 
+
+namespace :solr do
+  task :stop do
+    on roles(:app) do
+     run "cd #{current_path} && rake sunspot:solr:stop RAILS_ENV=production"
+    end
+  end
+  task :start do
+    on roles(:app) do
+      run "cd #{current_path} && rake sunspot:solr:start RAILS_ENV=production"
+    end
+  end
+  task :reindex do
+    on roles(:app) do
+      run "cd #{current_path} && rake sunspot:solr:reindex RAILS_ENV=production"
+    end
+  end
+end
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
