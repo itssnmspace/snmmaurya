@@ -32,7 +32,8 @@
       <h3><%= technology_type.title %></h3>
       <div>
         <% if technology_type.technologies.present? %>
-          <%= technology_type.technologies.map{|technology| technology.name}.join("<br>").html_safe %>
+          <%= technology_type.technologies.map{|technology| "#{technology.name} - (Experience: #{technology
+          .experience})"}.join("<br>").html_safe %>
         <% else %>
           ......
         <% end %>

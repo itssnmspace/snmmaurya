@@ -1,4 +1,297 @@
-How to deploy rails application
+On Server
+
+Assuming you've your host like on digitalocea / aws and so on.
+
+using appname: snmmaurya
+
+1) Login with root user
+
+ssh root@xxx.xx.x.xx
+now create a new user for scecurity reason do not work with root user
+
+I am going to create a new user the name is:  cherry
+
+sudo adduser cherry
+sudo adduser cherry sudo
+su cherry
+
+
+and now exit from server
+
+
+2) Login with cherry user
+
+ssh cherry@xxx.xx.x.xx
+
+
+Create ssh key to put into github account
+
+cat .ssh/id_rsa.pub and put into gihub account
+
+
+
+3) install Git
+sudo apt-get install git
+
+
+
+4) Install dependency of RUBY
+
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
+
+5) Install RVM and Ruby
+
+sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm install 2.3.1
+rvm use 2.3.1 --default
+ruby -v
+
+
+6) Install bundler
+
+gem install bundler
+
+7) Install nginx
+
+sudo apt-get install nginx
+
+
+
+
+
+Local System
+
+1) Add required gems under Gemfile
+
+gem 'figaro'
+gem 'puma'
+
+group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
+  gem 'capistrano-sidekiq', require: false
+end
+
+
+bundle install
+
+2) Create capistrano configuration
+
+cap install
+
+will create some configuraiton files --
+
+2.1) Capfile
+
+Paste below content to you Capfile
+
+# Load DSL and set up stages
+require "capistrano/setup"
+
+# Include default deployment tasks
+require "capistrano/deploy"
+
+require 'capistrano/rails'
+require 'capistrano/bundler'
+require 'capistrano/rvm'
+require 'capistrano/puma'
+require 'capistrano/sidekiq'
+
+# Load custom tasks from `lib/capistrano/tasks` if you have any defined
+Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+
+
+2.2) config/deploy.rb
+
+Populate with below contents and change your server credentials and github repository
+
+# config valid only for current version of Capistrano
+lock '3.6.0'
+
+# Change these
+server 'xxx.xx.x.xx', roles: [:web, :app, :db], primary: true
+
+set :repo_url,        'git@github.com:example/snmmaurya.git'
+set :application,     'snmmaurya'
+set :user,            'cherry'
+set :puma_threads,    [4, 16]
+set :puma_workers,    0
+
+# Don't change these unless you know what you're doing
+set :pty,             true
+set :use_sudo,        true
+set :stage,           :production
+set :deploy_via,      :remote_cache
+set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
+set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
+set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
+set :puma_access_log, "#{release_path}/log/puma.error.log"
+set :puma_error_log,  "#{release_path}/log/puma.access.log"
+set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
+set :puma_preload_app, true
+set :puma_worker_timeout, nil
+set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+
+
+#Assets adding prefix as in environments/production.rb
+# set :assets_prefix, "/shared/public/assets"
+# set :bundle_binstubs, -> { shared_path.join('bin') }
+
+## Defaults:
+set :scm,           :git
+set :branch,        :master
+set :format,        :pretty
+set :log_level,     :debug
+set :keep_releases, 5
+
+## Linked Files & Directories (Default None):
+set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml config/puma.rb}
+set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
+namespace :puma do
+  desc 'Create Directories for Puma Pids and Socket'
+  task :make_dirs do
+    on roles(:app) do
+      execute "mkdir #{shared_path}/tmp/sockets -p"
+      execute "mkdir #{shared_path}/tmp/pids -p"
+    end
+  end
+
+  before :start, :make_dirs
+end
+
+namespace :deploy do
+  desc "Make sure local git is in sync with remote."
+  task :check_revision do
+    on roles(:app) do
+      unless `git rev-parse HEAD` == `git rev-parse origin/master`
+        puts "WARNING: HEAD is not the same as origin/master"
+        puts "Run `git push` to sync changes."
+        exit
+      end
+    end
+  end
+
+  desc 'Initial Deploy'
+  task :initial do
+    on roles(:app) do
+      before 'deploy:restart', 'puma:start'
+      invoke 'deploy'
+    end
+  end
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      invoke 'puma:restart'
+    end
+  end
+
+  before :starting,     :check_revision
+  after  :finishing,    :compile_assets
+  after  :finishing,    :cleanup
+  after  :finishing,    :restart
+end
+
+
+
+2.3) ignore config/deploy/production.rb and config/deploy/staging.rb
+
+
+3) Nginx configuration
+
+Create nginx.conf inside your product snmmaurya/config/nginx.conf and populate with below contents change if required like location.
+
+upstream puma {
+  server unix:///home/cherrry/apps/snmmaurya/shared/tmp/sockets/snmmaurya-puma.sock;
+}
+
+server {
+  listen 80 default_server deferred;
+  server_name www.snmmaurya.com snmmaurya.com;
+
+  root /home/cherry/apps/snmmaurya/current/public;
+  access_log /home/cherry/apps/snmmaurya/current/log/nginx.access.log;
+  error_log /home/cherry/apps/snmmaurya/current/log/nginx.error.log info;
+
+  location ^~ /assets/ {
+    gzip_static on;
+    expires max;
+    add_header Cache-Control public;
+  }
+
+  try_files $uri/index.html $uri @puma;
+  location @puma {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+
+    proxy_pass http://puma;
+  }
+
+  error_page 500 502 503 504 /500.html;
+  client_max_body_size 10M;
+  keepalive_timeout 10;
+}
+
+
+
+4) Now Deploy --- bundle exec cap production deploy
+
+
+
+
+
+
+
+
+After succeffully deployment --
+
+On Server
+
+1) Symlink nginx conf file
+
+sudo rm /etc/nginx/sites-enabled/default
+
+sudo ln -nfs "/home/cherry/apps/snmmaurya/current/config/nginx.conf" "/etc/nginx/sites-enabled/snmmaurya"
+
+
+2) Restart nginx 
+
+sudo service nginx restart
+
+
+Final Step now visit on your =>  url www.snmmaurya.com  Enjoy :)
+
+
+
+
+Further assistence --
+
+If your server asking password whenever you go to login via ssh-- 
+
+ssh-copy-id cherry@xxx.xx.x.xx will fix your problem and will never ask whenever you go to login via ssh
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
