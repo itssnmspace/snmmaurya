@@ -30,6 +30,13 @@ a:hover{
   cursor: pointer;
 }
 
+.snm-navbar-inverse a.active{
+  /*color: #123456 !important;*/
+  background-color: #008080 !important;
+  color: #FFFFFF !important;
+}
+
+
 
 
 .flash_message{

@@ -88,4 +88,12 @@ module ApplicationHelper
   def setup_meta_options meta_data
     {title: meta_data.meta_title, description: meta_data.meta_description, keywords: meta_data.meta_keywords} if meta_data.present?
   end
+
+  def more_nav_active_class
+    "active" if ["portfolios", "about", "blogs"].include?(params[:controller]) || params[:action] == "contact"
+  end
+
+  def user_nav_active_class
+    "active" if ["problems", "solutions", "users"].include?(params[:controller])
+  end  
 end
