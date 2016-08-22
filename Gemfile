@@ -72,7 +72,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-amazon'
-gem 'omniauth-google'
+gem "omniauth-google-oauth2"
 gem 'omniauth-github'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'

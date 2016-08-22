@@ -27,11 +27,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  def google
-    flash[:error] = "Signin/Signup with google under development... Sorry for inconvenience"
-    redirect_to root_path
+  def google_oauth2
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    sign_in_and_redirect @user
+    if @user.present?
+      sign_in_and_redirect @user
+    else
+      flash[:error] = "Something went wrong please try later!"
+      redirect_to root_path
+    end
   end
 
   def linkedin

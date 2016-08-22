@@ -6,7 +6,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:github, :facebook, :twitter, :linkedin, :google, :amazon]
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:github, :facebook, :twitter, :linkedin, :google_oauth2, :amazon]
 
   has_many :images, as: :imageable
   has_many :topics
@@ -56,14 +56,15 @@ class User < ApplicationRecord
 
   # {provider: auth.provider, uid: auth.uid, email: auth.info.email, username: auth.info.name.parameterize}
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email
-      user.username = auth.info.name.parameterize
+      user.username = auth.info.email.gsub("@", "").gsub(".","")
       user.role_id = Role.role_id_by_title("user")
       user.password = Devise.friendly_token[0,20]
     end
+    user
   end
 
 

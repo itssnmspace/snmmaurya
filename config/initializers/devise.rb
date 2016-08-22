@@ -278,7 +278,7 @@ Devise.setup do |config|
   config.omniauth :github, Settings.social_credentials.try(server).github_app_id, Settings.social_credentials.try(server).github_app_secrets
   config.omniauth :facebook, Settings.social_credentials.try(server).facebook_app_id, Settings.social_credentials.try(server).facebook_app_secrets
   # config.omniauth :twitter, Settings.social_credentials.try(server).twitter_app_id, Settings.social_credentials.try(server).twitter_app_secrets
-  config.omniauth :google, Settings.social_credentials.try(server).google_app_id, Settings.social_credentials.try(server).google_app_secrets
+  config.omniauth :google_oauth2, Settings.social_credentials.try(server).google_app_id, Settings.social_credentials.try(server).google_app_secrets
   config.omniauth :linkedin, Settings.social_credentials.try(server).linkedin_app_id, Settings.social_credentials.try(server).linkedin_app_secrets
   # config.omniauth :amazon, Settings.social_credentials.try(server).amazon_app_id, Settings.social_credentials.try(server).amazon_app_secrets
 end

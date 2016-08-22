@@ -12,7 +12,11 @@
     <div class="col-sm-12 text-right">
       <%= render partial: "problems/informations", locals: {datetime: @problem.created_at, user: @problem.user, counter: @solution_counter } %>
     </div>
-    <hr>
+    <div class="col-sm-12 text-center">
+      <hr>
+    </div>
+  </div>
+  <div class="col-sm-12">
     <!-- Make Sure Answers Are Available -->
     <% if @solution_counter > 0 %>
       <% @problem.solutions.each_with_index do |solution, index| %>
@@ -22,7 +26,12 @@
           <%= render partial: "problems/solution_actions", locals: {solution: solution} %>
           <%= render partial: "problems/informations", locals: {datetime: solution.created_at, user: solution.user } %>
         </div>
+        <% if index < @solution_counter - 1  %>
+          <div class="col-sm-12 text-center"><hr></div>
+        <% end %>
       <% end %>
+    <% else %>
+      <%= render "shared/solution_not_found" %>
     <% end %>
   </div>
 

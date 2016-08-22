@@ -82,3 +82,7 @@ h3, .h3 {
   background-color: #008080;
   color: #FFFFFF !important;
 }
+ul.pagination li.active a{
+  color: #FFFFFF !important;
+  background-color: #008080 !important;
+}

@@ -6,21 +6,25 @@
 <div class="row">
   <div class="col-sm-12">
     <% if @problems.present? %>
-      <% @problems.each do |problem| %>
+      <% @problems.each_with_index do |problem, index| %>
         <div class="col-sm-12">
           <div class="text-title"> <%= link_to problem.title, topic_problem_path(@topic, problem) %></div>
           <div class="spacer-10"></div>
           <div class="text-description"> <%= problem.description.truncate(250).html_safe if problem.description.present? %></div>
+          <div class="col-sm-12 text-right">
+            <%= render partial: "problems/informations", locals: {datetime: problem.created_at, user: problem.user, counter: problem.solutions.count } %>
+          </div>
+          <% if index < @problems.count - 1  %>
+            <div class="col-sm-12 text-center"><hr></div>
+          <% end %>
         </div>
-        <div class="col-sm-12 text-right">
-          <%= render partial: "problems/informations", locals: {datetime: problem.created_at, user: problem.user, counter: problem.solutions.count } %>
-        </div>
+
       <% end %>
     <% else %>
       <%= render "shared/search_not_found" %>
     <% end %>
   </div>
-  <div class="col-sm-12">
+  <div class="col-sm-12 text-center">
     <%= paginate @search.hits %>
   </div>
 </div>
