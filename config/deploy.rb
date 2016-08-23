@@ -96,26 +96,35 @@ namespace :deploy do
   # after  :finishing,    'solr:stop'
   # after  :finishing,    'solr:start'
   # after  :finishing,    'solr:reindex'
+
+
+  task :setup_solr_data_dir do
+    run "mkdir -p #{shared_path}/solr/data"
+  end
 end
 
 
 namespace :solr do
-  task :stop do
-    on roles(:app) do
-     run "cd #{current_path} && rake sunspot:solr:stop RAILS_ENV=production"
-    end
+  desc "start solr"
+  task :start, :roles => :app, :except => { :no_release => true } do 
+    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
   end
-  task :start do
-    on roles(:app) do
-      run "cd #{current_path} && rake sunspot:solr:start RAILS_ENV=production"
-    end
+  desc "stop solr"
+  task :stop, :roles => :app, :except => { :no_release => true } do 
+    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
   end
-  task :reindex do
-    on roles(:app) do
-      run "cd #{current_path} && rake sunspot:solr:reindex RAILS_ENV=production"
-    end
+  desc "reindex the whole database"
+  task :reindex, :roles => :app do
+    stop
+    run "rm -rf #{shared_path}/solr/data"
+    start
+    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
   end
 end
+
+
+
+after 'deploy:setup', 'deploy:setup_solr_data_dir'
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
