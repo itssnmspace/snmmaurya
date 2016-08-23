@@ -1,1 +1,14 @@
+http://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+
 How to implement chron ubuntu 14.04? 
+
+
+
+
+15 * * * *
+cd /Users/you/projects/myrailsapp && /usr/local/bin/rake RAILS_ENV=production myrailsapp:monthly_report
+
+
+
+
+cd /home/snmspace/apps/snmmaurya/current && /user/local/bin/rake RAILS_ENV=production task:email
