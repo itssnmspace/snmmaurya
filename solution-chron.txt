@@ -1,4 +1,6 @@
 http://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
+http://tutorials.jumpstartlab.com/topics/systems/automation.html
+
 
 How to implement chron ubuntu 14.04? 
 
