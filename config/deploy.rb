@@ -27,6 +27,9 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
 
+# set :rvm_ruby_version, 'ruby-2.3.1@snmspace'
+
+# set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 #Assets adding prefix as in environments/production.rb
 # set :assets_prefix, "/shared/public/assets"
 # set :bundle_binstubs, -> { shared_path.join('bin') }
@@ -92,39 +95,104 @@ namespace :deploy do
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 
-  #Solr setup
-  # after  :finishing,    'solr:stop'
-  # after  :finishing,    'solr:start'
-  # after  :finishing,    'solr:reindex'
-
-
-  task :setup_solr_data_dir do
-    run "mkdir -p #{shared_path}/solr/data"
-  end
-end
-
-
-namespace :solr do
-  desc "start solr"
-  task :start, :roles => :app, :except => { :no_release => true } do 
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-  end
-  desc "stop solr"
-  task :stop, :roles => :app, :except => { :no_release => true } do 
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-  end
-  desc "reindex the whole database"
-  task :reindex, :roles => :app do
-    stop
-    run "rm -rf #{shared_path}/solr/data"
-    start
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
-  end
 end
 
 
 
-after 'deploy:setup', 'deploy:setup_solr_data_dir'
+
+# namespace :sunspot do
+#   desc 'setup solr data dir'
+#   task :setup_solr_data_dir do
+#     on roles :app do
+#       within shared_path do
+#         execute :mkdir, "-p #{shared_path}/solr"
+#       end
+#     end
+#   end
+#   desc 'link to solr shared dirs'
+#   task :link_to_solr_shared_dirs do
+#     on roles :app do
+#       within shared_path do
+#         execute :rm, "-rf #{release_path}/solr/solr"
+#         execute :ln, "-sfn #{shared_path}/solr #{release_path}/solr"
+#         execute :ln, "-sfn #{shared_path}/pids #{release_path}/solr/pids"
+#       end
+#     end
+#   end
+#   desc 'start solr'
+#   task :start do
+#     on roles :app do
+#       within release_path do
+#         execute :rake, "sunspot:solr:start RAILS_ENV=#{fetch :stage}"
+#       end
+#     end
+#   end
+#   desc 'stop solr'
+#   task :stop do
+#     on roles :app do
+#       within release_path do
+#         execute :rake, "sunspot:solr:stop RAILS_ENV=#{fetch :stage};true"
+#       end
+#     end
+#   end
+#   desc 'reindex solr'
+#   task :reindex do
+#     on roles :app do
+#       within release_path do
+#         execute :rake, "sunspot:solr:reindex RAILS_ENV=#{fetch :stage};true"
+#       end
+#     end
+#   end
+# end
+# after 'deploy:check', 'sunspot:setup_solr_data_dir'
+# before 'deploy:publishing', 'sunspot:link_to_solr_shared_dirs'
+# before 'deploy:publishing', 'sunspot:stop'
+# before 'deploy:publishing', 'sunspot:start'
+# before 'deploy:publishing', 'sunspot:reindex'
+
+# http://ccaloha.cc/blog/2014/04/30/howto-setup-sunspot-in-rails4-and-deploy-to-ubuntu12-dot-04-using-capistrano/
+# https://docs.omniref.com/ruby/gems/h2ocube_rails_sunspot/0.0.4/files/lib/capistrano/tasks/sunspot.cap
+
+# I want make these tasks in capistrano. Now I perform these tasks manually:
+
+# 1º I kill sunspot solr pid with:
+
+# a) Find the pid with ps aux | grep 'solr'
+
+# b) Kill pid with kill pid_number
+
+# 2º Remove index solr in production environment if exist with:
+
+# a) rm -r solr/data/production/index
+
+# 3º turn on sunspot solr with:
+
+# a) RAILS_ENV=production rake sunspot:solr:start
+
+# 4º Reindex models with:
+
+# a) RAILS_ENV=production rake sunspot:mongo:reindex
+
+# My question is:
+
+
+# namespace :solr do
+#   task :stop do
+#     on roles(:app) do
+#      run "cd #{current_path} && rake sunspot:solr:stop RAILS_ENV=production"
+#     end
+#   end
+#   task :start do
+#     on roles(:app) do
+#       run "cd #{current_path} && rake sunspot:solr:start RAILS_ENV=production"
+#     end
+#   end
+#   task :reindex do
+#     on roles(:app) do
+#       run "cd #{current_path} && rake sunspot:solr:reindex RAILS_ENV=production"
+#     end
+#   end
+# end
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma

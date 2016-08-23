@@ -229,3 +229,30 @@ sudo ln -nfs "/home/snmspace/apps/snmmaurya/current/config/nginx.conf" "/etc/ngi
 
 Sidekiq
 $ bundle exec sidekiq -q high,5 default,1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1) Kill if any process
+ps aux | grep solr
+sudo kill process-id
+
+2) inside your project - Remove all of previous indexes
+rm -r solr
+   
+3. RAILS_ENV=production bundle exec rake sunspot:solr:start
+4. RAILS_ENV=production bundle exec rake sunspot:solr:reindex
+
+
+Again try to deploy will work fine - note in rails reindex process automatically handled

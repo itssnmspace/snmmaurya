@@ -1,0 +1,29 @@
+Ruby is a dynamic, object oriented, general-purpose programming language. It was developed in the mid of 1990 by Matsumoto Yukihiro also known as "Matz" in Japan.
+
+
+Some Important things
+
+1) Everything in Ruby is an Object
+
+irb> nil.class
+=> NilClass
+irb> 1.class
+=> Fixnum
+irb> 1.2.class
+=> Float
+irb> "something".class
+=> String
+
+
+2)Easier to manage
+
+It provides facility to reopen class and alter methods at run time.
+
+
+3) Good Leberary:
+
+>"cherry".reverse
+=> yrrech
+
+
+4) Ruby as an awesome community

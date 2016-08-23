@@ -1,0 +1,25 @@
+Ruby on Rails also known as Rails is a web application framework written in Ruby under the MIT License. Rails is a (MVC) framework, providing default structures for a database, a web service, and web pages.
+
+
+
+Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+
+
+jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML. jQuery is the most popular JavaScript library. JQuery is free, open-source software.
+
+
+
+
+
+
+
+
+
+
+
+
+redis-setup
+http://stackoverflow.com/questions/14742020/configuring-redis-sidekiq-in-production
+http://stackoverflow.com/questions/14825565/sidekiq-deploy-to-multiple-environments
+https://github.com/jollygoodcode/jollygoodcode.github.io/issues/12
+http://peternixey.com/post/60084356281/using-sidekiq-and-openredis-on-heroku
