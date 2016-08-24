@@ -1,0 +1,14 @@
+https://thoughtbot.com/upcase/videos/fundamentals-of-tdd-overview
+https://www.relishapp.com/rspec/rspec-rails/v/3-5/docs/gettingstarted
+
+Rspec is a testing tool supports DBB (Behavior Driven Develppment) framework for the Ruby programming language. The framework supports domain-specific language (DSL), are very natural like english.
+
+
+
+rails generate rspec:install
+
+
+rake db:migrate && rake db:test:prepare
+
+
+rake spec
