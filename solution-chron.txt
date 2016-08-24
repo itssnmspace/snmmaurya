@@ -14,3 +14,37 @@ cd /Users/you/projects/myrailsapp && /usr/local/bin/rake RAILS_ENV=production my
 
 
 cd /home/snmspace/apps/snmmaurya/current && /user/local/bin/rake RAILS_ENV=production task:email
+
+First of all you should know about - cron job is based on OS(operating system) handled by OS at specified time.
+
+
+On server/local system
+
+Step-1 install cron
+> apt-get install cron
+
+Step-2 Edit crontab file
+> crontab -e
+
+Add line -
+
+0 * * * * cd /home/snmspace/apps/snmmaurya/current && RAILS_ENV=production bundle exec rake task:email
+
+Save and exit -
+
+Cron job setup done - will work per hour like at 07:00, 06:00 and so on..
+
+
+
+Explanation of above changes -
+
+1) /home/snmspace/apps/snmmaurya/current   is project path
+2) rake task:email                         task is rake file and email is a task
+
+
+
+In side you project
+
+3) Create you rake file -
+
+tasks/task.rake  and define your rake task to anything you want like want to send email and so on ---
