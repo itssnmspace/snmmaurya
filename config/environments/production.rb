@@ -101,5 +101,5 @@ Rails.application.configure do
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
 
-  config.action_controller.relative_url_root  = "/snmmaurya"
+  config.action_controller.relative_url_root  = "/home/snmspace/apps/snmmaurya"
 end
