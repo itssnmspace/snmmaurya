@@ -99,4 +99,7 @@ Rails.application.configure do
 
   #Add fonts path to assets pipeline
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+
+  config.action_controller.relative_url_root  = "/snmmaurya"
 end
