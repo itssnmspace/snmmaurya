@@ -21,3 +21,37 @@ Integration test
 
 
 Hybrid test
+
+
+
+
+
+
+
+
+
+http://rspec.info/
+
+
+A controller spec is an RSpec wrapper for a Rails functional test
+It allows you to simulate a single http request in each example -
+
+rendered templates
+redirects
+instance variables assigned in the controller to be shared with the view
+cookies sent back with the response
+
+to specify outcomes- 
+
+standard rspec matchers (expect(response.status).to eq(200) )
+standard test/unit assertions (assert_equal 200, response.status )
+rails assertions (assert_response 200 )
+
+
+1. Cookies
+2. controller spec
+3. views are stubbed by default
+4. render_views
+5. anonymous controller
+6. bypass rescue
+7. engine routes for controllers
