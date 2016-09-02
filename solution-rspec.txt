@@ -55,3 +55,6 @@ rails assertions (assert_response 200 )
 5. anonymous controller
 6. bypass rescue
 7. engine routes for controllers
+
+
+https://www.relishapp.com/rspec/rspec-rails/docs/gettingstarted
