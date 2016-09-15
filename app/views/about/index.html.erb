@@ -39,5 +39,11 @@
         <% end %>
       </div>
     <% end %>
+    <% if @user.resume_pdf.present? %>
+      <h3>My Resume</h3>
+      <div>
+        <%= link_to "Download Resume", @user.resume_pdf.try(:url) %>
+      </div>
+    <% end %>
   </div>
 </div>

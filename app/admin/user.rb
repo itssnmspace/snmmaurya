@@ -20,7 +20,7 @@ ActiveAdmin.register User do
       f.input :username
       f.input :password
       f.input :password_confirmation
-      f.input :resume_pdf, as: :file, label: "Resume PDF", hint: image_tag(f.object.resume_pdf.url(:thumb))
+      f.input :resume_pdf, as: :file, label: "Resume", hint: image_tag(f.object.resume_pdf.url(:thumb))
       # f.input :resume_doc, as: :file, label: "Image", hint: image_tag(f.object.resume_doc.url(:thumb))
       f.has_many :images, allow_destroy: true do |ff|
         ff.input :data, as: :file, label: "Image", hint: image_tag(ff.object.data.url(:thumb))
