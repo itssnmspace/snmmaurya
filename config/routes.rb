@@ -67,6 +67,18 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :welcome
+
+      resources :topics do
+        resources :problems do
+          resources :solutions
+        end
+      end
+    end
+  end
+
   #action cable running status
   mount ActionCable.server => '/cable'
 
