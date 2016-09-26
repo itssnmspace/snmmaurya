@@ -58,3 +58,32 @@ rails assertions (assert_response 200 )
 
 
 https://www.relishapp.com/rspec/rspec-rails/docs/gettingstarted
+
+
+
+
+
+Controller Spec : 
+A controller spec is rails functional test. Controller spec specified by :type => :controller.
+It allows single http request in single example, then you can specify outcomes- 
+
+rendered templates.
+redirects.
+instance variable assigns in controller are being shared in view.
+cookie has sent back to the response.
+
+To specify outcomes you can use standard rspec matchers - expect(response.status).to eq(200)
+
+Some matchers
+
+render template matcher
+expect(response).to render_template(:index)
+
+redirect to matcher
+expect(response).to redirect_to(location)
+
+have_http_status
+expect(response).to have_http_status(:created)
+
+be_a_new
+expect(response).to be_a_new(User)
