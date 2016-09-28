@@ -4,6 +4,12 @@ class Blog < ApplicationRecord
   belongs_to :user
   has_many :comments
 
+  scope :active, -> {where(status: true)}
+
+  def self.blog_options
+    self.active.map{|blog| [blog.title, blog.id]}
+  end
+
 
   searchable do
     text :title, :description
