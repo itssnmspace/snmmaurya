@@ -29,7 +29,7 @@
               <%= blog.title %>
             <% end %>
             </h3>
-            <%= truncate(blog.description, length: 250) %>
+            <%= truncate(blog.description.html_safe, length: 250) %>
           </p>
           <div class="col-sm-12 text-right">
           <%= render partial: "blogs/informations", locals: {datetime: blog.created_at, user: blog.user, counter: blog.comments.count } %>
