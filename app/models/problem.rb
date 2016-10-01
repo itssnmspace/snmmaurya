@@ -10,7 +10,7 @@ class Problem < ApplicationRecord
   validates :title, :description, presence: true
 
   before_create :set_meta_data
-  after_create :send_information_email
+  after_create :send_information_email, :problem_information
 
 
   def send_information_email
@@ -19,7 +19,16 @@ class Problem < ApplicationRecord
       user: self.user,
       topic: self.topic,
       problem: self,
-    })
+    }).deliver
+  end
+
+  def problem_information
+    SolutionsMailer.problem_information({
+      subject: "problem created by you!",
+      user: self.user,
+      topic: self.topic,
+      problem: self,
+    }).deliver
   end
 
   def set_meta_data

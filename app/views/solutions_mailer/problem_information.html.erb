@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SnmMaurya Contact</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,100,700' rel='stylesheet' type='text/css'>
+</head>
+<body style="margin:0;">
+<p>
+  <h3>Hi <%= @options[:user].username %>,</h3>
+  <p>
+    A new problem created by you
+    <hr>
+    <p>
+      <strong>Topic:</strong> <%= @options[:topic].title %><br>
+      <strong>Problem:</strong> <%= @options[:problem].title %><br>
+    </p>
+    <%= render "shared/emailers/footer" %>
+  </p>
+</p>
+</body>
+</html>
