@@ -26,7 +26,6 @@
 /config/aws.yml
 /config/settings.yml
 /config/puma.rb
-/spec/*
 /log/capistrano.log
 /log/development.log
 /public/*

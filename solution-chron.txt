@@ -48,3 +48,44 @@ In side you project
 3) Create you rake file -
 
 tasks/task.rake  and define your rake task to anything you want like want to send email and so on ---
+
+
+
+
+<b>Cron job setup</b>
+
+I am going to run a rake task name task:email. My project directory is /home/snmspace/apps/snmmaurya/current and evnironment is production
+
+
+Create rake task file -
+
+lib/task.rb
+
+namespace :task do
+  desc "Email via chron"
+  task email: :environment do
+    STDOUT.puts "Sending Email Via Chron........!"
+
+    //your function goes here
+
+    /////for me I am sending an email => ChronMailer.information.delivery
+  end
+end
+
+
+
+Lets start-
+
+1) Login to your system/server system
+
+2) Open chrontab file 
+
+> crontab -e
+
+Add your job at last - 
+
+#will run once daily
+0 0 * * * /bin/bash -l -c 'cd /home/snmspace/apps/snmmaurya/current && RAILS_ENV=production bundle exec rake task:email'
+
+
+Save the file by pressing cntrl+x , press y and press enter

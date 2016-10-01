@@ -1,0 +1,89 @@
+https://thoughtbot.com/upcase/videos/fundamentals-of-tdd-overview
+https://www.relishapp.com/rspec/rspec-rails/v/3-5/docs/gettingstarted
+
+Rspec is a testing tool supports DBB (Behavior Driven Develppment) framework for the Ruby programming language. The framework supports domain-specific language (DSL), are very natural like english.
+
+
+
+rails generate rspec:install
+
+
+rake db:migrate && rake db:test:prepare
+
+
+rake spec
+
+
+Unit tests
+
+
+Integration test
+
+
+Hybrid test
+
+
+
+
+
+
+
+
+
+http://rspec.info/
+
+
+A controller spec is an RSpec wrapper for a Rails functional test
+It allows you to simulate a single http request in each example -
+
+rendered templates
+redirects
+instance variables assigned in the controller to be shared with the view
+cookies sent back with the response
+
+to specify outcomes- 
+
+standard rspec matchers (expect(response.status).to eq(200) )
+standard test/unit assertions (assert_equal 200, response.status )
+rails assertions (assert_response 200 )
+
+
+1. Cookies
+2. controller spec
+3. views are stubbed by default
+4. render_views
+5. anonymous controller
+6. bypass rescue
+7. engine routes for controllers
+
+
+https://www.relishapp.com/rspec/rspec-rails/docs/gettingstarted
+
+
+
+
+
+Controller Spec : 
+A controller spec is rails functional test. Controller spec specified by :type => :controller.
+It allows single http request in single example, then you can specify outcomes- 
+
+rendered templates.
+redirects.
+instance variable assigns in controller are being shared in view.
+cookie has sent back to the response.
+
+To specify outcomes you can use standard rspec matchers - expect(response.status).to eq(200)
+
+Some matchers
+
+render template matcher
+expect(response).to render_template(:index)
+
+redirect to matcher
+expect(response).to redirect_to(location)
+
+have_http_status
+expect(response).to have_http_status(:created)
+
+be_a_new
+expect(response).to be_a_new(User)
