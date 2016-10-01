@@ -1,0 +1,236 @@
+What is elastic search-
+
+First install java 
+
+
+install elasticsearch
+
+sudo apt-get update && sudo apt-get install elasticsearch
+
+
+Handle elastic search-
+
+
+sudo service elasticsearch status
+sudo service elasticsearch start
+sudo service elasticsearch stop
+sudo service elasticsearch restart
+
+
+
+
+
+
+This type of index is called an inverted index
+
+ElasticSearch uses Apache Lucene to create and manage this inverted index.
+
+
+How elastic search represents data ?
+
+An index is consist of one or more documents(db terminology rows) and a document is consists of one or more fields(db terminilogy columns).
+
+
+In elastic search no need for schema but like schema you've to declare mapping like -  
+which field is going to be primary key / uniq key.
+How to index and search each field.
+What types of fields are they.
+
+
+An index can store documents of different mapping types. A mapping is way of seperating the documents in the index into logical groups.
+
+To create a mapping, you will need the Put Mapping API, or you can add multiple mappings when you create an index.
+
+
+
+Elastic Search - Query DSL
+
+The Query DSL is ElasticSearch's way of making Lucene's query syntax accessible to users, allowing complex queries to be composed using a JSON syntax.
+
+
+
+ElasticSearch is powered by Lucene, a powerful open-source full-text search library.
+
+The relationship between ElasticSearch and Lucene, is like that of the relationship between a car and its engine.
+
+
+Real-Time Data
+
+Real-Time Advanced Analytics
+
+Massively Distributed
+
+High Availability
+
+Multitenancy
+
+Full-Text Search
+
+Document-Oriented
+
+Schema-Free
+
+Developer-Friendly, RESTful API
+
+Per-Operation Persistence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+First make sure you application needs elastic search technology -
+
+Some times we can get/search data rapidly using some advanced SQL with help of indexing even you are going to use elastic search that is not a recommended way.
+
+There are two cases whether you can use elastic search -
+
+Full-text search - This is what elastic search library build for 
+
+Getting very complex search/data using a complex query not performing well you can use elastic search
+
+
+
+
+
+
+Setup elastic search on Operating System
+
+-- ELASTIC SEARCH ON UBUNTU -- 
+
+sudo apt-get update
+
+install dependency like java
+
+
+Download elasticsearch
+wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.deb
+
+Install ES
+sudo dpkg -i elasticsearch-1.7.2.deb
+
+Start/Manage the ES
+sudo service elasticsearch start
+sudo service elasticsearch stop
+sudo service elasticsearch restart
+
+After starting ES visit on - http://127.0.0.1:9200/
+
+Respons will be a JSON data having {status: 200}
+
+
+
+
+
+
+
+Rails implementation
+
+Now create a rails application for me my application name is 'snmmaurya' consist of a model -> search and a controller -> searches.
+Searches Controller is consist of an action index
+Search Model is consist of two fields title:string and descriptoin:text
+
+<code>
+rails new snmmaurya
+rails g controller searches
+rails g model search
+</code>
+
+Lets add gem required to elastic search
+<code>
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+</code>
+<code>
+bundle install
+</code>
+
+
+searches_controller.rb
+<code>
+class SearchesController < ApplicationController
+  def index
+    @searchs = Search.search(params[:keyword])
+  end
+end
+</code>
+In above controller search is class method of search model,
+
+
+
+search.rb
+<code>
+class Search < ActiveRecord:Base
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+
+
+  def self.search(keyword)
+    __elasticsearch__.search(
+      {
+        query: {
+          multi_match: {
+            query: keyword,
+            fields: ['title^10', 'description']
+          }
+        }
+      }
+    )
+  end
+end
+# Index all searches records from the DB to Elasticsearch on start of application
+Search.import
+</code>
+In above example including two module first is es model(to get library of es into our model) and second one is es model callbacks(make sure after each transacion like creation/deletion/updatation index is getting updated into es database)
+
+Method self.search accepting a parameter that is keyword on basis of that we're passing to search keyword in title and description both
+
+
+A good idea to put - below code to the end of the model - search.rb. To reindex into Elasticsearch automatically on deletion / udpation / creation of data.
+
+# Delete the previous articles index in Elasticsearch
+Search.__elasticsearch__.client.indices.delete index: Search.index_name rescue nil
+
+# Create the new index with the new mapping
+Search.__elasticsearch__.client.indices.create \
+  index: Search.index_name,
+  body: { settings: Search.settings.to_hash, mappings: Search.mappings.to_hash }
+
+
+
+
+Configure views by putting a search form
+
+views/searches/index.html.erb
+<code>
+<form action="/searches" method="get">
+  Search: <input type="text" name="keyword">
+  <input type="submit" name="submit" value="Search">
+</form>
+<hr>
+
+<h2>Searche Lists</h2>
+<% if @searches.present? %>
+  <% @searches.each do |search| %>
+    <p>
+      <h3><%= search.title %></h3>
+      <%= search.description %>
+    </p>
+  <% end %>
+<% end %>
+</code>
+
+
+
+Now run your application navigate to => http://youapplicationpath/searches  Yay! done enjoy !.

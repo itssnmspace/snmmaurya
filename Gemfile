@@ -135,3 +135,7 @@ end
 #   gem 'capistrano-bundler', require: false
 #   gem 'capistrano-rvm'
 # end
+
+gem "tire"
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
