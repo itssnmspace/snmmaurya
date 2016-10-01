@@ -61,14 +61,14 @@ class Problem < ApplicationRecord
   #***************************************************************************#
   #Solr Search
   #***************************************************************************#
-    searchable do
-      text :title
-      integer :topic_id
-      text :solutions do
-        solutions.map { |solution| solution.title }
-      end
-      time :created_at
-    end
+    # searchable do
+    #   text :title
+    #   integer :topic_id
+    #   text :solutions do
+    #     solutions.map { |solution| solution.title }
+    #   end
+    #   time :created_at
+    # end
   #***************************************************************************#
   #END Solr Search
   #***************************************************************************#  
