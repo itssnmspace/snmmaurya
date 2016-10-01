@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817133209) do
+ActiveRecord::Schema.define(version: 20160930150135) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -185,6 +185,15 @@ ActiveRecord::Schema.define(version: 20160817133209) do
     t.index ["meta_data_setting_id"], name: "index_meta_data_socials_on_meta_data_setting_id", using: :btree
   end
 
+  create_table "personalizations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "topic_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_personalizations_on_topic_id", using: :btree
+    t.index ["user_id"], name: "index_personalizations_on_user_id", using: :btree
+  end
+
   create_table "portfolios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "image"
@@ -270,6 +279,13 @@ ActiveRecord::Schema.define(version: 20160817133209) do
     t.string   "meta_keywords"
     t.string   "meta_description"
     t.index ["user_id"], name: "index_rubiests_on_user_id", using: :btree
+  end
+
+  create_table "searches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "solutions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -1,0 +1,8 @@
+http://www.w3schools.in/mysql/intro/
+
+
+MySQL is Relational Database Management System, developed in 1994 by David Axmark.
+MySQL written in C and C++.
+
+
+MySQL provides transactional and non-transactional storage engines
