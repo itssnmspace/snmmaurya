@@ -59,6 +59,16 @@ SnmJS = (function($, window, document, snm){
       });
     },
 
+    SearchesAdvanceSearchModalController: function(){
+      $("#searches-advance-search-modal").on("show.bs.modal", function(e) {
+        $(this).find(".modal-content").load($(e.relatedTarget).attr("href"));
+      });
+      $("#searches-advance-search-modal").on("shown.bs.modal", function(e) {
+        SnmJS.custom.dateTimePickerController("from-date-timepicker");
+        SnmJS.custom.dateTimePickerController("to-date-timepicker");
+      });
+    },
+
     cunstructFlashMessageController: function(container_class, message_class, flash_message){
       $(document).find("."+container_class).html("<div class='alert-alert "+message_class+" flash_message'>"+flash_message+"</div>");
     },
@@ -87,6 +97,7 @@ $(document).ready(function(){
   SnmJS.custom.blogCommentController();
   SnmJS.custom.signinModalController();
   SnmJS.custom.BlogAdvanceSearchModalController();
+  SnmJS.custom.SearchesAdvanceSearchModalController();
   SnmJS.custom.CommonMethodController();
   SnmJS.custom.cunstructFlashMessageController();
    SnmJS.custom.cunstructErrorMessageController();

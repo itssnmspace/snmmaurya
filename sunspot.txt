@@ -1,0 +1,54 @@
+Some commands:
+==================================================================================
+Solr:
+**************
+RAILS_ENV=production bundle exec rake sunspot:solr:start
+RAILS_ENV=production bundle exec rake sunspot:solr:restart
+RAILS_ENV=production bundle exec rake sunspot:solr:stop
+RAILS_ENV=production bundle exec rake sunspot:solr:reindex
+
+
+Whenever sunspot solr stops working follow given steps
+$ rake sunspot:solr:stop RAILS_ENV=production
+$ rm -rvf solr # delete your /solr directory
+$ sudo reboot # reboot the machine RAILS_ENV=production
+$ rake sunspot:solr:start RAILS_ENV=production
+$ rake sunspot:solr:reindex RAILS_ENV=production
+
+**********************************************************************************
+
+
+Sunspot and Solr:
+
+Solr is search library written Java, while Suspot is ruby library to faciliates solr search.
+
+
+
+
+
+Reindexing: This is a process to sync database data with solr including creation of new index, updation of existing index and so on.
+Rails sunspot automatically reindex(sync updated data with solr). 
+
+We've to reindex -
+1) Previousaly Existing data.
+2) Creating/deleting/updating indexes.
+
+
+
+In sunspot - text fields are used for full-text search. Other fields like integer, string, boolean can be used to scope queries.
+
+
+Sunspot Solr setup
+
+gem 'sunspot_rails'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+
+
+bundle install
+
+Generate a default configuration file:
+
+rails generate sunspot_rails:install
+
+#Run Sunspot Solr Server
+bundle exec rake sunspot:solr:start

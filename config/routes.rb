@@ -14,7 +14,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :searches
+  namespace :sunspot do
+    resources :searches do
+      collection do
+        get :advance_search
+      end
+    end
+  end
   resources :portfolios
 
   resources :about, only: :index

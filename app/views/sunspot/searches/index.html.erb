@@ -1,0 +1,47 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Solr search implementation" %>
+
+<div class="row">
+  <div class="col-lg-10">
+    <form action="" method="get">
+      <div class="input-group">
+        <input type="text" name="search" value="<%= params[:search] %>" class="form-control" placeholder="Sunspot:Solr Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-2 text-right">
+  <%= link_to "Advance Search", advance_search_sunspot_searches_path, class: "btn btn-default", data: {toggle: :modal, target: "#searches-advance-search-modal", remote: false} %>
+  </div>
+</div>
+<!-- Intro Content -->
+<div class="row">
+  <% if @searches.present? %>
+    <% @searches.each do |search| %>
+      <div class="col-sm-12">
+        <p>
+          <p>
+            <h3>
+            <%= link_to sunspot_search_path(search) do %>
+              <%= search.title %>
+            <% end %>
+            </h3>
+            <%= truncate(search.description.html_safe, length: 250) %>
+          </p>
+          <div class="col-sm-12 text-right">
+          <%= render partial: "sunspot/searches/informations", locals: {datetime: search.created_at, user: search.user, counter: search.sunspot_comments.count } %>
+        </div>
+        </p>
+        <hr>
+      </div>
+    <% end %>
+  <% else %>
+    <%= render "shared/search_not_found" %>
+  <% end %>
+  <div class="col-sm-12 text-center">
+    <%= paginate @searches %>
+  </div>
+</div>

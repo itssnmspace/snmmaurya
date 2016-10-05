@@ -1,0 +1,2 @@
+module Sunspot::SearchesHelper
+end

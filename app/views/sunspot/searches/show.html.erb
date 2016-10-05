@@ -1,0 +1,43 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Feel free to comment on any blog!" %>
+
+<!-- Intro Content -->
+<div class="row">
+  <div class="col-sm-12">
+    <p>
+      <p>
+        <h3>
+        <%= link_to blog_path(@blog) do %>
+          <%= @blog.title %>
+        <% end %>
+        </h3>
+        <%= @blog.try(:description).try(:html_safe) %>
+      </p>
+      <div class="col-sm-12 text-right">
+        <%= render partial: "blogs/informations", locals: {datetime: @blog.created_at, user: @blog.user, counter: @blog.comments.count } %>
+      </div>
+    </p>
+  </div>
+  <div class="spacer-20 clear"></div><div class="spacer-20 clear"></div>
+  <div class="col-sm-12">
+    <% @blog.comments.each do |comment| %>
+    <div class='media'>
+      <div class='media-body'>
+        <p><%= comment.description %></p>
+        <div class="col-sm-12 text-right">
+          <%= render partial: "blogs/informations", locals: {datetime: comment.created_at, user: comment.user} %>
+        </div>
+      </div>  
+    </div>
+    <% end %>
+  </div>
+  <div class="spacer-20 clear"></div><div class="spacer-20 clear"></div>
+  <div class="col-sm-12">
+    <%= form_for [@blog, Comment.new], html: {class: "comment-form"} do |form| %>
+      <fieldset class="form-group">
+        <%= form.label "Your Comment", form: "Description" %>
+        <%= form.text_area :description, class: "form-control" %>
+      </fieldset>
+      <button class="btn btn-primary width-hundred-percent" type="submit">Submit Your Comment</button>
+    <% end %>
+  </div>
+</div>

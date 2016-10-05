@@ -1,0 +1,8 @@
+create a gem
+
+bundle gem firstgem
+
+
+
+
+To extend Rails with your gem you will need to use Railtie, create a Railtie class which inherits from Rails::Railtie within your gem’s namespace. This class will be loaded during the Rails boot up.

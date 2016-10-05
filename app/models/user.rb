@@ -27,6 +27,9 @@ class User < ApplicationRecord
   has_many :blogs
   has_many :comments
 
+  has_many :sunspot_posts
+  has_many :sunspot_comments
+
   accepts_nested_attributes_for :profiles, allow_destroy: true
   accepts_nested_attributes_for :images, allow_destroy: true
 
