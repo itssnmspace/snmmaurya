@@ -50,7 +50,6 @@ group :test do
 end
 
 group :development do
-  gem 'mysql2'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen'
@@ -101,7 +100,8 @@ gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 
 gem "sidekiq"
 gem 'sinatra', github: 'sinatra', require: false 
-gem 'rack-protection', github: 'sinatra/rack-protection', require: false
+gem 'rack-protection', require: false
+# gem 'rack-protection', github: 'sinatra/rack-protection', require: false
 
 
 # group :development do

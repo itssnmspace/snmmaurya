@@ -59,3 +59,7 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+set :stage, :production
+
+server '138.68.8.26', roles: [:web, :app, :db], primary: true
