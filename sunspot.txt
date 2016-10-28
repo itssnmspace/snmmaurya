@@ -17,6 +17,8 @@ $ rake sunspot:solr:reindex RAILS_ENV=production
 
 **********************************************************************************
 
+sudo apt-get install default-jdk
+
 
 Sunspot and Solr:
 
