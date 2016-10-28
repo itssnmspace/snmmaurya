@@ -3,15 +3,14 @@ class ProblemsController < ApplicationController
   before_action :topic
 
   def index
-    # topic_id = @topic.id
-    # @search = Problem.solr_search do
-    #   fulltext params[:search]
-    #   with :topic_id, topic.id
-    #   order_by :created_at, :desc
-    #   paginate :page => params[:page], :per_page => 10
-    # end
-    # @problems = @search.results
-    @problems = Problem.all
+    topic_id = @topic.id
+    @search = Problem.solr_search do
+      fulltext params[:search]
+      with :topic_id, topic.id
+      order_by :created_at, :desc
+      paginate :page => params[:page], :per_page => 10
+    end
+    @problems = @search.results
   end
 
   def show
