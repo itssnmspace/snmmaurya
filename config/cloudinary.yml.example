@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: coudname
+  api_key: 'apikey'
+  api_secret: apisecret
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: coudname
+  api_key: 'apikey'
+  api_secret: apisecret
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: coudname
+  api_key: 'apikey'
+  api_secret: apisecret
+  enhance_image_tag: true
+  static_image_support: false

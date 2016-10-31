@@ -26,7 +26,7 @@ set :log_level, :debug
 # set :pty, true
 
 ## Linked Files & Directories (Default None):
-set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml config/puma.rb}
+set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml cloudinary.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for :linked_files is []

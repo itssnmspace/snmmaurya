@@ -25,6 +25,7 @@
 /solr/*
 /config/aws.yml
 /config/settings.yml
+/config/cloudinary.yml
 /config/puma.rb
 /log/capistrano.log
 /log/development.log
