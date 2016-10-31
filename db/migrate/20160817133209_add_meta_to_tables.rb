@@ -23,7 +23,7 @@ class AddMetaToTables < ActiveRecord::Migration[5.0]
     ADD COLUMN meta_description varchar(255)"
 
 
-    execute "ALTER TABLE rubiests 
+    execute "ALTER TABLE rubyists 
     ADD COLUMN meta_title varchar(255),
     ADD COLUMN meta_keywords varchar(255),
     ADD COLUMN meta_description varchar(255)"
@@ -56,7 +56,7 @@ class AddMetaToTables < ActiveRecord::Migration[5.0]
     DROP COLUMN meta_keywords,
     DROP COLUMN meta_description"
 
-    execute "ALTER TABLE rubiests 
+    execute "ALTER TABLE rubyists 
     DROP COLUMN meta_title,
     DROP COLUMN meta_keywords,
     DROP COLUMN meta_description"

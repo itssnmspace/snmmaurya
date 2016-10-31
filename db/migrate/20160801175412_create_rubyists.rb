@@ -1,6 +1,6 @@
-class CreateRubiests < ActiveRecord::Migration[5.0]
+class CreateRubyists < ActiveRecord::Migration[5.0]
   def change
-    create_table :rubiests do |t|
+    create_table :rubyists do |t|
       t.text :title
       t.text :description
       t.boolean :status, default: true

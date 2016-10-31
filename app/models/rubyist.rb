@@ -1,4 +1,4 @@
-class Rubiest < ApplicationRecord
+class Rubyist < ApplicationRecord
   include FinderConcern
 
   def featured?

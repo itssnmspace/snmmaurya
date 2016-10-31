@@ -1,13 +1,13 @@
-ActiveAdmin.register Rubiest do
-  menu parent: "Rubiest"
+ActiveAdmin.register Rubyist do
+  menu parent: "Rubyist"
 
   permit_params :title, :description, :status, :featured, :meta_title, :meta_description, :meta_keywords
 
   index do
     column :id
     column :title
-    column :description do |rubiest|
-      rubiest.description.truncate(100)
+    column :description do |rubyist|
+      rubyist.description.truncate(100)
     end  
     column :featured
     column :status
