@@ -2,7 +2,7 @@ class ImageAsset < ApplicationRecord
   has_attached_file :data,
     :storage => :cloudinary,
     :cloudinary_credentials => Rails.root.join("config/cloudinary.yml"),
-    styles: { medium: "300x300>", thumb: "100x100>" },
+    styles: { medium: "300x300>", thumb: "100x100>", original: ["100%"] },
     #Attention please specify path and url in case of cloudinary
     :path => 'uploads/image_assets/:id/:filename.:extension',
     :url => '/:class/:id/:filename.:extension'
