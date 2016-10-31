@@ -26,7 +26,7 @@ set :log_level, :debug
 # set :pty, true
 
 ## Linked Files & Directories (Default None):
-set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml cloudinary.yml}
+set :linked_files, %w{config/database.yml config/settings.yml config/aws.yml config/secrets.yml config/cloudinary.yml}
 set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for :linked_files is []
@@ -52,32 +52,27 @@ namespace :deploy do
       # end
     end
   end
-
-  task :setup_solr_data_dir do
-    run "mkdir -p #{shared_path}/solr/data"
-  end
-
 end
 
 
 
 
-namespace :solr do
-  desc "start solr"
-  task :start, :roles => :app, :except => { :no_release => true } do 
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-  end
-  desc "stop solr"
-  task :stop, :roles => :app, :except => { :no_release => true } do 
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-  end
-  desc "reindex the whole database"
-  task :reindex, :roles => :app do
-    stop
-    run "rm -rf #{shared_path}/solr/data"
-    start
-    run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
-  end
-end
+# namespace :solr do
+#   desc "start solr"
+#   task :start, :roles => :app, :except => { :no_release => true } do 
+#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
+#   end
+#   desc "stop solr"
+#   task :stop, :roles => :app, :except => { :no_release => true } do 
+#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
+#   end
+#   desc "reindex the whole database"
+#   task :reindex, :roles => :app do
+#     stop
+#     run "rm -rf #{shared_path}/solr/data"
+#     start
+#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
+#   end
+# end
 
-after 'deploy:setup', 'deploy:setup_solr_data_dir'
+# after 'deploy:setup', 'deploy:setup_solr_data_dir'
