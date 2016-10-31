@@ -9,6 +9,8 @@ set :repo_url, 'git@github.com:snmspace/snmmaurya.git'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/data/apps/snmmaurya'
+#application_executable_path
+set :acp, '/data/apps/snmmaurya/current'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -43,7 +45,6 @@ set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle publi
 
 
 namespace :deploy do
-
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -54,64 +55,74 @@ namespace :deploy do
   end
 end
 
-namespace :solr do
-  # task :reindex do
-  #   execute "cd #{current_path} && #{rake} RAILS_ENV=#{fetch(:stage)} sunspot:solr:reindex"
-  # end
 
+
+namespace :sunspotsolrsearch do
   task :stop do
     on roles(:web) do
-      begin
-        execute "cd #{current_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:stop"
-      rescue Exception => error
-        puts "***Unable to stop Solr with error: #{error}"
-        puts "***Solr may have not been started. Continuing anyway.***"
+      within current_path do
+        with rails_env: fetch(:rails_env, 'production') do
+          begin
+            #roles          =>   web
+            #current_path   =>   /path_to/youproject/current
+            #rails_env      =>   production
+            #execute        =>   execute command with bundle exec
+            #finally which command runs: RAILS_ENV=production bundle exec rake sunspot:solr:stop
+            execute :bundle, 'exec', :rake, 'sunspot:solr:stop'
+          rescue Exception => e
+            puts " ------- Unable to stop because of: #{e.message}"
+          end
+        end
       end
     end
   end
 
   task :start do
     on roles(:web) do
-      begin
-        execute "cd #{current_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:start"
-      rescue Exception => error
-        puts "***Unable to stop Solr with error: #{error}"
-        puts "***Solr may have not been started. Continuing anyway.***"
+      within current_path do
+        with rails_env: fetch(:rails_env, 'production') do
+          begin
+            execute :bundle, 'exec', :rake, 'sunspot:solr:start'
+          rescue Exception => e
+            puts " ------- Unable to start because of: #{e.message}"
+          end
+        end
       end
     end
   end
 
-  #restart and reindex any newly added full search fields:
   task :restart do
     on roles(:web) do
-      begin
-        execute("cd #{release_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:restart")
-      rescue Exception => error
-        puts "***Unable to start Solr with error: #{error}."
-        puts "***Continuing anyway.***"
+      within current_path do
+        with rails_env: fetch(:rails_env, 'production') do
+          begin
+            execute :bundle, 'exec', :rake, 'sunspot:solr:restart'
+          rescue Exception => e
+            puts " ------- Unable to restart because of: #{e.message}"
+          end
+        end
       end
     end
   end
 
   task :reindex do
     on roles(:web) do
-      begin
-        execute("cd #{release_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:reindex}")
-      rescue Exception => error
-        puts "***Unable to reindex Solr with error: #{error}"
-        puts "***Continuing anyway.***"
+      within current_path do
+        with rails_env: fetch(:rails_env, 'production') do
+          begin
+            execute :bundle, 'exec', :rake, 'sunspot:solr:reindex'
+          rescue Exception => e
+            puts " ------- Unable to reindex because of: #{e.message}"
+          end
+        end
       end
     end
   end
-
 end
 
-# before "deploy", "solr:stop"
-# before "deploy", "solr:start"
-# before "deploy", "solr:restart"
-# before "deploy", "solr:reindex"
-
-after "deploy", "solr:stop"
-after "deploy", "solr:start"
-# after "deploy", "solr:restart"
-# after "deploy", "solr:reindex"
+#Run the tasks just after deployment finish
+#You can configure what are the the task you want to run
+# after "deploy", "sunspotsolrsearch:stop"
+# after "deploy", "sunspotsolrsearch:start"
+# after "deploy", "sunspotsolrsearch:restart"
+after "deploy", "sunspotsolrsearch:reindex"
