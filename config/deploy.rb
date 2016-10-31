@@ -9,8 +9,6 @@ set :repo_url, 'git@github.com:snmspace/snmmaurya.git'
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/data/apps/snmmaurya'
-#application_executable_path
-set :acp, '/data/apps/snmmaurya/current'
 
 # Default value for :scm is :git
 # set :scm, :git
