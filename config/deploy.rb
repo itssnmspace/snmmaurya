@@ -54,25 +54,64 @@ namespace :deploy do
   end
 end
 
+namespace :solr do
+  # task :reindex do
+  #   execute "cd #{current_path} && #{rake} RAILS_ENV=#{fetch(:stage)} sunspot:solr:reindex"
+  # end
 
+  task :stop do
+    on roles(:web) do
+      begin
+        execute "cd #{current_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:stop"
+      rescue Exception => error
+        puts "***Unable to stop Solr with error: #{error}"
+        puts "***Solr may have not been started. Continuing anyway.***"
+      end
+    end
+  end
 
+  task :start do
+    on roles(:web) do
+      begin
+        execute "cd #{current_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:start"
+      rescue Exception => error
+        puts "***Unable to stop Solr with error: #{error}"
+        puts "***Solr may have not been started. Continuing anyway.***"
+      end
+    end
+  end
 
-# namespace :solr do
-#   desc "start solr"
-#   task :start, :roles => :app, :except => { :no_release => true } do 
-#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr start --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-#   end
-#   desc "stop solr"
-#   task :stop, :roles => :app, :except => { :no_release => true } do 
-#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec sunspot-solr stop --port=8983 --data-directory=#{shared_path}/solr/data --pid-dir=#{shared_path}/pids"
-#   end
-#   desc "reindex the whole database"
-#   task :reindex, :roles => :app do
-#     stop
-#     run "rm -rf #{shared_path}/solr/data"
-#     start
-#     run "cd #{current_path} && RAILS_ENV=#{rails_env} bundle exec rake sunspot:solr:reindex"
-#   end
-# end
+  #restart and reindex any newly added full search fields:
+  task :restart do
+    on roles(:web) do
+      begin
+        execute("cd #{release_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:restart")
+      rescue Exception => error
+        puts "***Unable to start Solr with error: #{error}."
+        puts "***Continuing anyway.***"
+      end
+    end
+  end
 
-# after 'deploy:setup', 'deploy:setup_solr_data_dir'
+  task :reindex do
+    on roles(:web) do
+      begin
+        execute("cd #{release_path} && RAILS_ENV=#{fetch(:stage)} #{rake} bundle exec sunspot:solr:reindex}")
+      rescue Exception => error
+        puts "***Unable to reindex Solr with error: #{error}"
+        puts "***Continuing anyway.***"
+      end
+    end
+  end
+
+end
+
+# before "deploy", "solr:stop"
+# before "deploy", "solr:start"
+# before "deploy", "solr:restart"
+# before "deploy", "solr:reindex"
+
+after "deploy", "solr:stop"
+after "deploy", "solr:start"
+# after "deploy", "solr:restart"
+# after "deploy", "solr:reindex"
