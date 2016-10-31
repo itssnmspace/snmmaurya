@@ -42,7 +42,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :rubiests
+  resources :rubyists
 
   #scoping is the way to just remove namespaces
   #path: /contat
