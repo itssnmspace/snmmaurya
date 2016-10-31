@@ -80,10 +80,6 @@ gem 'omniauth-linkedin'
 gem 'metamagic'
 gem 'friendly_id', '~> 5.1.0'
 
-
-gem "paperclip", "~> 5.0.0"
-gem 'aws-sdk'
-
 #Active Admin for rails 5
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
@@ -139,3 +135,8 @@ end
 gem "tire"
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+
+
+gem "paperclip", "~> 5.0.0"
+#Storing files to cloudinary uploaded by carrierwave gem
+gem 'paperclip-cloudinary'

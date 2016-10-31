@@ -25,5 +25,17 @@ ActiveAdmin.register ImageAsset do
       f.actions
     end
   end
+
+  show do |image_asset|
+    attributes_table do
+      row :code
+      row :title
+      row :action
+      row :image do |image_asset|
+        image_tag(image_asset.data.url) if image_asset.data.present?
+      end
+    end
+  end
+
   filter :title
 end
