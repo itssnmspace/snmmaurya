@@ -1,5 +1,5 @@
 class ProblemMailerJob < ApplicationJob
-  queue_as :urgent
+  queue_as :default
 
   def perform problem_id, options={}
     problem = Problem.find(problem_id)
