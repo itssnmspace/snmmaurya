@@ -505,7 +505,6 @@ DEPENDENCIES
   rails (~> 5.0.0)
   rails-controller-testing
   ransack!
-  redis
   redis-namespace
   rspec-rails
   sass-rails (~> 5.0)

@@ -6,7 +6,7 @@
   <% @topics.each do |topic| %>
     <div class="col-md-6 portfolio-item text-center snm-height-four">
       <a href="<%= topic_problems_path(topic) %>">
-        <%= image_tag topic.images.last.data.url(:original), alt: topic.title, class: "snm-image-size-portfolio-one" %>
+        <%= image_tag topic.images.last.data.url(:solution), alt: topic.title, class: "snm-image-size-portfolio-one" %>
       </a>
       <h3>
         <%= link_to topic.title, topic_problems_path(topic) %>

@@ -2,11 +2,11 @@ module ApplicationHelper
   def create_asset_image_template options={}
     image = ImageAsset.image_asset_by_code(options[:image_asset_code])
     if image.present?
-      image_tag image.data.url(:original), class: options[:class], id: options[:id], alt: image.title
+      image_tag image.data.url(:medium), class: options[:class], id: options[:id], alt: image.title
     else
       image = ImageAsset.image_asset_by_code("default_image_asset")
       if image.present?
-        image_tag image.data.url(:original), class: options[:class], id: options[:id], alt: image.title
+        image_tag image.data.url(:medium), class: options[:class], id: options[:id], alt: image.title
       else
         image_tag "static_images/default.jpg", class: options[:class], id: options[:id], alt: "SnmMaurya"
       end
