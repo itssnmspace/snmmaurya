@@ -38,7 +38,12 @@ class User < ApplicationRecord
   validates :email, :username, uniqueness: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
-  has_attached_file :resume_pdf, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :resume_pdf,
+    styles: {medium: "300x300", thumb: "100x100#" },
+    storage: :cloudinary,
+    cloudinary_credentials: Rails.root.join("config/cloudinary.yml"),
+    #Attention please specify path and url
+    :path => ':class/:id.:style.:extension'
   validates_attachment :resume_pdf, :content_type => { :content_type => %w(application/pdf application/msword application/vnd.openxmlformats-officedocument.wordprocessingml.document) }
 
 
