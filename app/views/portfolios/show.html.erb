@@ -3,7 +3,7 @@
   <h4 class="modal-title" id="portfolioModalLabel"><%= @portfolio.title %></h4>
 </div>
 <div class="modal-body">
-  <%= image_tag @portfolio.images.last.data.url(:original), alt: @portfolio.title, class: "snm-image-size-portfolio-one" %>
+  <%= image_tag @portfolio.images.last.data.url(:portfolio), alt: @portfolio.title, class: "snm-image-size-portfolio-one" %>
   <h4>URL:</h4>
   <%= link_to @portfolio.url, @portfolio.url, alt: @portfolio.title %>
   <h4>Tools:</h4>
