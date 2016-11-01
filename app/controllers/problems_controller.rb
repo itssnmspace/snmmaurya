@@ -1,6 +1,7 @@
 class ProblemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :topic
+  before_action :set_problem, only: [:update, :show, :edit, :destroy]
 
   def index
     topic_id = @topic.id
@@ -14,9 +15,7 @@ class ProblemsController < ApplicationController
   end
 
   def show
-   @problem = Problem.find params[:id]
    @solution_counter = @problem.solutions.count
-   @solution = Solution.new
   end
 
   def new
@@ -24,7 +23,7 @@ class ProblemsController < ApplicationController
   end
   
   def create
-    @problem = current_user.problems.new(topic_params)
+    @problem = current_user.problems.new(problem_params)
     if @problem.save
       flash[:success] = "Created Successfully!"
       redirect_to topic_problem_path(@topic, @problem)
@@ -34,23 +33,37 @@ class ProblemsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
+    if @problem.update(problem_params)
+      flash[:success] = "Updated Successfully!"
+      redirect_to topic_problem_path(@topic, @problem)
+    else
+      render :edit
+    end
   end
 
   def destroy
-
+    if @problem.destroy
+      flash[:success] = "Deleted Successfully!"
+      redirect_to topic_problems_path(@topic)
+    else
+      flash[:alert] = "Unable to delete!"
+      redirect_to topic_problems_path(@topic)
+    end  
   end
 
   def topic
     @topic = Topic.find(params[:topic_id])
   end
 
-  def topic_params
+  def problem_params
     params.require(:problem).permit(:title, :topic_id, :featured, :description)
+  end  
+
+  def set_problem
+    @problem = Problem.find(params[:id])
   end  
 end
 

@@ -3,18 +3,14 @@ class Solution < ApplicationRecord
   has_one :user, through: :user_solution, dependent: :destroy
   belongs_to :problem
 
-  after_create :solution_information
+  after_create :solution_information_mailer_to_the_admin, :solution_information_mailer_to_user
 
-   def solution_information
-    SolutionsMailer.solution_information({
-      subject: "Solution for you problem",
-      user: self.user,
-      problem: self.problem,
-      solution: self
-    }).deliver
+
+  def solution_information_mailer_to_the_admin
+    SolutionMailerJob.perform_later(self.id, {admin: true})
   end
 
-#****************************************************************************#
-
-#****************************************************************************# 
+  def solution_information_mailer_to_user
+    SolutionMailerJob.perform_later(self.id, {admin: false})
+  end
 end

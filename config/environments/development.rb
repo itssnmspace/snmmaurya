@@ -56,7 +56,7 @@ Rails.application.configure do
   #Getting running server like snmmaurya as production
   server = Rails.env.production? ? "snmmaurya" : "localhost"
 
-  config.action_mailer.default_url_options = { host: Settings.smtp_settings.try(server).host }
+  config.action_mailer.default_url_options = { host: "localhost:7000" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',

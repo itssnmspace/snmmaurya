@@ -10,26 +10,21 @@ class Problem < ApplicationRecord
   validates :title, :description, presence: true
 
   before_create :set_meta_data
-  after_create :send_information_email, :problem_information
+  after_create :problem_information_mailer_to_the_admin, :problem_information_mailer_to_user
 
 
-  def send_information_email
-    InformationsMailer.problem({
-      subject: "Problem Created",
-      user: self.user,
-      topic: self.topic,
-      problem: self,
-    }).deliver
+  def problem_information_mailer_to_the_admin
+    ProblemMailerJob.perform_later(self.id, {admin: true})
   end
 
-  def problem_information
-    SolutionsMailer.problem_information({
-      subject: "problem created by you!",
-      user: self.user,
-      topic: self.topic,
-      problem: self,
-    }).deliver
+  def problem_information_mailer_to_user
+    ProblemMailerJob.perform_later(self.id, {admin: false})
   end
+
+  #ActiveJob mailer
+  # UserMailer.welcome_email(@user).deliver_later
+  # UserMailer.welcome_email(@user).deliver_now
+  # UserMailer.welcome_email(@user).deliver_later!(wait: 1.hour)
 
   def set_meta_data
     textual_description = ActionView::Base.full_sanitizer.sanitize(self.description)[0..200]

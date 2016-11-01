@@ -10,6 +10,7 @@
     <div class="spacer-20 clear"></div>
     <div class="text-description"><%= @problem.description.html_safe %></div>
     <div class="col-sm-12 text-right">
+      <%= render partial: "problems/problem_actions", locals: {problem: @problem} %>
       <%= render partial: "problems/informations", locals: {datetime: @problem.created_at, user: @problem.user, counter: @solution_counter } %>
     </div>
     <div class="col-sm-12 text-center">

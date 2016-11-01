@@ -15,5 +15,9 @@ module Snmmaurya
     # Enable the asset pipeline
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.precompile += %w( .svg .eot .woff .ttf )
+
+
+    #ActiveJob is being used sidekiq
+    config.active_job.queue_adapter = :sidekiq
   end
 end

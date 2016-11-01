@@ -1,0 +1,8 @@
+<div class="text-information">
+  <% if can? :update, problem %>
+    <%=  link_to "Edit", edit_topic_problem_path(@topic, problem), role: "button", data: {edit: true} %> &nbsp;
+  <% end %>
+  <% if can? :destroy, problem %>
+    <%=  link_to "Delete",  topic_problem_path(@topic, problem), role: "button", method: :delete, data: {confirm: "Are you sure ?", delete: true} %> &nbsp;
+  <% end %>
+</div>

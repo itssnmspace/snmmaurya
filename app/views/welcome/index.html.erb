@@ -5,7 +5,7 @@
   <div class="col-md-6 portfolio-item main-page-image">
     <a href="#">
       <% if @user.images.last.present? %>
-        <%= image_tag @user.images.last.data.url(:medium), class: "profile-image", alt: @user.username %>
+        <%= image_tag @user.images.last.data.url(:profile), class: "profile-image", alt: @user.username %>
       <% end %>
     </a>
     <div class="spacer-20 clear"></div>
