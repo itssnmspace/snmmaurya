@@ -22,7 +22,7 @@
 
       <p>
         <strong>Solution:</strong><br>
-        <a href="<%= Rails.application.routes.url_helpers.topic_problem_solution_url(@options[:topic], @options[:problem], @options[:solution], host: @options[:host]) %>">
+        <a href="<%= Rails.application.routes.url_helpers.topic_problem_url(@options[:topic], @options[:problem], host: @options[:host]) %>">
           <%= @options[:solution].description[0..100].html_safe %>
         </a>
       </p>
