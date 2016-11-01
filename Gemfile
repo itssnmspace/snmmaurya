@@ -98,7 +98,7 @@ gem "sidekiq"
 gem 'sinatra', github: 'sinatra', require: false 
 gem 'rack-protection', require: false
 # gem 'rack-protection', github: 'sinatra/rack-protection', require: false
-# gem 'redis'
+gem 'redis'
 gem 'redis-namespace'
 
 # group :development do
