@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SnmMaurya Contact</title>
+<title>SnmMaurya Problems</title>
 <link href='https://fonts.googleapis.com/css?family=Lato:400,100,700' rel='stylesheet' type='text/css'>
 </head>
 <body style="margin:0;">
@@ -13,8 +13,12 @@
     A new problem created by you
     <hr>
     <p>
-      <strong>Topic:</strong> <%= @options[:topic].title %><br>
-      <strong>Problem:</strong> <%= @options[:problem].title %><br>
+      <p>
+        <strong>Problem:</strong><br>
+        <a href="<%= Rails.application.routes.url_helpers.topic_problem_url(@options[:topic], @options[:problem], host: @options[:host]) %>">
+          <%= @options[:problem].title %>
+        </a>
+      </p>
     </p>
     <%= render "shared/emailers/footer" %>
   </p>

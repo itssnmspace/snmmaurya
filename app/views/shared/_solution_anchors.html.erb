@@ -8,7 +8,7 @@
     </div>
     <% if params[:controller] == "problems" && params[:action] == "show" %>
       <div class="col-sm-2 border-one anchor-container">
-        <%= link_to "Your Solution", new_topic_problem_solution_path(@topic, @problem, @solution), class: "topic-anchor", remote: true %>
+        <%= link_to "Your Solution", new_topic_problem_solution_path(@topic, @problem, @solution), class: "topic-anchor" %>
       </div>
     <% end %>
     <% if params[:controller] == "problems" %>

@@ -12,6 +12,7 @@
           <div class="spacer-10"></div>
           <div class="text-description"> <%= problem.description.truncate(250).html_safe if problem.description.present? %></div>
           <div class="col-sm-12 text-right">
+            <%= render partial: "problems/problem_actions", locals: {problem: problem} %>
             <%= render partial: "problems/informations", locals: {datetime: problem.created_at, user: problem.user, counter: problem.solutions.count } %>
           </div>
           <% if index < @problems.count - 1  %>
@@ -25,6 +26,6 @@
     <% end %>
   </div>
   <div class="col-sm-12 text-center">
-    <%#= paginate @problems %>
+    <%= paginate @problems %>
   </div>
 </div>

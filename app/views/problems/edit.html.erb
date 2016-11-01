@@ -1,4 +1,4 @@
-<%= render 'shared/header_title', header_title: "", header_sub_title: "Specify your problem related to #{@topic.title}" %>
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Update your problem related to #{@topic.title}" %>
 
 <%= render "shared/solution_anchors" %>
 <!-- Intro Content -->
@@ -23,15 +23,15 @@
     </div>
     <div class="col-sm-12">
       <fieldset class="form-group">
-        <%= form.label "Describle Your Problem", for: "Problem" %>
-        <%= form.text_area :description, id: "editor", class: "form-control", placeholder: "Describle Your Problem...." %>
+        <%= form.label "Describe Your Problem", for: "Problem" %>
+        <%= form.text_area :description, id: "editor", class: "form-control", placeholder: "Describe Your Problem...." %>
       </fieldset>
       <div id="editor-preview">
         <span id="header"></span>
         <span id="data"></span>
       </div>
 
-      <button type="submit" class="btn btn-info width-hundred-percent">Create Your Problem</button>
+      <button type="submit" class="btn btn-info width-hundred-percent">Update Your Problem</button>
     </div>
     <% end %>
   </div>

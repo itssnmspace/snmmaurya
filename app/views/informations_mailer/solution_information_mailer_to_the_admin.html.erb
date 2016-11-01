@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SnmMaurya Contact</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,100,700' rel='stylesheet' type='text/css'>
+</head>
+<body style="margin:0;">
+<p>
+  <h3>Hi Snm Maurya,</h3>
+  <p>
+    There is a solution for the problem
+    <hr>
+    <p>
+      <p>
+        <strong>Problem:</strong><br>
+        <a href="<%= Rails.application.routes.url_helpers.topic_problem_url(@options[:topic], @options[:problem], host: @options[:host]) %>">
+          <%= @options[:solution].problem.title %>
+        </a>
+      </p>
+
+      <p>
+        <strong>Solution:</strong><br>
+        <a href="<%= Rails.application.routes.url_helpers.topic_problem_solution_url(@options[:topic], @options[:problem], @options[:solution], host: @options[:host]) %>">
+          <%= @options[:solution].description[0..100].html_safe %>
+        </a>
+      </p>
+    </p>
+    <%= render "shared/emailers/footer" %>
+  </p>
+</p>
+</body>
+</html>

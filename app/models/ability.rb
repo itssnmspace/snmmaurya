@@ -4,10 +4,20 @@ class Ability
   def initialize(user)
     user ||= User.new
 
+    alias_action :create, :read, :update, :destroy, :to => :solution_crud_actions
+    alias_action :create, :read, :update, :to => :problem_crud_actions
+
     if user.master?
       can :manage, :all
     else
       can :read, :all
+
+      can :solution_crud_actions, Solution do |solution|
+        solution.user == user
+      end  
+      can :problem_crud_actions, Problem do |problem|
+        problem.user == user
+      end  
     end
 
     # The first argument to `can` is the action you are giving the user 

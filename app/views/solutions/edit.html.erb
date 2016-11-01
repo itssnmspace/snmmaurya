@@ -1,0 +1,34 @@
+<%= render 'shared/header_title', header_title: "", header_sub_title: "Update solution contributed by you" %>
+<%= render "shared/solution_anchors" %>
+<%= render partial: "shared/meta_data", locals: {data: @problem} %>
+<!-- Intro Content -->
+<div class="row">
+  <div class="col-sm-12">
+    <div class="text-title"><%= @problem.title %></div>
+    <div class="spacer-20 clear"></div>
+    <div class="text-description"><%= @problem.description.html_safe %></div>
+    <div class="col-sm-12 text-right">
+      <%= render partial: "problems/informations", locals: {datetime: @problem.created_at, user: @problem.user, counter: @solution_counter } %>
+    </div>
+    <div class="col-sm-12 text-center">
+      <hr>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div id="solution-form">
+      <%= form_for [@topic, @problem, @solution] do |form| %>
+        <fieldset class="form-group">
+            <%= form.label "Solution", for: "Solution" %>
+            <%= form.text_area :description, id: "editor", class: "form-control", placeholder: "Solution...." %>
+          </fieldset>
+          <div id="editor-preview">
+            <span id="header"></span>
+            <span id="data"></span>
+          </div>
+          <!-- hidden fields -->
+          <%= hidden_field_tag "solution[problem_id]", @problem.id %>
+        <button type="submit" class="btn btn-primary">Solution Submition</button>
+      <% end %>
+    </div>
+  </div>
+</div>
