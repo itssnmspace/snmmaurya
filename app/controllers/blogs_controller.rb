@@ -4,18 +4,18 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    # @search = Blog.solr_search do
-    #   fulltext params[:search]
-    #   fulltext params[:description]
+    @search = Blog.solr_search do
+      fulltext params[:search]
+      fulltext params[:description]
 
-    #   with :user_id, params[:user_id] if params[:user_id].present?
-    #   with :featured, params[:featured] if params[:featured].present?
+      with :user_id, params[:user_id] if params[:user_id].present?
+      with :featured, params[:featured] if params[:featured].present?
 
-    #   if params[:from].present?
-    #     with :created_at, params[:from].to_datetime..(params[:to].present? ? params[:to] : Date.today).to_datetime
-    #   end
-    # end  
-    @blogs = Blog.all
+      if params[:from].present?
+        with :created_at, params[:from].to_datetime..(params[:to].present? ? params[:to] : Date.today).to_datetime
+      end
+    end
+    @blogs = @search.results
   end
 
   # GET /blogs/1

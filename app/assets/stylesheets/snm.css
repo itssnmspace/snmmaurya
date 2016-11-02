@@ -22,3 +22,10 @@
   height: 250px;
   width: 100%;
 }
+
+.fleft{
+  float: left;
+}
+.fright{
+  float: right;
+}
