@@ -11,19 +11,19 @@ class Blog < ApplicationRecord
   end
 
 
-  # searchable do
-  #   text :title, :description
+  searchable do
+    text :title, :description
 
-  #   text :comments do
-  #     comments.map{|comment| comment.description}
-  #   end
+    text :comments do
+      comments.map{|comment| comment.description}
+    end
 
-  #   integer :user_id
-  #   boolean :featured
-  #   boolean :status
-  #   time :created_at
-  #   time :updated_at
-  # end
+    integer :user_id
+    boolean :featured
+    boolean :status
+    time :created_at
+    time :updated_at
+  end
 
 
 #****************************************************************************#

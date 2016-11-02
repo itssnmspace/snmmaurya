@@ -1,20 +1,9 @@
 <div class="row topic-anchor-container">
-  <div class="col-sm-12">
-    <div class="col-sm-2 border-one anchor-container">
-      <%= link_to "Have a problem?", new_topic_problem_path(@topic), class: "topic-anchor" %>
-    </div>
-    <div class="col-sm-2 border-one anchor-container">
-      <%= link_to "Problems", topic_problems_path(@topic), class: "topic-anchor" %>
-    </div>
-    <% if params[:controller] == "problems" && params[:action] == "show" %>
-      <div class="col-sm-2 border-one anchor-container">
-        <%= link_to "Your Solution", new_topic_problem_solution_path(@topic, @problem, @solution), class: "topic-anchor" %>
-      </div>
-    <% end %>
-    <% if params[:controller] == "problems" %>
-    <div class="col-sm-3 border-one anchor-container">
-      <form action="" class="navbar-form" role="search">
-        <div class="input-group add-on">
+  <div class="col-sm-12 flat-container">
+    <% if params[:controller] == "problems" && params[:action] == "index" %>
+    <div class="col-sm-3 anchor-container">
+      <form action="" class="navbar-form" role="search" style="margin-top: 5px;">
+        <div class="input-group add-on" style="width: 100%;">
           <input class="form-control" placeholder="Search" name="search" id="search" type="text" value="<%= params[:search] %>">
             <div class="input-group-btn">
               <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -23,6 +12,18 @@
       </form>
     </div>
     <% end %>
+    <div class="col-sm-2 anchor-container">
+      <%= link_to "Problem?", new_topic_problem_path(@topic), class: "topic-anchor" %>
+    </div>
+    <div class="col-sm-2 anchor-container">
+      <%= link_to "Problems", topic_problems_path(@topic), class: "topic-anchor" %>
+    </div>
+    <% if params[:controller] == "problems" && params[:action] == "show" %>
+      <div class="col-sm-2 anchor-container">
+        <%= link_to "Solution", new_topic_problem_solution_path(@topic, @problem, @solution), class: "topic-anchor" %>
+      </div>
+    <% end %>
   </div>
 </div>
-<hr>
+<br><br>
+<!-- <hr class="custom-hr"> -->

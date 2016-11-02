@@ -22,13 +22,34 @@ footer {
 }
 
 .topic-anchor-container .topic-anchor{
-  padding: 15px;
+  padding: 10px;
   display: block;
+  background-color: #FFFFFF;
+  color: #008080;
 }
+/*.topic-anchor-container .topic-anchor:hover{
+  background-color: #008080;
+  color: #FFFFFF !important;
+}*/
 
+.flat-container{
+  background-color: #008080;
+  padding: 1px;
+}
 .topic-anchor-container .anchor-container{
   margin-right: 5px;
   text-align: center;
+}
+.anchor-container form{
+  margin: 0 auto !important;
+}
+
+.anchor-container form #search{
+  height: 40px;
+}
+
+.anchor-container form button{
+  height: 40px;
 }
 /* Custom css COMMON CSS */
 .right-border{
@@ -163,4 +184,8 @@ footer {
 }
 .account-container{
   /*color: #FFFFFF !important;*/
+}
+.custom-hr{
+  margin-bottom: 20px;
+  margin-top: 0;
 }

@@ -120,7 +120,7 @@ end
 
 #Run the tasks just after deployment finish
 #You can configure what are the the task you want to run
-after "deploy", "sunspotsolrsearch:stop"
-after "deploy", "sunspotsolrsearch:start"
-after "deploy", "sunspotsolrsearch:restart"
+# after "deploy", "sunspotsolrsearch:stop"
+# after "deploy", "sunspotsolrsearch:start"
+# after "deploy", "sunspotsolrsearch:restart"
 after "deploy", "sunspotsolrsearch:reindex"
