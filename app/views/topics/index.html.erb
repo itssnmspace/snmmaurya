@@ -2,20 +2,21 @@
 
 <!-- Start row -->
 <div class="row">
-<div class="col-md-12">
-  <% @topics.each do |topic| %>
-    <div class="col-md-6 portfolio-item text-center snm-height-four">
-      <a href="<%= topic_problems_path(topic) %>">
-        <%= image_tag topic.images.last.data.url(:solution), alt: topic.title, class: "snm-image-size-portfolio-one" %>
-      </a>
-      <h3>
-        <%= link_to topic.title, topic_problems_path(topic) %>
-      </h3>
-      <p>
-        <%= topic.description.truncate(250).try(:html_safe) %>
-      </p>
-    </div>
-  <% end %>
-</div>
+  <div class="col-md-12">
+    <% @topics.each do |topic| %>
+      <div class="col-md-4 portfolio-item text-center snm-height-two-half">
+        <a href="<%= topic_problems_path(topic) %>">
+          <%= image_tag topic.images.last.data.url(:solution), alt: topic.title, class: "snm-image-size-solutions-one" %>
+        </a>
+        <strong class="block">
+          <%= link_to topic.title, topic_problems_path(topic) %>
+        </strong>
+        <p>
+          <%= topic.description.truncate(250).try(:html_safe) %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <div class="clear"></div>
 </div>
 <!-- /.row -->
