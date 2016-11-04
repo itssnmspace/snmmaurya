@@ -5,39 +5,45 @@
 <%= render partial: "shared/meta_data", locals: {data: @problem} %>
 <!-- Intro Content -->
 <div class="row">
-  <div class="col-sm-12">
-    <div class="text-title"><%= @problem.title %></div>
-    <div class="spacer-20 clear"></div>
-    <div class="text-description"><%= @problem.description.html_safe %></div>
-    <div class="col-sm-12 text-right">
-      <%= render partial: "problems/problem_actions", locals: {problem: @problem} %>
-      <%= render partial: "problems/informations", locals: {datetime: @problem.created_at, user: @problem.user, counter: @solution_counter } %>
+  <div class="col-sm-9">
+    <div class="col-sm-12">
+      <div class="text-title"><%= @problem.title %></div>
+      <div class="spacer-20 clear"></div>
+      <div class="text-description"><%= @problem.description.html_safe %></div>
+      <div class="col-sm-12 text-right">
+        <%= render partial: "problems/problem_actions", locals: {problem: @problem} %>
+        <%= render partial: "problems/informations", locals: {datetime: @problem.created_at, user: @problem.user, counter: @solution_counter } %>
+      </div>
+      <div class="col-sm-12 text-center">
+        <hr>
+      </div>
     </div>
-    <div class="col-sm-12 text-center">
-      <hr>
+    <div class="col-sm-12">
+      <!-- Make Sure Answers Are Available -->
+      <% if @solution_counter > 0 %>
+        <% @problem.solutions.each_with_index do |solution, index| %>
+          <%= solution.description.try(:html_safe) %>
+          
+          <div class="col-sm-12 text-right">
+            <%= render partial: "problems/solution_actions", locals: {solution: solution} %>
+            <%= render partial: "problems/informations", locals: {datetime: solution.created_at, user: solution.user } %>
+          </div>
+          <% if index < @solution_counter - 1  %>
+            <div class="col-sm-12 text-center"><hr></div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= render "shared/solution_not_found" %>
+      <% end %>
+    </div>
+
+    <div class="col-sm-12">
+      <div id="solution-form">
+      </div>
     </div>
   </div>
-  <div class="col-sm-12">
-    <!-- Make Sure Answers Are Available -->
-    <% if @solution_counter > 0 %>
-      <% @problem.solutions.each_with_index do |solution, index| %>
-        <%= solution.description.try(:html_safe) %>
-        
-        <div class="col-sm-12 text-right">
-          <%= render partial: "problems/solution_actions", locals: {solution: solution} %>
-          <%= render partial: "problems/informations", locals: {datetime: solution.created_at, user: solution.user } %>
-        </div>
-        <% if index < @solution_counter - 1  %>
-          <div class="col-sm-12 text-center"><hr></div>
-        <% end %>
-      <% end %>
-    <% else %>
-      <%= render "shared/solution_not_found" %>
-    <% end %>
+  <div class="col-sm-3">
+  Add Section !
   </div>
 
-  <div class="col-sm-12">
-    <div id="solution-form">
-    </div>
-  </div>
 </div>

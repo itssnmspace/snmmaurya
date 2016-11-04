@@ -48,8 +48,8 @@ Rails.application.routes.draw do
   #path: /contat
   #route: contact_path
   scope :module => "pages" do
-    get :contact
-    post :create_contact
+    # get :contact
+    # post :create_contact
     get :terms
     get :policies
     get :pages

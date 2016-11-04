@@ -22,20 +22,16 @@ footer {
 }
 
 .topic-anchor-container .topic-anchor{
-  padding: 10px;
+  background-color: #008080;
+  color: #ffffff !important;
   display: block;
-  background-color: #FFFFFF;
-  color: #008080;
+  padding: 10px;
 }
 /*.topic-anchor-container .topic-anchor:hover{
   background-color: #008080;
   color: #FFFFFF !important;
 }*/
 
-.flat-container{
-  background-color: #008080;
-  padding: 1px;
-}
 .topic-anchor-container .anchor-container{
   margin-right: 5px;
   text-align: center;

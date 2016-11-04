@@ -2,20 +2,23 @@
 
 <!-- Start row -->
 <div class="row">
-  <% @studies.each do |study| %>
-    <div class="col-md-6 portfolio-item text-center snm-height-four">
-      <a href="<%= study_lessions_path(study) %>">
-        <% if study.images.last.present? %>
-          <%= image_tag study.images.last.data.url(:solution), alt: study.title, class: "snm-image-size-portfolio-one" %>
-        <% end %>
-      </a>
-      <h3>
-        <%= link_to study.title, study_lessions_path(study) %>
-      </h3>
-      <p>
-        <%= study.description.truncate(250).try(:html_safe) %>
-      </p>
-    </div>
-  <% end %>
+  <div class="col-md-12">
+    <% @studies.each do |study| %>
+      <div class="col-md-4 portfolio-item text-center snm-height-two-half">
+        <a href="<%= study_lessions_path(study) %>">
+          <% if study.images.last.present? %>
+            <%= image_tag study.images.last.data.url(:solution), alt: study.title, class: "snm-image-size-solutions-one" %>
+          <% end %>
+        </a>
+        <strong class="block">
+          <%= link_to study.title, study_lessions_path(study) %>
+        </strong>
+        <p>
+          <%= study.description.truncate(250).try(:html_safe) %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <div class="clear"></div>
 </div>
 <!-- /.row -->

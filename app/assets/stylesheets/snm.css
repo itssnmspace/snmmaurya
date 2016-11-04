@@ -11,6 +11,9 @@
 .snm-border-style-one{
   border: 1px #cccccc solid;
 }
+.snm-height-two-half{
+  height: 250px;
+}
 .snm-height-four{
   height: 400px;
 }
@@ -28,4 +31,11 @@
 }
 .fright{
   float: right;
+}
+.clear{
+  clear: both;
+}
+.snm-image-size-solutions-one{
+  height: 200px;
+  width: 250px;
 }
