@@ -1,22 +1,20 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_search, only: [:index]
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @search = Blog.solr_search do
-      fulltext params[:search]
-      fulltext params[:description]
-
-      with :user_id, params[:user_id] if params[:user_id].present?
-      with :featured, params[:featured] if params[:featured].present?
-
-      if params[:from].present?
-        with :created_at, params[:from].to_datetime..(params[:to].present? ? params[:to] : Date.today).to_datetime
-      end
+    if @search
+      @blogs = Blog.search(@search)
+    else
+      @blogs = Blog.active
     end
-    @blogs = @search.results
   end
+
+  def set_search
+    @search = params[:search].present? ? params[:search] : nil
+  end  
 
   # GET /blogs/1
   # GET /blogs/1.json

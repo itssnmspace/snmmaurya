@@ -6,25 +6,22 @@ class Blog < ApplicationRecord
 
   scope :active, -> {where(status: true)}
 
+  #searchkick implementation
+  searchkick batch_size: 1000, word_start: [:title, :description]
+  # , index_name: -> { "#{self.name.tableize}_#{Rails.env}" }
+
+  
+  def search_data
+    {
+      title: title,
+      description: description
+    }
+  end
+
+
   def self.blog_options
     self.active.map{|blog| [blog.title, blog.id]}
   end
-
-
-  searchable do
-    text :title, :description
-
-    text :comments do
-      comments.map{|comment| comment.description}
-    end
-
-    integer :user_id
-    boolean :featured
-    boolean :status
-    time :created_at
-    time :updated_at
-  end
-
 
 #****************************************************************************#
   #START Seo Related Functions

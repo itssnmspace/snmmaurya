@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-md-4 rubyists-container">
     <% @rubyists.each do |rubyist| %>
-      <%= link_to rubyist.title, rubiest_path(rubyist, page: (params[:page] || 1)), class: "rubyists-anchor #{"selected" if @rubyist.id == rubyist.id}" %>
+      <%= link_to rubyist.title, rubyist_path(rubyist, page: (params[:page] || 1)), class: "rubyists-anchor #{"selected" if @rubyist.id == rubyist.id}" %>
       <% if rubyist.featured? %>
         <sup class="featured btn btn-danger btn-xs">Featured</sup>
       <% end %>
