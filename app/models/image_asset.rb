@@ -4,7 +4,7 @@ class ImageAsset < ApplicationRecord
     storage: :cloudinary,
     cloudinary_credentials: Rails.root.join("config/cloudinary.yml"),
     #Attention please specify path and url
-    :path => ':class/:id.:style.:extension'
+    :path => ':class/:updated_at.:style.:extension'
 
   validates_attachment_content_type :data, content_type: /\Aimage\/.*\z/
 

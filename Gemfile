@@ -141,3 +141,6 @@ gem 'elasticsearch-rails'
 gem "paperclip", "~> 5.0.0"
 #Storing files to cloudinary uploaded by carrierwave gem
 gem 'paperclip-cloudinary'
+
+
+gem 'searchkick'

@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-description = "Euismod dictumst nonummy imperdiet litora felis aptent. Dolor justo consequat augue vulputate. Condimentum montes taciti faucibus. Consectetuer Eu tempus convallis praesent nonummy eget sapien leo egestas interdum lorem nisl amet. Senectus primis potenti gravida sodales. Venenatis montes phasellus ad sapien augue mauris hymenaeos nulla."
-
+description = "Euismod dictumst nonummy imperdiet litora felis aptent. Dolor justo consequat augue vulputate."
 
 STDOUT.puts "\nCreating Administrator user ....\n"
 unless AdminUser.find_by email: "admin@snmmaurya.com"
@@ -72,9 +71,9 @@ STDOUT.puts "\n.........................COMPLETED.........................\n"
 
 
 
-STDOUT.puts "\nCreating Rubiest ....\n"
-unless Rubiest.find_by title: "What is Ruby?"
-  rubiest = Rubiest.new(title: "What is Ruby?", description: description)
+STDOUT.puts "\nCreating Rubyist ....\n"
+unless Rubyist.find_by title: "What is Ruby?"
+  rubiest = Rubyist.new(title: "What is Ruby?", description: description)
   rubiest.save(validate: false)
 end
 STDOUT.puts "\n.........................COMPLETED.........................\n"
