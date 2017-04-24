@@ -12,6 +12,7 @@ class Problem < ApplicationRecord
   before_create :set_meta_data
   after_create :problem_information_mailer_to_the_admin, :problem_information_mailer_to_user
 
+  scope :active, -> {where(status: true)}
 
   def problem_information_mailer_to_the_admin
     ProblemMailerJob.perform_later(self.id, {admin: true})
@@ -61,41 +62,18 @@ class Problem < ApplicationRecord
     end
   #****************************************************************************#
 
-
-  #***************************************************************************#
-  #Solr Search
-  #***************************************************************************#
-    searchable do
-      text :title
-      integer :topic_id
-      text :solutions do
-        solutions.map { |solution| solution.title }
-      end
-      time :created_at
-    end
-  #***************************************************************************#
-  #END Solr Search
-  #***************************************************************************#  
-end
+  scope :search_import, -> { eager_load(:topic, :solutions)}
+  searchkick batch_size: 1000, word_start: [:title, :description, :solution, :topic]
 
 
-=begin
-  searchable do
-    text :question, :body
-    text :comments do
-      comments.map { |comment| comment.body }
-    end
-
-    boolean :featured
-    integer :blog_id
-    integer :author_id
-    integer :category_ids, :multiple => true
-    double  :average_rating
-    time    :published_at
-    time    :expired_at
-
-    string  :sort_title do
-      title.downcase.gsub(/^(an?|the)/, '')
-    end
+  def search_data
+    {
+      title: title,
+      description: description,
+      solution: solutions.map(&:title),
+      topic: topic.title,
+      topic_id: topic_id
+    }
   end
-=end  
+  
+end
