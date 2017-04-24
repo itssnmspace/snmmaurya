@@ -1,18 +1,20 @@
 class ProblemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :topic
+  before_action :set_topic
   before_action :set_problem, only: [:update, :show, :edit, :destroy]
+  before_action :set_search, only: [:index]
 
   def index
-    topic_id = @topic.id
-    @search = Problem.solr_search do
-      fulltext params[:search]
-      with :topic_id, topic.id
-      order_by :created_at, :desc
-      paginate :page => params[:page], :per_page => 10
+    if @search.present?
+      @problems = Problem.search(@search, where: {topic_id: @topic.id})
+    else
+      @problems = @topic.problems.active
     end
-    @problems = @search.results
   end
+
+  def set_search
+    @search = params[:search]
+  end  
 
   def show
    @solution_counter = @problem.solutions.count
@@ -54,7 +56,7 @@ class ProblemsController < ApplicationController
     end  
   end
 
-  def topic
+  def set_topic
     @topic = Topic.find(params[:topic_id])
   end
 
