@@ -1,36 +1,47 @@
 <%= render 'shared/header_title', header_title: "", header_sub_title: "All the problems related to #{@topic.title}" %>
-
-<%= render "shared/solution_anchors" %>
 <%= render partial: "shared/meta_data" %>
+
+<div class="row">
+  <div class="col-lg-10">
+    <form action="" method="get">
+      <div class="input-group">
+        <input type="text" name="search" value="<%= params[:search] %>" class="form-control" placeholder="Type to search">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-2 text-right">
+  <%= link_to "Advance Search", advance_search_blogs_path, class: "btn btn-default", data: {toggle: :modal, target: "#advance-search-modal", remote: false} %>
+  </div>
+</div>
+
+
+
 <!-- Intro Content -->
 <div class="row">
-  <div class="col-sm-9">
-    <div class="col-sm-12">
-      <% if @problems.present? %>
-        <% @problems.each_with_index do |problem, index| %>
-          <div class="col-sm-12">
-            <div class="text-title"> <%= link_to problem.title, topic_problem_path(@topic, problem) %></div>
-            <div class="spacer-10"></div>
-            <div class="text-description"> <%= problem.description.truncate(250).html_safe if problem.description.present? %></div>
-            <div class="col-sm-12 text-right">
-              <%= render partial: "problems/problem_actions", locals: {problem: problem} %>
-              <%= render partial: "problems/informations", locals: {datetime: problem.created_at, user: problem.user, counter: problem.solutions.count } %>
-            </div>
-            <% if index < @problems.count - 1  %>
-              <div class="col-sm-12 text-center"><hr></div>
-            <% end %>
-          </div>
+  <% if @problems.present? %>
+    <% @problems.each do |problem| %>
+      <div class="col-sm-12">
+        <p>
+          <p>
+            <h3>
+              <%= link_to problem.title, topic_problem_path(@topic, problem) %>
+            </h3>
+            <%= problem.description.truncate(250).html_safe if problem.description.present? %>
+          </p>
+          <div class="col-sm-12 text-right">
+          <%= render partial: "problems/informations", locals: {datetime: problem.created_at, user: problem.user, counter: problem.solutions.count } %>
+        </div>
+        </p>
+        <hr>
+      </div>
+    <% end %>
+  <% else %>
+    <%= render "shared/search_not_found" %>
+  <% end %>
 
-        <% end %>
-      <% else %>
-        <%= render "shared/search_not_found" %>
-      <% end %>
-    </div>
-    <div class="col-sm-12 text-center">
-      <%#= paginate @problems %>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !This is add section  !
-  </div>
 </div>
