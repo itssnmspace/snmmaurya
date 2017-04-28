@@ -12,17 +12,6 @@
       </form>
     </div>
     <% end %>
-    <div class="col-sm-2 anchor-container">
-      <%= link_to "Problem?", new_topic_problem_path(@topic), class: "topic-anchor" %>
-    </div>
-    <div class="col-sm-2 anchor-container">
-      <%= link_to "Problems", topic_problems_path(@topic), class: "topic-anchor" %>
-    </div>
-    <% if params[:controller] == "problems" && params[:action] == "show" %>
-      <div class="col-sm-2 anchor-container">
-        <%= link_to "Solution", new_topic_problem_solution_path(@topic, @problem, @solution), class: "topic-anchor" %>
-      </div>
-    <% end %>
   </div>
 </div>
 <br><br>
