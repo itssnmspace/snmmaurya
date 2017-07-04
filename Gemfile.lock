@@ -164,6 +164,7 @@ GEM
       activesupport (>= 3.0)
       deep_merge (~> 1.1.1)
     connection_pool (2.2.0)
+    database_cleaner (1.6.1)
     debug_inspector (0.0.2)
     deep_merge (1.1.1)
     devise (4.2.0)
@@ -479,6 +480,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   config
+  database_cleaner
   devise
   draper (> 3.x)
   elasticsearch-model
@@ -529,4 +531,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
