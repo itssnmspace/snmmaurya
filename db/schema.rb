@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005181858) do
+ActiveRecord::Schema.define(version: 20160817133209) do
 
-  create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
     t.text     "body",          limit: 65535
     t.string   "resource_id",                 null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
   end
 
-  create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "description", limit: 65535
     t.string   "slug"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["user_id"], name: "index_blogs_on_user_id", using: :btree
   end
 
-  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "description", limit: 65535
     t.boolean  "status",                    default: true
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "contacts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.string   "contact"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "downloads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "downloads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "download"
     t.string   "description"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "cource"
     t.string   "college"
     t.string   "location"
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                                null: false
   end
 
-  create_table "employments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "employments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "location"
     t.text     "description", limit: 65535
@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                                              null: false
   end
 
-  create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "friendly_id_slugs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
     t.string   "sluggable_type", limit: 50
@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
-  create_table "image_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "image_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "code"
     t.string   "title"
     t.string   "action"
@@ -139,7 +139,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                       null: false
   end
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.string   "data_file_name"
@@ -151,7 +151,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", using: :btree
   end
 
-  create_table "lessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "lessions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "title",            limit: 65535
     t.text     "description",      limit: 65535
     t.boolean  "status",                         default: true
@@ -168,7 +168,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["user_id"], name: "index_lessions_on_user_id", using: :btree
   end
 
-  create_table "meta_data_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "meta_data_settings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "site_url"
     t.string   "meta_title"
     t.text     "meta_keywords",    limit: 65535
@@ -178,14 +178,14 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                                     null: false
   end
 
-  create_table "meta_data_socials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "meta_data_socials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "meta_data_setting_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.index ["meta_data_setting_id"], name: "index_meta_data_socials_on_meta_data_setting_id", using: :btree
   end
 
-  create_table "portfolios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "portfolios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "image"
     t.string   "url"
@@ -198,7 +198,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at"
   end
 
-  create_table "problems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "problems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "description",      limit: 65535
     t.integer  "topic_id"
@@ -215,7 +215,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["topic_id"], name: "index_problems_on_topic_id", using: :btree
   end
 
-  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "contact"
@@ -235,7 +235,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                                      null: false
   end
 
-  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "url"
     t.string   "about"
@@ -250,14 +250,14 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                                 null: false
   end
 
-  create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.boolean  "status",     default: true
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
 
-  create_table "rubiests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "rubyists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "title",            limit: 65535
     t.text     "description",      limit: 65535
     t.boolean  "status",                         default: true
@@ -269,17 +269,10 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.string   "meta_title"
     t.string   "meta_keywords"
     t.string   "meta_description"
-    t.index ["user_id"], name: "index_rubiests_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_rubyists_on_user_id", using: :btree
   end
 
-  create_table "searches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "title"
-    t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
-
-  create_table "solutions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "solutions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "description",      limit: 65535
     t.integer  "problem_id"
@@ -295,7 +288,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["problem_id"], name: "index_solutions_on_problem_id", using: :btree
   end
 
-  create_table "studies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "studies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "title",            limit: 65535
     t.text     "description",      limit: 65535
     t.boolean  "status",                         default: true
@@ -310,43 +303,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["user_id"], name: "index_studies_on_user_id", using: :btree
   end
 
-  create_table "sunspot_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.text     "description",     limit: 65535
-    t.integer  "sunspot_post_id"
-    t.integer  "user_id"
-    t.boolean  "status",                        default: true
-    t.string   "slug"
-    t.boolean  "featured",                      default: false
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
-    t.index ["sunspot_post_id"], name: "index_sunspot_comments_on_sunspot_post_id", using: :btree
-    t.index ["user_id"], name: "index_sunspot_comments_on_user_id", using: :btree
-  end
-
-  create_table "sunspot_post_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "title"
-    t.boolean  "status",     default: true
-    t.string   "slug"
-    t.boolean  "featured",   default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
-  create_table "sunspot_posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "title"
-    t.text     "description",              limit: 65535
-    t.integer  "sunspot_post_category_id"
-    t.integer  "user_id"
-    t.boolean  "status",                                 default: true
-    t.string   "slug"
-    t.boolean  "featured",                               default: false
-    t.datetime "created_at",                                             null: false
-    t.datetime "updated_at",                                             null: false
-    t.index ["sunspot_post_category_id"], name: "index_sunspot_posts_on_sunspot_post_category_id", using: :btree
-    t.index ["user_id"], name: "index_sunspot_posts_on_user_id", using: :btree
-  end
-
-  create_table "technologies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "technologies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "description"
     t.float    "experience",         limit: 24
@@ -359,7 +316,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                                   null: false
   end
 
-  create_table "technology_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "technology_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.boolean  "status",     default: true
     t.integer  "position"
@@ -367,7 +324,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "updated_at",                null: false
   end
 
-  create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "description"
     t.integer  "position"
@@ -380,7 +337,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.string   "meta_description"
   end
 
-  create_table "user_problems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "user_problems", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "problem_id"
     t.datetime "created_at"
@@ -389,7 +346,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["user_id"], name: "index_user_problems_on_user_id", using: :btree
   end
 
-  create_table "user_solutions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "user_solutions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "solution_id"
     t.datetime "created_at"
@@ -398,7 +355,7 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.index ["user_id"], name: "index_user_solutions_on_user_id", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                   default: "", null: false
     t.string   "encrypted_password",      default: "", null: false
     t.string   "username",                default: "", null: false
@@ -432,7 +389,13 @@ ActiveRecord::Schema.define(version: 20161005181858) do
     t.datetime "resume_pdf_updated_at"
     t.string   "uid"
     t.string   "provider"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["role_id"], name: "index_users_on_role_id", using: :btree
+    t.index ["slug"], name: "index_users_on_slug", unique: true, using: :btree
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
   add_foreign_key "blogs", "users"
