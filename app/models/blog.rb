@@ -6,6 +6,8 @@ class Blog < ApplicationRecord
 
   scope :active, -> {where(status: true)}
 
+  validates :title, :description, :user_id, presence: true
+
   #searchkick implementation
   searchkick batch_size: 1000, word_start: [:title, :description]
   # , index_name: -> { "#{self.name.tableize}_#{Rails.env}" }

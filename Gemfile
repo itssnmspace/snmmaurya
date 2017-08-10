@@ -126,18 +126,6 @@ group :development do
   gem 'capistrano-sidekiq', require: false
 end
 
-# group :development do
-#   gem 'capistrano'
-#   gem 'capistrano3-puma'
-#   gem 'capistrano-rails', require: false
-#   gem 'capistrano-bundler', require: false
-#   gem 'capistrano-rvm'
-# end
-
-gem "tire"
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
-
 
 gem "paperclip", "~> 5.0.0"
 #Storing files to cloudinary uploaded by carrierwave gem
@@ -145,3 +133,6 @@ gem 'paperclip-cloudinary'
 
 
 gem 'searchkick'
+
+
+gem 'rails-backbone'

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile view first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Default meta data setting if page has not meta data -->
+    <%# meta_options = default_meta_data %>
+    <%#= metamagic title: meta_options[:title], description: meta_options[:description], keywords: meta_options[:keywords] %>
+    <%= csrf_meta_tags %>
+    
+    <%= stylesheet_link_tag    'spa', media: 'all' %>
+    <%= javascript_include_tag 'spa' %>
+
+    <!-- <link rel="shortcut icon" href="<%#= @favicon %>" type="image/x-icon" /> -->
+  </head>
+
+  <body id='body'>
+    <%= render "layouts/spa/header" %>
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Header -->
+      <div class="row">
+        <%= yield :header_title %>
+      </div>
+      <!-- /.row -->
+        <%= yield %>
+      <hr>
+
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="col-lg-4">
+              <ul>
+                <li><%= link_to "Terms & Conditions", terms_path %></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              
+            </div>
+            <div class="col-lg-4">
+              Copyright &copy; <%= link_to "http://www.snmmaurya.com", root_path %>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+      </footer>
+
+    </div>
+    <!-- /.container -->
+  </body>
+</html>
