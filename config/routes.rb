@@ -93,4 +93,12 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+
+  namespace :spa do
+    root :to => 'spa#index', :as => :root_with_locale
+    resources :spa
+    resources :dummies
+  end
 end

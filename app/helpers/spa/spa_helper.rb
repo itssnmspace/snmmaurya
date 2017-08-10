@@ -1,0 +1,2 @@
+module Spa::SpaHelper
+end
